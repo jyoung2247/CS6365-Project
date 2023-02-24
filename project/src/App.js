@@ -1,11 +1,13 @@
-//import logo from './logo.svg';
 import './App.css';
 import Checkbox from 'muicss/lib/react/checkbox';
+//import { Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+          <div className="circle1">1</div>
+          <div className="circle2">2</div>
           <div className="contain">
               <div className="profile-link">
                 My Steam Public Profile Link
