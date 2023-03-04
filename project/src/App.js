@@ -1,11 +1,50 @@
 import './App.css';
 import Checkbox from 'muicss/lib/react/checkbox';
 import { Link } from "react-router-dom";
+import papa from 'papaparse';
+import { readString } from 'react-papaparse';
+import file from './Games-HLTB.csv';
 
 export function App() {
+
+    console.log("Console log not working");
+
+    let record;
+    let record_data;
+    let result;
+    let result_data;
+    const games = file;
+
+    papa.parse(games, {
+        download: true,
+        complete: function (input) {
+            record = input;
+            record_data = input.data;
+            console.log("Records: " + record);
+        }
+    });
+
+    const PapaConfig = {
+        complete: (results, file) => {
+            console.log('Parsing complete:', results, file);
+            console.log("Results: " + results);
+            console.log("Results Data: " + results.data);
+            result = results;
+            result_data = results.data;
+        },
+        download: true,
+        error: (error, file) => {
+            console.log('Error while parsing:', error, file);
+        },
+    };
+    readString(games, PapaConfig);
+
+    console.log("Console log still not working");
+
     return (
         <div className="App">
             <header className="App-header">
+                <div className="data">{record}{record_data}{result}{result_data}</div>
                 <div className="circle1">1</div>
                 <div className="circle2">2</div>
                 <div className="contain">
@@ -61,7 +100,7 @@ export function List() {
                 </Link>
                 Results
             </div>
-            <div className="recs">
+            <div className="profile-link">
                 <div className="filters">
                     Filter:
                     <button className="filter">Genre</button>
