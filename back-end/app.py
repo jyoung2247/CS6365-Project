@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 import json
-import steam_recommender
+from steam_recommender import Steam_Recommender
 import helper_functions
 
 app = Flask(__name__)
@@ -12,9 +12,8 @@ def hello():
 @app.route('/getRMSE', methods=['GET'])
 def getRMSE():
     try:
-        train, test = steam_recommender.prep_data("back-end/user-title-rating.csv")
-        model = steam_recommender.fit_svd(train)
-        rmse = steam_recommender.model_rmse(model, test)
+        steam_recommender = Steam_Recommender("back-end/user-title-rating.csv", "SVD")
+        rmse = steam_recommender.model_rmse()
         return json.dumps({"rmse": rmse}), 200, {"Content-Type": "application/json"}
     except Exception as e:
         print("Error:", e)
