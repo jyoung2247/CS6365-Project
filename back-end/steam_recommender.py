@@ -8,7 +8,7 @@ class Steam_Recommender:
     def __init__(self, csv_filepath, modelName):
         self.data = self.get_data(csv_filepath)
         self.train = self.get_train()
-        self.model = self.fit_svd(modelName)
+        self.model = self.model_create_fit(modelName)
 
     #Import our csv as a dataframe to use as data
     def get_data(self, filepath):
@@ -16,24 +16,28 @@ class Steam_Recommender:
         reader = Reader(rating_scale=(0,10))
         data = Dataset.load_from_df(df, reader=reader)
         return data
-
+    
+    #This function is only necessary if we want to make rating estimates for every user in the dataset
     def get_train_test(self):
         train = self.data.build_full_trainset()
         test = train.build_anti_testset()
         return train, test
-
+    
+    #Return the trainingset for the model to be fit to
     def get_train(self):
         train = self.data.build_full_trainset()
         return train
-
-    def fit_svd(self, modelName):
+    
+    #Create and fit the model to the training data
+    def model_create_fit(self, modelName):
         if modelName == "SVD":
             model = SVD()
         else:
             model = SVD()
         model.fit(self.train)
         return model
-        
+    
+    #RMSE of model
     def model_rmse(self):
         train, test = train_test_split(self.data, test_size=.20)
         self.model.fit(train)
@@ -44,7 +48,8 @@ class Steam_Recommender:
     def get_prediction(self, uid, title):
         prediction = self.model.predict(uid, title)
         return prediction
-
+    
+    #Get top n titles and estimated ratings for a user
     def get_top_predictions(self, uid, n):
         #Creating the test set for the user with uid = uid
         rating_mean = self.data.df["rating"].mean()
