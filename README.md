@@ -1,6 +1,8 @@
 # CS6365-Project
 CS6365 Project - Steam Game Recommender
-Conda installs:
-Flask
-Requests
-Surprise
+To run project:
+conda create --name steamrec
+conda activate steamrec
+conda install -c conda-forge flask
+conda install -c conda-forge requests
+conda install -c conda-forge scikit-surprise
