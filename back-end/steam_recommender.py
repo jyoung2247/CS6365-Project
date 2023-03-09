@@ -26,8 +26,16 @@ def get_prediction(model, uid, title):
 
 #Example
 
-# train, test = prep_data("backend/user-title-rating.csv")
-# model = fit_svd(train)
-# rmse = model_rmse(model, test)
+train, test = prep_data("back-end/user-title-rating.csv")
+model = fit_svd(train)
+predictions = model.test(test)
+df = pd.DataFrame(predictions)
+user_predictions = df.loc[df['uid'] == 59945701]
+user_ratings = user_predictions[["iid", "est"]]
+# user_predictions = []
+# for prediction in predictions:
+#     if prediction.uid == 59945701:
+#         user_predictions.append(prediction)
+rmse = model_rmse(model, test)
 # prediction = get_prediction(59945701, "Dota 2")
 # print(prediction)
