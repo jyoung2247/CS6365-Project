@@ -6,10 +6,10 @@ conda create --name steamrec
 
 conda activate steamrec
 
-conda install -c conda-forge flask
+conda install -c conda-forge flask=2.2.3
 
-conda install -c conda-forge requests
+conda install -c conda-forge requests=2.28.2
 
-conda install -c conda-forge scikit-surprise
+conda install -c conda-forge scikit-surprise=1.1.3
 
- conda install -c conda-forge pandas
+ conda install -c conda-forge pandas=1.5.3
