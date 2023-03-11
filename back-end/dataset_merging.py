@@ -8,17 +8,20 @@ df_games["name_lower"] = df_games.name.str.lower()
 
 
 #Clean HLTB
-df_hltb = pd.read_csv("original datasets/HLTB.csv")
-df_hltb = df_hltb.loc[:, ["title", "main_story"]]
-#Strip non-digits from main_story
-df_hltb["main_story"] = df_hltb["main_story"].str.replace('\D', '', regex=True).astype("float64")
-#Create lower case game name column for the purpose of joins
-df_hltb["name_lower"] = df_hltb.title.str.lower()
-#Delete previous title column for purpose of joins
-df_hltb.drop(columns="title", inplace=True)
+# df_hltb = pd.read_csv("original datasets/HLTB.csv")
+# df_hltb = df_hltb.loc[:, ["title", "main_story"]]
+# #Strip h from main_story
+# df_hltb["main_story"] = df_hltb["main_story"].str.replace('h', '', regex=True).astype("float64")
+# #Create lower case game name column for the purpose of joins
+# df_hltb["name_lower"] = df_hltb.title.str.lower()
+# #Delete previous title column for purpose of joins
+# df_hltb.drop(columns="title", inplace=True)
+
+#Use updated HLTB
+df_hltb = pd.read_csv("back-end/HLTB-updated.csv")
 
 #Clean metacritic
-df_metacritic = pd.read_csv("original datasets/metacritic.csv")
+df_metacritic = pd.read_csv("original-datasets/metacritic.csv")
 df_metacritic = df_metacritic[df_metacritic.platform == "PC"]
 df_metacritic = df_metacritic.loc[:, ["name", "score", "user score", "players"]]
 #Create lower case game name column for the purpose of joins

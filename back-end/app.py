@@ -12,7 +12,7 @@ def hello():
 @app.route('/getRMSE', methods=['GET'])
 def getRMSE():
     try:
-        steam_recommender = Steam_Recommender("back-end/user-title-rating.csv", "SVD")
+        steam_recommender = Steam_Recommender("created-datasets/user-title-rating.csv", "SVD")
         rmse = steam_recommender.model_rmse()
         return json.dumps({"rmse": rmse}), 200, {"Content-Type": "application/json"}
     except Exception as e:

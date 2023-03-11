@@ -73,6 +73,6 @@ class Steam_Recommender:
         return top_user_titles, top_user_ratings
 
 #Example
-steam_recommender = Steam_Recommender("back-end/user-title-rating.csv", "SVD")
+steam_recommender = Steam_Recommender("created-datasets/user-title-rating.csv", "SVD")
 top_user_titles, top_user_ratings = steam_recommender.get_top_predictions(59945701, 10)
 rmse = steam_recommender.model_rmse()
