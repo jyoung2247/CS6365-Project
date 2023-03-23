@@ -1,4 +1,6 @@
 name_lower,main_story
+,
+,
 !4rc4n01d!,
 !4rc4n01d! 2: retro edition,
 !4rc4n01d! 3: cold space,
@@ -21,7 +23,7 @@ $1 ride,0.6166666666666667
 .t.e.s.t: expected behaviour,
 .detuned,0.36666666666666664
 .flow,
-.hack//g.u. last recode,
+.hack//g.u. last recode,49.62
 .hack//g.u. vol. 1: rebirth,20.5
 .hack//g.u. vol. 2: reminisce,22.5
 .hack//g.u. vol. 3: redemption,23.5
@@ -144,7 +146,7 @@ $1 ride,0.6166666666666667
 1979 invasion earth,
 1979 revolution: black friday,2.0
 1982,
-198x,
+198x,1.56
 1991 du ma racing,
 1993 space machine,3.0
 199x,2.0
@@ -227,7 +229,7 @@ $1 ride,0.6166666666666667
 3d hardcore cube,
 3d hardcore cube 2,
 3d maze walker,1.0
-3d mini golf,
+3d mini golf,1.5
 3d mühle,
 3d pinball express,
 3d pinball for windows - space cadet,
@@ -564,7 +566,7 @@ agon: the mysterious codex,5.0
 ahegal,
 ai dummy,
 ai escort,
-ai war 2,
+ai war 2,21.08
 ai war: fleet command,16.0
 ai: rampage,
 ai: the somnium files,
@@ -582,7 +584,7 @@ alone?,0.36666666666666664
 alone? - vr,
 am2r: return of samus,5.5
 amber: journeys beyond,3.0
-amid evil,
+amid evil,8.23
 amplitude: a visual novel,
 and 1 streetball,
 animality,
@@ -603,7 +605,7 @@ araya,5.0
 area 4643,
 arena gods,
 ark box unlimited,
-ark: survival evolved,
+ark: survival evolved,56.75
 ark: survival of the fittest,
 arkadianax,
 arm: planetary prospectors,
@@ -761,7 +763,7 @@ ace o nerae!,
 ace of aces,
 ace of protectors,
 ace of seafood,3.5
-ace of spades,
+ace of spades,1.0
 ace of words,
 aces high iii,
 aces wild: manic brawling action!,2.5
@@ -1074,7 +1076,7 @@ age of empires iii,15.0
 age of empires iii: complete collection,18.5
 age of empires iii: the asian dynasties,9.0
 age of empires iii: the warchiefs,8.0
-age of empires online,
+age of empires online,18.5
 age of empires: castle siege,
 age of empires: definitive edition,
 age of empires: mythologies,
@@ -1137,7 +1139,7 @@ aidyn chronicles: the first mage,
 aim hero,
 aim lab,
 aimtastic,1.5
-aion,
+aion,53.59
 air (2000),
 air aces: pacific,12.0
 air boarder 64,
@@ -1499,7 +1501,7 @@ alteric,
 alternate reality: the city,
 alternate reality: the dungeon,
 alternativa,6.0
-altitude,
+altitude,0.82
 altitude0: lower & faster,
 alto's adventure,4.0
 alto's odyssey,1.0
@@ -1670,7 +1672,7 @@ ancient wars: sparta,
 ancients 1: death watch,
 ancients of fasaria,
 ancients of fasaria: chess club,
-ancients of ooga,
+ancients of ooga,7.12
 and so it was,
 and yet it moves,3.0
 andarilho,
@@ -1870,7 +1872,7 @@ ape quest,
 aperion cyberstorm,9.5
 aperture tag: the paint gun testing initiative,4.0
 apex construct,6.5
-apex legends,
+apex legends,34.42
 apez,
 aphelion episode one: graves of earth,
 apidya,0.75
@@ -2049,7 +2051,7 @@ arkhelom 3d,
 arkista's ring,0.7666666666666667
 arkshot,
 arktika.1,
-arma 2: dayz mod,
+arma 2: dayz mod,24.5
 arma 2: free,
 armagallant: decks of destiny,
 armada,
@@ -2569,7 +2571,7 @@ avernum 2: crystal souls,
 avernum 3,
 avernum 3: ruined world,
 avernum 4,
-avernum 5,
+avernum 5,60.0
 avernum 6,
 avernum: escape from the pit,40.5
 avery cardoza's slam-tilt pinball,
@@ -2853,7 +2855,7 @@ ballistic overkill,
 ballistic protection,
 ballistic tanks,
 ballistic: ecks vs. sever,
-ballisticng,
+ballisticng,24.5
 ballistick,3.0
 ballistix,
 balloon (2018),
@@ -3207,7 +3209,7 @@ battletech (2018),49.5
 battletech (2018) - flashpoint,
 battletech: the crescent hawk's inception,
 battletime,
-battlezone 98 redux,
+battlezone 98 redux,22.25
 battleborn,8.5
 battlecorps,
 battlecruiser 3000ad,
@@ -3247,7 +3249,7 @@ battlemorph,
 battlepaths,9.0
 battlepillars,4.0
 battleplan: american civil war,8.0
-battlerite,
+battlerite,101.0
 battlerite royale,
 battles of norghan,
 battles of norghan - gold version,
@@ -3706,7 +3708,7 @@ black crypt,6.5
 black dahlia,
 black dawn,8.0
 black death (2011),0.25
-black desert,
+black desert,106.66
 black desert online,
 black fire,
 black forest,
@@ -3766,14 +3768,14 @@ blackguards: untold legends,
 blackhole,22.5
 blackjack (1977),
 blackjack in space,
-blacklight: retribution,
+blacklight: retribution,22.5
 blacklight: tango down,2.5
 blacksad: under the skin,
 blacksea odyssey,
 blacksmith (2018),
 blackstar: agent of justice,
 blackthorne,6.0
-blackwake,
+blackwake,3.44
 blackwater,2.0
 blackwater bayou vr,
 blackwell convergence,3.0
@@ -3784,7 +3786,7 @@ blackwell unbound,2.5
 blackwood crossing,2.0
 blade,4.5
 blade & bones,
-blade & sorcery,
+blade & sorcery,5.57
 blade & soul,
 blade & sword,
 blade arcus from shining: battle arena,
@@ -3799,7 +3801,7 @@ blade master,
 blade runner (1997),9.5
 blade runner 9732,
 blade strangers,2.0
-blade symphony,
+blade symphony,0.25
 blade warrior (1991),
 blade warrior (1996),
 bladed fury,4.0
@@ -4007,7 +4009,7 @@ blood of old,
 blood of the werewolf,5.0
 blood of the zombies,
 blood+: one night kiss,
-blood: one unit whole blood,
+blood: one unit whole blood,10.86
 blood: plasma pak,2.0
 bloodgate,
 bloodlust shadowhunter,
@@ -4292,7 +4294,7 @@ borderlands 2: t.k. baha's bloody harvest dlc,0.75
 borderlands 2: the horrible hunger of the ravenous wattle gobbler dlc,0.8166666666666667
 borderlands 2: tiny tina's assault on dragon keep dlc,6.0
 borderlands 2: ultimate vault hunter upgrade pack 2: digistruct peak challenge,0.75
-borderlands 3,
+borderlands 3,22.8
 borderlands triple pack,
 borderlands: claptrap's new robot revolution,4.5
 borderlands: game of the year,26.0
@@ -4491,7 +4493,7 @@ brick-force,
 brickochet,
 bridge constructor,5.0
 bridge constructor portal,13.0
-bridge constructor stunts,
+bridge constructor stunts,4.6
 bridge constructor: medieval,3.0
 bridge constructor: playground,2.0
 bridge crosser,0.2833333333333333
@@ -4507,7 +4509,7 @@ brigandine: the legend of forsena,
 briganty: the roots of darkness,
 bright memory - episode 1,0.6166666666666667
 brighter day,
-brilliant bob,
+brilliant bob,0.72
 brilliant shadows - part one of the book of gray magic,4.0
 bring you home,2.5
 brink,
@@ -5116,7 +5118,7 @@ car mechanic simulator 2015,10.5
 car mechanic simulator 2018,28.0
 car quest,7.5
 car washer: summer of the ninja,
-carx drift racing online,
+carx drift racing online,3.7
 caravan,9.0
 caravanserail,0.6666666666666666
 carcassonne (2007),3.5
@@ -5220,8 +5222,8 @@ casino noir,
 casper,2.0
 casper: friends around the world,5.0
 casper: spirit dimensions,4.5
-cast of the seven godsends,
-castaway paradise,
+cast of the seven godsends,3.0
+castaway paradise,6.0
 castelian,
 caster,2.0
 castle (2015),
@@ -5564,7 +5566,7 @@ chess (android),1.0
 chess 2: the sequel,
 chess knight 2,
 chess titans,
-chess ultra,
+chess ultra,2.1
 chess of blades,
 chess the gathering,
 chessvr,
@@ -5642,7 +5644,7 @@ chip's challenge 2,
 chiptune champion,2.0
 chisel,1.0
 chivalry: deadliest warrior,
-chivalry: medieval warfare,
+chivalry: medieval warfare,14.8
 cho aniki,2.5
 cho aniki zero,
 cho dengeki stryker,5.5
@@ -5738,7 +5740,7 @@ chrono trigger,23.0
 chrono trigger: crimson echoes,
 chronoclock,10.0
 chronoclysm,
-chronology,
+chronology,1.96
 chronomaster,8.0
 chronos,12.0
 chronos twins,
@@ -5773,7 +5775,7 @@ cinemaware anthology: 1986-1991,
 circa infinity,5.0
 circadia,2.0
 circle (2009),
-circle empires,
+circle empires,9.79
 circle pong,
 circle up,
 circlecers,
@@ -5819,7 +5821,7 @@ city siege: faction island,
 city z,
 city of chains,7.0
 city of fools,
-city of heroes,
+city of heroes,50.0
 city of heroes: going rogue,
 city of secrets,
 city of steam: arkadia,
@@ -5945,7 +5947,7 @@ close the window!,
 closers (2017),75.5
 closure,6.0
 cloud,1.5
-cloud chamber,
+cloud chamber,5.53
 cloud chasers - a journey of hope,
 cloud knights,
 cloud master,1.5
@@ -6093,7 +6095,7 @@ colonies online,
 colony 7,
 colony assault,
 colony on mars,
-colony survival,
+colony survival,20.0
 colony wars,6.5
 colony wars: red sun,10.0
 colony wars: vengeance,8.0
@@ -6114,7 +6116,7 @@ colorblind,
 colorcers,
 colorful life,
 coloring game (2019),
-coloring pixels,
+coloring pixels,40.36
 colorless life,
 colors! 3d,1.0
 colossal cave adventure,2.0
@@ -6365,7 +6367,7 @@ convoy,5.5
 "cook, serve, delicious!",18.5
 "cook, serve, delicious! 2!!",22.5
 cookie & cream,
-cookie clicker,
+cookie clicker,134.27
 cookie dozer,
 cookies vs. claus,
 cooking academy fire and knives,
@@ -6483,10 +6485,10 @@ counter spell,
 counter-strike (1999),
 counter-strike (2004),
 counter-strike nexon: zombies,
-counter-strike: condition zero,
+counter-strike: condition zero,3.76
 counter-strike: condition zero deleted scenes,6.5
-counter-strike: global offensive,
-counter-strike: source,
+counter-strike: global offensive,54.62
+counter-strike: source,73.06
 counterattack,
 counterspy,2.5
 counterfeit monkey,
@@ -6811,7 +6813,7 @@ crusaders of the lost idols,22.82
 crusaders: thy kingdom come,
 crush,6.5
 crush 3d,11.0
-crush crush,
+crush crush,53.36
 crush online,
 crush your enemies,12.0
 crusty demons,
@@ -6830,7 +6832,7 @@ crysis,10.5
 crysis 2,9.0
 crysis 3,7.0
 crysis warhead,5.0
-crysis wars,
+crysis wars,3.15
 crystal adventure,
 crystal beans: from dungeon explorer,7.0
 crystal castles,
@@ -7034,7 +7036,7 @@ cybernator,1.0
 cybernetic empire,
 cybernoid,
 cyberpong,
-cyberpunk 2077,
+cyberpunk 2077,24.27
 cyberpunk 3776,3.0
 cyberpunk arena,
 cyberpunks,
@@ -7075,7 +7077,7 @@ d2,8.5
 d4: dark dreams don't die,4.5
 dariusburst: chronicle saviours,0.3
 dark blood online,
-dc universe online,
+dc universe online,79.24
 dc universe online: fight for the light dlc,
 dcs: a-10c warthog,
 dcs: black shark,
@@ -7442,7 +7444,7 @@ dark witch music episode: rudymical,2.0
 dark wizard,
 dark years,4.0
 dark and bright,
-dark and light,
+dark and light,21.0
 darkbase 01,2.0
 darkend,
 darkgate,
@@ -7555,7 +7557,7 @@ day d: tower rush,
 day dreamin' davey,2.0
 day one: garry's incident,3.5
 day of defeat,5.62
-day of defeat: source,
+day of defeat: source,2.05
 day of destruction,
 day of infamy,
 day of the tentacle,6.5
@@ -7615,7 +7617,7 @@ dead island,18.0
 dead island 2,
 dead island: bloodbath arena dlc,2.0
 dead island: definitive edition,22.5
-dead island: epidemic,
+dead island: epidemic,4.0
 dead island: retro revenge,4.0
 dead island: riptide,12.0
 dead island: riptide - definitive edition,10.5
@@ -7664,7 +7666,7 @@ dead synchronicity: tomorrow comes today,5.5
 dead trigger,5.5
 dead trigger 2,10.0
 dead and buried,
-dead by daylight,
+dead by daylight,61.21
 dead in bermuda,12.0
 dead in the water,6.0
 dead of the brain,4.0
@@ -7740,7 +7742,7 @@ deal or no deal: the banker is back,0.06666666666666667
 dean daimon,
 dear esteban,0.08333333333333333
 dear esther,1.3
-dear esther: landmark edition,
+dear esther: landmark edition,1.3
 dear leader prototype,0.6333333333333333
 dear red - extended,0.43333333333333335
 deardrops,10.5
@@ -7840,7 +7842,7 @@ deep freeze,
 deep gachigasm,
 deep labyrinth,13.5
 deep ones,3.0
-deep rock galactic,
+deep rock galactic,53.43
 deep sixed,
 deep sky derelicts,
 deep sleep,0.36666666666666664
@@ -7969,7 +7971,7 @@ delta force: land warrior,6.0
 delta force: task force dagger,6.0
 delta force: urban warfare,
 delta force: xtreme,6.5
-delta force: xtreme 2,
+delta force: xtreme 2,3.35
 deltaplan simulator,
 deltarune: chapter 1,3.0
 delve deeper,0.9833333333333333
@@ -8114,7 +8116,7 @@ desolate (2018),
 desolate wastes: vendor chronicles,
 despair,0.8
 desperados 2: cooper's revenge,22.5
-desperados iii,
+desperados iii,26.43
 desperados: wanted dead or alive,25.0
 despicable me: the game,
 despotism 3k,
@@ -8233,7 +8235,7 @@ devil's dare,5.5
 devil's land,
 devil's third,8.5
 devil's tuning fork,1.0
-devilian,
+devilian,15.0
 devilish,1.0
 devilry,0.75
 devils & demons,
@@ -8370,7 +8372,7 @@ dimension of monster girls,
 dimensional (2016),
 dimensional rift,
 dimensity,
-din's curse,
+din's curse,12.0
 diner bros,3.0
 diner dash,4.5
 diner dash 2: restaurant rescue,4.0
@@ -8432,7 +8434,7 @@ dirt rally,27.5
 dirt rally 2.0,11.0
 dirt trax fx,0.5
 dirt: showdown,9.5
-dirty bomb,
+dirty bomb,147.2
 dirty harry (1990),
 dirty racing,1.0
 dirty split,2.0
@@ -8455,7 +8457,7 @@ disciples of steel,
 disciples: sacred lands,49.0
 disciples: sacred lands - gold,
 discipline: the record of a crusade,
-disco elysium,
+disco elysium,22.57
 disco time 80s vr,0.08333333333333333
 disco zombie rampage 2,
 disco zoo,10.0
@@ -8639,7 +8641,7 @@ doctor who: episode 3 - tardis,0.6
 doctor who: episode 4 - shadows of the vashta nerada,1.0
 doctor who: episode 5 - the gunpowder plot,3.0
 doctor who: legacy,
-doctor who: the adventure games,
+doctor who: the adventure games,6.86
 doctor who: the eternity clock,7.5
 dodge,0.4
 dodge 'em,
@@ -8694,7 +8696,7 @@ domino craft,3.0
 domino master,
 domino sky,2.0
 dominus,
-don bradman cricket 14,
+don bradman cricket 14,17.36
 don bradman cricket 17,
 don doko don,
 don doko don 2,8.0
@@ -8789,7 +8791,7 @@ doom 3: the lost mission,2.0
 doom 64,7.0
 doom 64: absolution,
 doom classic complete,
-doom eternal,
+doom eternal,14.29
 doom ii rpg,3.5
 doom ii: hell on earth,7.0
 doom ii: no rest for the living,2.0
@@ -8833,7 +8835,7 @@ dota 2,691.77
 dots (2013),
 dots (2017),0.5333333333333333
 dots extreme,
-double action: boogaloo,
+double action: boogaloo,2.0
 double clue: solitaire stories,6.5
 double cross,
 double cubes,
@@ -9160,7 +9162,7 @@ draw a stickman: epic,1.5
 draw a stickman: epic - friend's journey,
 draw a stickman: epic 2,1.5
 draw_love,
-drawful 2,
+drawful 2,1.66
 drawkanoid,
 drawn to death,
 drawn to life,12.5
@@ -9235,7 +9237,7 @@ drift into eternity,
 drift streets japan,0.5833333333333334
 drifter,
 drifting lands,
-driftland: the magic revival,
+driftland: the magic revival,23.66
 driftmoon,9.0
 driftwatch vr,
 driftwood,
@@ -9393,7 +9395,7 @@ dungeon explorer,3.5
 dungeon explorer ii,5.0
 dungeon explorer: warriors of ancient arts,10.0
 dungeon fighter live: fall of hendon myre,
-dungeon fighter online,
+dungeon fighter online,12.0
 dungeon fray,
 dungeon gambit boy,
 dungeon girl,
@@ -9466,7 +9468,7 @@ dungeonism,4.0
 dungeonland,1.0
 dungeonmans,
 dungeons,13.0
-dungeons & dragons online,
+dungeons & dragons online,100.0
 dungeons & dragons tactics,
 dungeons & dragons: chronicles of mystara,2.0
 dungeons & dragons: daggerdale,7.5
@@ -9508,7 +9510,7 @@ dust and salt,
 dust: a tale of the wired west,10.0
 dust: an elysian tail,10.0
 dustbowl,
-dustforce,
+dustforce,33.79
 dustin,
 dustmania grotesque,
 dustoff heli rescue,4.0
@@ -9528,7 +9530,7 @@ dwelvers,
 dyad,2.5
 dyadic,
 dying light,17.0
-dying light 2,
+dying light 2,24.13
 dying light: bad blood,
 dying light: the following - enhanced edition,20.0
 dying light: the following dlc,9.5
@@ -9747,7 +9749,7 @@ echo night: beyond,7.5
 echo prime,11.5
 echo tokyo: intro,
 echo of soul,
-echo of the wilds,
+echo of the wilds,16.0
 echo: secrets of the lost cavern,6.0
 echochrome,8.0
 echochrome ii,4.0
@@ -9983,7 +9985,7 @@ empire: total war,22.0
 empires & dungeons 2: the sultanate,2.0
 empires apart,8.0
 empires of creation,
-empires of the undergrowth,
+empires of the undergrowth,15.0
 empires: dawn of the modern world,
 employee recycling center,
 emporea: realms of war and magic,
@@ -10612,6 +10614,7 @@ framed (2014),1.5
 framed 2,2.0
 framed collection,2.5
 frost (2016),
+frost (2016),0.35
 fru,3.0
 ftl: faster than light,11.5
 furidashi: drift cyber sport,
@@ -10660,7 +10663,7 @@ fade to silence,41.0
 fading hearts,2.0
 fading shadows,
 faeverse alchemy,
-faeria,
+faeria,6.0
 faerie solitaire,13.0
 faerie solitaire remastered,11.0
 faery: legends of avalon,6.0
@@ -10783,7 +10786,7 @@ fantasia: music evolved,6.5
 fantasica,
 fantastic 4 in a row 2,
 fantastic checkers 2,0.25
-fantastic contraption,
+fantastic contraption,5.0
 fantastic dizzy,
 fantastic four (1997),4.0
 fantastic four (2005),5.5
@@ -10891,7 +10894,7 @@ farming simulator 14,9.5
 farming simulator 15,17.5
 farming simulator 16,
 farming simulator 17,37.0
-farming simulator 19,
+farming simulator 19,113.38
 farming simulator 2011,
 farming simulator 2013,4.0
 farming world,
@@ -10978,7 +10981,7 @@ father's island,
 fatman: the caped consumer,
 fatty bear's birthday surprise,0.6333333333333333
 fatty maze's adventures,
-fault milestone one,
+fault milestone one,5.07
 fault milestone two,
 fausseté amour,2.0
 faust: the seven games of the soul,5.5
@@ -11038,7 +11041,7 @@ feudal alloy,7.5
 feudalism,
 fever pitch soccer,
 fez,6.0
-fibbage xl,
+fibbage xl,0.17
 fibbage: the hilarious bluffing party game,
 fiber twig: midnight puzzle,
 fibrillation hd,0.8166666666666667
@@ -11167,7 +11170,7 @@ final fantasy x hd remaster,43.5
 final fantasy x-2,35.0
 final fantasy x-2 hd remaster,25.0
 final fantasy x-2: last mission,
-final fantasy x/x-2 hd remaster,
+final fantasy x/x-2 hd remaster,50.53
 final fantasy xi,
 final fantasy xi: a crystalline prophecy - ode of life bestowing dlc,
 final fantasy xi: a moogle kupo d'etat - evil in small doses dlc,
@@ -11309,7 +11312,7 @@ fire pro wrestling,
 fire pro wrestling 2,
 fire pro wrestling d,
 fire pro wrestling returns,
-fire pro wrestling world,
+fire pro wrestling world,24.57
 fire shark,0.7833333333333333
 fire with fire: tower attack and defense,
 fire and forget: the final assault,
@@ -11319,7 +11322,7 @@ firebird: la peri,
 firebugs,
 fireburst,
 fired up (2005),
-firefall,
+firefall,30.0
 firefight reloaded,
 firefighter f.d.18,7.0
 firefighters 2014,
@@ -11567,13 +11570,13 @@ football manager 2006,
 football manager 2007,
 football manager 2008,103.0
 football manager 2009,77.5
-football manager 2010,
-football manager 2011,
-football manager 2012,
-football manager 2013,
-football manager 2014,
-football manager 2015,
-football manager 2016,
+football manager 2010,320.57
+football manager 2011,342.94
+football manager 2012,415.75
+football manager 2013,288.67
+football manager 2014,455.86
+football manager 2015,383.29
+football manager 2016,270.72
 football manager 2017,120.0
 football manager 2018,86.0
 football manager 2019,
@@ -11623,10 +11626,10 @@ forestry 2017 - the simulation,
 forever home,52.0
 forever kingdom,
 foreverhood,0.75
-forge,
+forge,0.39
 forge quest,10.0
 forge of gods,
-forged battalion,
+forged battalion,8.33
 forget me not annie,2.0
 "forget me not, annie",1.0
 forget me not: my organic garden,10.0
@@ -11686,7 +11689,7 @@ fortnite,94.5
 fortress,1.5
 fortress forever,
 fortress of the witch king,
-fortresscraft evolved,
+fortresscraft evolved,110.5
 forts (2017),8.5
 fortuna magus,14.0
 fortune arterial,
@@ -11830,7 +11833,7 @@ freedom: a time to reckon,
 freefall racers,
 freekstyle,5.5
 freelancer,16.0
-freeman: guerrilla warfare,
+freeman: guerrilla warfare,18.05
 freestyle 2: street basketball,
 freestyle football,
 freestyle metalx,
@@ -11927,7 +11930,6 @@ frontline heroes vr,
 frontline tactics,
 frontline: road to moscow,
 frontlines: fuel of war,5.5
-frost (2016),0.35
 frostrunner,0.75
 frostbite,0.5
 frostbite: deadly climate,0.6333333333333333
@@ -12065,7 +12067,7 @@ godus,
 goken,
 gorb,
 gorn,4.0
-grav,
+grav,11.33
 graven the purple moon prophecy,2.5
 groovy,
 grow: wild west,0.25
@@ -12222,7 +12224,7 @@ game tycoon 2,
 game type,
 game of life,
 game of thrones (2012),19.5
-game of thrones - a telltale games series,
+game of thrones - a telltale games series,12.14
 game of thrones - episode 1: iron from ice,
 game of thrones - episode 2: the lost lords,
 game of thrones - episode 3: the sword in the darkness,
@@ -12341,7 +12343,7 @@ gear works,11.0
 gear.club unlimited,42.0
 gearcity,
 geargrinder,
-gearcrack arena,
+gearcrack arena,0.27
 gears 5,
 gears tactics,
 gears of war,9.0
@@ -12502,7 +12504,7 @@ ghost in the sheet,
 ghost in the shell,2.0
 ghost in the shell: stand alone complex,7.5
 ghost in the shell: stand alone complex (psp),10.0
-ghost in the shell: stand alone complex - first assault online,
+ghost in the shell: stand alone complex - first assault online,18.0
 ghost of tsushima,
 ghost of a tale,9.5
 ghostcontrol inc.,
@@ -12615,7 +12617,7 @@ glitchrunners,
 glitchspace,4.0
 glittermitten grove,4.0
 global adventures,
-global agenda,
+global agenda,53.75
 global defence force,23.5
 global defense,
 global domination (1999),
@@ -12768,7 +12770,7 @@ gold rush in the oort cloud,
 gold rush!,
 gold rush! 2,
 gold rush! anniversary,
-gold rush: the game,
+gold rush: the game,17.05
 gold and glory: the road to el dorado,5.5
 gold key,
 goldmine,78.0
@@ -12801,11 +12803,11 @@ golf 2d,
 golf clash,
 golf extreme,
 golf grand slam,
-golf it!,
+golf it!,27.4
 golf magazine: 36 great holes starring fred couples,
 golf peaks,2.0
 golf story,15.0
-golf with your friends,
+golf with your friends,5.5
 golf for workgroups,
 golf: tee it up!,
 golfing over it with alva majo,3.5
@@ -12838,7 +12840,7 @@ goodnight butcher,
 goof troop,2.0
 goofy's fun house,1.0
 goofy's hysterical history tour,
-google earth vr,
+google earth vr,0.56
 google spotlight stories: age of sail,
 google spotlight stories: back to the moon,
 google spotlight stories: on ice,
@@ -12865,7 +12867,7 @@ goscurry,
 gotcha force,10.5
 gotcha racing,8.5
 gotcha! the sport!,
-gotham city impostors,
+gotham city impostors,6.0
 gothic,22.5
 gothic 3,47.0
 gothic 3: forsaken gods,18.0
@@ -12944,7 +12946,7 @@ grand theft auto advance,7.5
 grand theft auto iii,16.5
 grand theft auto iv,28.0
 grand theft auto iv: the ballad of gay tony,9.0
-grand theft auto iv: the complete edition,
+grand theft auto iv: the complete edition,33.56
 grand theft auto iv: the lost and damned,7.0
 grand theft auto online,
 grand theft auto v,31.5
@@ -12998,7 +13000,7 @@ graveyard keeper,47.0
 graveyard shift,
 graveyard smash,
 gravi,
-gravilon,
+gravilon,0.93
 gravitar,
 graviteam tactics: mius-front,
 graviteam tactics: operation star,
@@ -13185,8 +13187,8 @@ guardian's oath,
 guardians - denjin makai ii,
 guardians of ember,
 guardians of graxia,
-guardians of middle-earth,
-guardians of orion,
+guardians of middle-earth,0.5
+guardians of orion,3.0
 guardians of victoria,
 guardians of the galaxy: the telltale series,
 guardians of the galaxy: the telltale series - episode 1: tangled up in blue,
@@ -13274,7 +13276,7 @@ gun fight,
 gun frontier,
 gun godz,0.6666666666666666
 gun metal,2.5
-gun monkeys,
+gun monkeys,0.33
 gun rocket,
 gun showdown,
 gun wings,0.5
@@ -13343,7 +13345,7 @@ gunroar,
 guns n' boxes,
 guns up!,
 guns and robots,
-guns of icarus online,7.18
+guns of icarus online,8.38
 guns of icarus: alliance,
 guns of infinity,
 guns'n'zombies,2.5
@@ -13351,7 +13353,7 @@ guns'n'stories: bulletproof vr,
 guns'n'stories: preface vr,
 "guns, gore & cannoli",3.5
 "guns, gore & cannoli 2",2.0
-gunscape,
+gunscape,1.13
 gunship,
 gunship 2000,
 gunship!,
@@ -13439,7 +13441,7 @@ hacx: twitch 'n kill (doom 2 wad),
 hadaka shitsuji,
 hade,
 hadean lands,
-hades,
+hades,22.25
 haegemonia: legions of iron,
 haegemonia: the solon heritage,
 hagane: the final conflict,1.5
@@ -13469,7 +13471,7 @@ half past impossible,
 half-life,12.0
 half-life 2,13.0
 half-life 2: calamity,1.5
-half-life 2: deathmatch,
+half-life 2: deathmatch,2.78
 half-life 2: downfall,0.7333333333333333
 half-life 2: episode one,4.0
 half-life 2: episode two,5.0
@@ -13478,7 +13480,7 @@ half-life 2: riot act,
 half-life 2: rock 24,
 half-life 2: update,11.0
 half-life 2: year long alarm,0.4666666666666667
-half-life deathmatch: source,
+half-life deathmatch: source,3.0
 half-life: a place in the west,
 half-life: before,0.48333333333333334
 half-life: blue shift,3.0
@@ -13525,7 +13527,7 @@ halo: fireteam raven,0.6833333333333333
 halo: reach,9.0
 halo: spartan assault,4.0
 halo: spartan strike,5.5
-halo: the master chief collection,
+halo: the master chief collection,42.73
 hamepane tokyo mew mew,0.6166666666666667
 hamilton's great adventure,5.0
 hamilton's great adventure: retro fever dlc,
@@ -13588,7 +13590,7 @@ happy room,
 happy santa,
 happy song prototype,0.08333333333333333
 happy tree friends: false alarm,
-happy wars,
+happy wars,6.12
 happy wheels,4.0
 hapymaher,15.0
 haque,
@@ -13916,7 +13918,7 @@ hello baby!,
 hello charlotte,2.0
 hello kitty kruisers,
 hello kitty world,0.5833333333333334
-hello kitty and sanrio friends racing,
+hello kitty and sanrio friends racing,0.67
 hello kitty: big city dreams,3.0
 hello kitty: roller rescue,2.0
 hello neighbor,10.0
@@ -14245,7 +14247,7 @@ hive,
 hive jump,
 hiveswap friendsim,
 hocwar,
-hopiko,
+hopiko,4.91
 hoard,7.0
 hoard: dynamite roll! dlc,0.7
 hoard: flame-broiled sandwich dlc,
@@ -14297,7 +14299,6 @@ holy potatoes! what the hell?!,
 holy slaves - episode 1,
 holy umbrella: dondera no mubo,5.5
 holyday city: reloaded,
-home,1.0
 home,1.0
 home - a vr spacewalk,
 home alone,1.5
@@ -14386,7 +14387,7 @@ hostile dimension,
 hostile waters: antaeus rising,10.0
 hot date,0.4666666666666667
 hot dish,3.5
-"hot dogs, horseshoes & hand grenades",
+"hot dogs, horseshoes & hand grenades",35.0
 hot lava,
 hot pinball thrills,
 hot pixel,0.6166666666666667
@@ -14519,7 +14520,7 @@ huniepop,9.0
 huniecam studio,2.0
 hunt down the freeman,7.5
 hunt the wumpus,
-hunt: showdown,
+hunt: showdown,120.21
 hunt: the unknown quarry,
 hunted: one step too far,
 hunted: the demon's forge,12.0
@@ -14633,6 +14634,7 @@ hysteria hospital: emergency ward,
 hysteria project,0.43333333333333335
 hysteria project 2,2.0
 i am alive,5.0
+i am bread,2.5
 i am bread,2.5
 i am caligula,
 i am overburdened,0.7833333333333333
@@ -14781,7 +14783,7 @@ identity (2018),
 idioctopus,1.5
 idle adventure,
 idle bouncer,
-idle champions of the forgotten realms,
+idle champions of the forgotten realms,30.0
 idle civilization,
 idle evolution,11.5
 idle heist,
@@ -14790,7 +14792,7 @@ idol hands,4.0
 idol magical girl: chiru chiru michiru - part 1,4.0
 idol magical girl: chiru chiru michiru - part 2,3.5
 idolzzz,
-iesabel,
+iesabel,8.2
 if my heart had wings,17.5
 "if you love me, then say so!",31.5
 iggle pop,
@@ -14857,7 +14859,7 @@ imouto paradise!,15.0
 impact racing,1.0
 impact winter,13.5
 impale (2018),
-imperator: rome,
+imperator: rome,19.2
 imperatum (2018),
 imperia online,
 imperial glory,11.5
@@ -14890,7 +14892,7 @@ in between,3.0
 "in case of emergency, release raptor",0.75
 in celebration of violence,
 in cold blood,10.5
-in death,
+in death,16.0
 in exilium,
 in fear i trust - episode 1: waking up,
 in game adventure: legend of monsters,1.0
@@ -15102,8 +15104,8 @@ instinct,
 instinct (2018),
 instruments of chaos starring young indiana jones,1.5
 insurgency (2014),
-insurgency: modern infantry combat,
-insurgency: sandstorm,
+insurgency: modern infantry combat,2.46
+insurgency: sandstorm,22.38
 intake,
 intel 5g vr experience,
 intelligent design: an evolutionary sandbox,
@@ -15225,7 +15227,7 @@ iron fisticle,4.5
 iron front: liberation 1944,
 iron grip: marauders,
 iron grip: warlord,4.0
-iron harvest,
+iron harvest,21.94
 iron helix,
 iron impact,
 iron knight,
@@ -15732,7 +15734,7 @@ just bones,
 just breed,
 just cause,8.5
 just cause 2,17.5
-just cause 2: multiplayer mod,
+just cause 2: multiplayer mod,17.22
 just cause 3,17.0
 just cause 3: bavarium sea heist dlc,1.5
 just cause 3: mech land assault dlc,2.5
@@ -15945,7 +15947,7 @@ kensei: sacred fist,0.4
 kenseiden,0.8833333333333333
 kenshi,85.02
 kenshō,3.0
-kentucky route zero,8.85
+kentucky route zero,8.86
 kentucky route zero - act i,1.0
 kentucky route zero - act ii,1.0
 kentucky route zero - act iii,2.0
@@ -16198,7 +16200,7 @@ kingdom rush frontiers,9.5
 kingdom rush origins,8.0
 kingdom rush vengeance,
 kingdom tales,
-kingdom tales 2,
+kingdom tales 2,5.23
 kingdom two crowns,46.0
 kingdom under fire,
 kingdom under fire: circle of doom,9.0
@@ -16899,7 +16901,7 @@ legends of wrestling ii,
 legends of the diamond,
 legends of the universe: starcore,
 legion,
-legion td 2,
+legion td 2,2.6
 legion tale,
 legion: the legend of excalibur,
 legions of ashworld,
@@ -17116,7 +17118,7 @@ line of sight,
 line of sight: vietnam,6.0
 "linea, the game",1.0
 lineage 2: revolution,
-lineage ii,
+lineage ii,933.74
 lineage ii: the chaotic throne,
 lineage: the blood pledge,
 linelight,4.0
@@ -17943,7 +17945,7 @@ magicka: marshlands dlc,
 magicka: the other side of the coin dlc,1.0
 magicka: the stars are left dlc,2.5
 magicka: vietnam dlc,1.0
-magicka: wizard wars,
+magicka: wizard wars,24.0
 magicka: wizards of the square tablet,2.0
 magicmaker,
 magika: land of fantasy,
@@ -18457,7 +18459,7 @@ mechwarrior 3: pirate's moon,
 mechwarrior 4: black knight,7.0
 mechwarrior 4: mercenaries,
 mechwarrior 4: vengeance,10.5
-mechwarrior online,
+mechwarrior online,65.63
 mecha ace,4.0
 mecha ritz: steel rondo,0.7166666666666667
 mechagore,
@@ -18549,7 +18551,7 @@ mega man battle network 6,22.0
 mega man ii (game boy),1.0
 mega man iii (game boy),3.0
 mega man iv (game boy),3.0
-mega man legacy collection,
+mega man legacy collection,16.34
 mega man legacy collection 1 + 2,
 mega man legacy collection 2,
 mega man legends,7.0
@@ -18661,7 +18663,7 @@ men in black: the game,4.0
 men of valor,9.0
 men of war,43.5
 men of war: assault squad,
-men of war: assault squad 2,
+men of war: assault squad 2,63.75
 men of war: condemned heroes,17.0
 men of war: red tide,37.5
 men of war: vietnam,
@@ -18900,7 +18902,7 @@ microbot,
 microleague wrestling,
 microvolts surge,
 microcosm,
-microcosmum: survival of cells,
+microcosmum: survival of cells,5.26
 "microcosmum: survival of cells - campaign ""new life""",
 microcosmum: survival of cells - colors for organisms,
 microcosmum: survival of cells - random levels,
@@ -18910,7 +18912,7 @@ micron,1.5
 microsoft allegiance,
 microsoft bingo,
 microsoft entertainment pack: the puzzle collection,
-microsoft flight,
+microsoft flight,1.33
 microsoft flight simulator 2004: a century of flight,
 microsoft flight simulator 98,
 microsoft flight simulator x,
@@ -19160,7 +19162,7 @@ minimon,
 minimum,
 mining & tunneling simulator,7.5
 mining industry,
-minion masters,
+minion masters,4.45
 minit,1.5
 minna no soft series: tetris advance,
 minnesota cuke and the coconut apes,3.0
@@ -19236,7 +19238,7 @@ mnemonic prototype,0.4166666666666667
 mob enforcer,4.0
 mob rule,
 mobil 1 rally championship,
-mobile astro,
+mobile astro,1.73
 mobile empire,
 mobile forces,1.5
 mobile legends: bang bang,
@@ -19623,8 +19625,8 @@ motorsport manager,19.0
 motos,
 motte island,3.0
 mount & blade,55.0
-mount & blade ii: bannerlord,
-mount & blade: warband,
+mount & blade ii: bannerlord,37.84
+mount & blade: warband,72.68
 mount & blade: warband - napoleonic wars,
 mount & blade: warband - viking conquest,20.0
 mount & blade: with fire & sword,25.0
@@ -19646,7 +19648,7 @@ mouse trap hotel,
 mouse in lab,
 mousecraft,6.0
 moustache mountain,1.0
-move or die,
+move or die,13.17
 move the box,
 mover (2017),
 movie studio boss: the sequel,
@@ -19807,7 +19809,7 @@ my fight,
 my fitness coach,
 my free zoo,
 my french coach and my spanish coach,
-my friend pedro,
+my friend pedro,4.08
 my girlfriend,3.0
 my girlfriend is the president,8.5
 my girlfriend is the president - fan disc,
@@ -19999,12 +20001,12 @@ nba 2k playgrounds 2,
 nba 2k1,
 nba 2k10,
 nba 2k10 draft combine,
-nba 2k11,
-nba 2k12,
-nba 2k13,
-nba 2k14,
-nba 2k15,
-nba 2k16,
+nba 2k11,37.67
+nba 2k12,60.39
+nba 2k13,68.43
+nba 2k14,35.63
+nba 2k15,58.03
+nba 2k16,18.24
 nba 2k17,
 nba 2k17: the prelude,
 nba 2k18,
@@ -20016,7 +20018,7 @@ nba 2k3,
 nba 2k6,
 nba 2k7,
 nba 2k8,
-nba 2k9,
+nba 2k9,5.0
 nba all-star challenge,
 nba baller beats,
 nba ballers,
@@ -20176,6 +20178,7 @@ nightstar: rogue wings,
 nin2-jump,
 no thing,2.5
 nobunaga's ambition: sphere of influence - ascension,
+nobunaga's ambition: sphere of influence - ascension,
 north,1.0
 nppl: championship paintball 2009,
 ns2: combat,
@@ -20284,7 +20287,7 @@ narborion saga,
 narc (1988),0.3333333333333333
 narc (2005),4.5
 narcissu,2.0
-narcissu 1st & 2nd,
+narcissu 1st & 2nd,4.99
 narcissu zero,
 narcissu: 10th anniversary anthology project,11.5
 narcissu: a little iris,4.5
@@ -20399,7 +20402,7 @@ neckbeards: basement arena,
 necrovision,9.5
 necrovision: lost company,4.5
 necroarmy,
-necromancer returns,
+necromancer returns,8.75
 necromonads,
 necronomicon: the dawning of darkness,4.5
 necropolis,5.0
@@ -20532,7 +20535,7 @@ nervous brickdown,8.0
 nester's funky bowling,
 nethack,9.0
 netstorm: islands at war,
-nether,
+nether,8.45
 nethergate: resurrection,
 netherworld,0.95
 networm,
@@ -20562,7 +20565,7 @@ neverending nightmares,1.5
 neverinth,
 neverland card battles,
 nevermind,3.5
-neverout,
+neverout,1.75
 nevertales: the beauty within collector's edition,3.0
 neverwinter,51.0
 neverwinter nights,54.0
@@ -20735,7 +20738,7 @@ niki: rock 'n' ball,
 niko: through the dream,4.5
 nikopol: secrets of the immortals,4.0
 nil-ninjahtic: ronin,
-nimbatus - the space drone constructor,
+nimbatus - the space drone constructor,4.0
 nimble bunn,
 nimble quest,8.0
 nimbus,3.5
@@ -20851,7 +20854,7 @@ no man's sky,30.5
 no more heroes,10.5
 no more heroes 2: desperate struggle,8.5
 no more heroes: heroes' paradise,12.5
-no more room in hell,
+no more room in hell,6.65
 no one but you,4.0
 no one can stop mr. domino!,1.5
 no one lives forever 2: a spy in h.a.r.m.'s way,11.5
@@ -20877,7 +20880,6 @@ nobunaga's ambition: lord of darkness,
 nobunaga's ambition: rise to power,
 nobunaga's ambition: souzou,
 nobunaga's ambition: sphere of influence,50.0
-nobunaga's ambition: sphere of influence - ascension,
 nobunaga's ambition: taishi,
 noby noby boy,0.9166666666666666
 nock: hidden arrow,
@@ -20923,13 +20925,12 @@ northmark: hour of the wolf,4.0
 nostale,
 nosferatu,3.0
 nosferatu: the wrath of malachi,4.0
-nosgoth,
+nosgoth,26.0
 nostalgia,26.5
 nostradamus,7.5
 nostradamus - the four horsemen of the apocalypse,
 nostradamus: the last prophecy,7.5
 nostril shot,0.5
-not a hero,5.0
 not a hero,5.0
 "not a hero - me, myself & bunnylord",1.5
 not dying today,4.5
@@ -21001,7 +21002,7 @@ ok/normal,0.8166666666666667
 omg zombies!,
 omg-z,2.5
 omgwtfotl,
-omsi 2,
+omsi 2,200.0
 one day for ched,
 oog: the object orientation game,
 opus: rocket of whispers,5.5
@@ -21010,7 +21011,7 @@ or,
 orbb,1.0
 orcs,
 orion: dino horde,
-orion: prelude,
+orion: prelude,3.5
 os:path,
 oses,
 otttd,24.0
@@ -21125,7 +21126,7 @@ oh no! bugs!,
 oh no! more lemmings,
 oh! cube,
 "oh, deer!",0.25
-oh...sir!,
+oh...sir!,1.27
 oh...sir! the hollywood roast,1.0
 oh...sir!! the insult simulator,1.0
 oha suta dance dance revolution,2.0
@@ -21403,7 +21404,7 @@ organic panic,10.0
 orgarhythm,4.0
 ori and the blind forest,8.0
 ori and the blind forest: definitive edition,8.5
-ori and the will of the wisps,
+ori and the will of the wisps,11.7
 oriental blue: ao no tengai,
 oriental empires,
 oriental legend,
@@ -21469,8 +21470,8 @@ out of gas,3.0
 out of reach,
 out of the box,4.0
 out of the park baseball 14,
-out of the park baseball 15,
-out of the park baseball 16,
+out of the park baseball 15,6.04
+out of the park baseball 16,314.53
 out of the park baseball 17,
 out of the park baseball 18,
 out of the park baseball 19,15.0
@@ -21493,7 +21494,7 @@ outbreak: the nightmare chronicles,
 outcast,21.5
 outcast: second contact,17.5
 outcry,4.0
-outer wilds,
+outer wilds,16.29
 outland,7.0
 outlander,
 outlast,5.0
@@ -21597,7 +21598,7 @@ panoramical,1.5
 papa's time machine,
 pathos,
 paw patrol: on a roll,
-pc building simulator,
+pc building simulator,25.21
 pc fútbol 5.0,
 peg,
 pga tour 96,
@@ -21656,7 +21657,7 @@ pac-in-time,
 pac-land,2.0
 pac-man,0.65
 pac-man & galaga dimensions,
-pac-man 256,
+pac-man 256,4.23
 pac-man 2: the new adventures,2.0
 pac-man arrangement (2005),0.6166666666666667
 pac-man championship edition,3.0
@@ -21735,7 +21736,7 @@ pajama sam: life is rough when you lose your stuff!,1.5
 pako (1994),17.0
 paladin duty - knights and blades,
 paladin's quest,25.0
-paladins,
+paladins,40.68
 palamedes,
 palamedes ii: star twinkles,
 pale echoes,
@@ -21865,7 +21866,7 @@ parkan: the imperial chronicles,5.0
 parkasaurus,
 parker & lane: criminal justice,
 parking dash,5.0
-parkitect,
+parkitect,46.48
 parks puzzle,4.0
 parlour games,
 parodius,1.5
@@ -21893,7 +21894,7 @@ past cure,4.0
 past penalty,0.48333333333333334
 pastel muse,3.0
 pastry lovers,3.0
-pat & mat,
+pat & mat,0.61
 patapon,15.0
 patapon 2,21.5
 patapon 3,23.5
@@ -21902,13 +21903,13 @@ patchwork,1.5
 patchwork heroes,6.0
 patent9,
 path out,0.6666666666666666
-path of exile,28.64
+path of exile,28.96
 path of war,
 path to mnemosyne,2.0
 path to the sky,
 pathfinder adventures,30.0
 pathfinder adventures - rise of the goblins,4.0
-pathfinder: kingmaker,
+pathfinder: kingmaker,77.5
 pathogen wars,
 pathologic,24.0
 pathologic 2,18.5
@@ -21925,7 +21926,7 @@ patterns,
 pause ahead,0.45
 pavel quest,0.25
 pavilion,2.0
-pavlov vr,
+pavlov vr,2.63
 pawn (2016),
 paws: a shelter 2 game,2.0
 pax corpus,
@@ -22123,7 +22124,7 @@ phoenix,0.25
 phoenix dynasty 2,
 phoenix force,3.5
 phoenix hd (2011),2.0
-phoenix point,
+phoenix point,35.12
 phoenix wright: ace attorney,17.0
 phoenix wright: ace attorney - dual destinies,26.5
 phoenix wright: ace attorney - dual destinies: turnabout reclaimed,6.0
@@ -22240,7 +22241,7 @@ pinball dreams 2,
 pinball fx,
 pinball fx 2,
 pinball fx2 vr,
-pinball fx3,
+pinball fx3,1.57
 pinball fantasies,
 pinball hall of fame: the gottlieb collection,
 pinball hall of fame: the williams collection,20.0
@@ -22346,7 +22347,7 @@ pixel puzzles 2: radical roach,
 pixel puzzles 2: space,
 pixel puzzles junior,0.8666666666666667
 pixel puzzles mosaics,
-pixel puzzles ultimate,
+pixel puzzles ultimate,12.13
 pixel puzzles: japan,8.5
 pixel puzzles: undeadz,7.0
 pixel ripped 1989,3.5
@@ -22380,7 +22381,7 @@ pixeljunk sidescroller,2.5
 pixelpunk xl,
 pixelscape: oceans,
 piximalism,
-pixplode,
+pixplode,0.94
 piyotama,6.0
 pizza connection,
 pizza connection 3,
@@ -22494,7 +22495,7 @@ please knock on my door,1.5
 please love my computer game,
 please state your name: a vr animated film,
 "please, don't touch anything",0.9
-"please, don't touch anything 3d",
+"please, don't touch anything 3d",1.14
 plenty: skyhearth,
 plexus,
 plight of the zombie,
@@ -23000,10 +23001,10 @@ pro evolution soccer 2010,
 pro evolution soccer 2011,
 pro evolution soccer 2011 3d,
 pro evolution soccer 2012,
-pro evolution soccer 2013,
-pro evolution soccer 2014,
-pro evolution soccer 2015,
-pro evolution soccer 2016,
+pro evolution soccer 2013,77.19
+pro evolution soccer 2014,16.01
+pro evolution soccer 2015,47.47
+pro evolution soccer 2016,40.37
 pro evolution soccer 2016 myclub,
 pro evolution soccer 2017,
 pro evolution soccer 2018,
@@ -23211,7 +23212,7 @@ pulsen,
 pulstar,1.5
 pulut adventure,
 pulzar,
-pummel party,
+pummel party,7.27
 pump it up zero portable,
 pump-action captain,
 pumped bmx +,6.0
@@ -23405,7 +23406,7 @@ quake - single player: something wicked this way comes,2.0
 quake 4,8.0
 quake 64,3.0
 quake arena arcade,
-quake champions,
+quake champions,28.28
 quake ii,8.0
 quake ii netpack i: extremities,
 quake ii: ground zero,6.0
@@ -23413,7 +23414,7 @@ quake ii: the reckoning,5.0
 quake iii arena,5.5
 quake iii: revolution,5.0
 quake iii: team arena,5.0
-quake live,
+quake live,0.71
 quake mission pack 1: scourge of armagon,3.0
 quake mission pack 2: dissolution of eternity,4.0
 quake mission pack: abyss of pandemonium,5.0
@@ -23501,7 +23502,7 @@ quiet city,0.08333333333333333
 "quiet, please!",0.3
 quintessence: the blighted venom,16.5
 quintet,
-quiplash,
+quiplash,0.57
 quiz & dragons: capcom quiz game,2.5
 quizcross,
 quizup,
@@ -23651,7 +23652,7 @@ race.a.bit,0.75
 raceroom racing experience,
 racecar.io,
 racecraft,
-racer 8,
+racer 8,1.38
 racing gears advance,
 racing lagoon,
 racing manager 2014,
@@ -23743,7 +23744,7 @@ raiden ii,0.6166666666666667
 raiden iii,0.4166666666666667
 raiden iv,0.8333333333333334
 raiden iv: overkill,2.0
-raiden legacy,
+raiden legacy,1.8
 raiden trad,1.5
 raiden v,1.5
 raiden v: director's cut,1.0
@@ -24013,7 +24014,7 @@ rebound,
 rebuild,1.5
 rebuild 2,0.5
 rebuild 3: gangs of deadsville,24.0
-rec room,
+rec room,1.0
 receiver,5.0
 recettear: an item shop's tale,13.0
 reckless racing,
@@ -24071,7 +24072,7 @@ red johnson's chronicles,
 red johnson's chronicles: 1 + 2,
 red johnson's chronicles: one against all,
 red lake,2.5
-red matter,
+red matter,3.06
 red ninja: end of honor,8.5
 red obsidian remnant,
 red ocean,4.0
@@ -24326,7 +24327,7 @@ retro miami,
 retro pinball,
 retro space shooter,
 retro sphere,
-retro-pixel castles,
+retro-pixel castles,10.17
 retro/grade,1.0
 retromaze,
 retrobooster,
@@ -24450,7 +24451,7 @@ ride 2,40.0
 ride the bullet,
 ride to hell: retribution,8.5
 ride! carnival tycoon,
-riders of icarus,
+riders of icarus,70.0
 ridge (2016),
 ridge racer,1.0
 ridge racer (2011),
@@ -24482,7 +24483,7 @@ ring ii: twilight of the gods,
 ring king,
 ring runner: flight of the sages,15.5
 ring ni kakero,
-ring of elysium,
+ring of elysium,10.0
 ring of red,54.5
 ringies,
 rings of medusa,
@@ -24515,7 +24516,7 @@ rise of flight united,
 rise of flight: channel battles edition,
 rise of flight: the first great air war,
 rise of incarnates,
-rise of industry,
+rise of industry,23.16
 rise of insanity,2.0
 rise of liberty,
 rise of man,
@@ -24541,7 +24542,7 @@ rise of the tomb raider: 20 year celebration,15.0
 rise of the triad (2013),7.5
 rise of the triad: dark war,8.0
 rise of the triad: the hunt begins,5.5
-rise to ruins,
+rise to ruins,10.17
 rise: battle lines,
 risen,26.0
 risen 2: dark waters,27.0
@@ -24558,7 +24559,7 @@ rising islands,1.5
 rising kingdoms,
 rising runner,
 rising storm,
-rising storm 2: vietnam,
+rising storm 2: vietnam,1.07
 rising world,
 rising zan: the samurai gunman,3.0
 risk (2009),
@@ -24860,7 +24861,7 @@ rollercoaster tycoon 3: wild!,
 rollercoaster tycoon 3d,
 rollercoaster tycoon world,
 rollercoaster tycoon: corkscrew follies,
-rollercoaster tycoon: deluxe,
+rollercoaster tycoon: deluxe,15.26
 rollercoaster tycoon: loopy landscapes,
 rollerforce,
 rollergames,1.0
@@ -25046,7 +25047,7 @@ rune factory frontier,90.5
 rune factory: a fantasy harvest moon,29.0
 rune factory: tides of destiny,62.5
 rune jade,
-runescape,
+runescape,1240.87
 runescape: idle adventures,12.0
 runefall,
 runeous: part one,
@@ -25097,7 +25098,7 @@ rust bucket,
 rustbucket rumble,
 rusted warfare,3.5
 rusty (1993),4.0
-rusty hearts,
+rusty hearts,5.0
 rusty lake hotel,2.0
 rusty lake paradise,3.0
 rusty lake: roots,4.0
@@ -25120,7 +25121,7 @@ rōa,
 s.a.i.a.'s awakening: a robothorium visual novel,
 s.c.a.r.s.,
 s.c.a.t.: special cybernetic attack team,0.9
-s.k.i.l.l. - special force 2,
+s.k.i.l.l. - special force 2,66.34
 s.l.a.i.: steel lancer arena international,
 s.o.r.s.,
 s.t.a.l.k.e.r.: call of pripyat,16.0
@@ -25133,7 +25134,7 @@ s4 league,
 saelig,
 sanic the gaem,0.25
 sas: secure tomorrow,2.0
-sas: zombie assault 4,
+sas: zombie assault 4,2.0
 sawkoban,
 sbk 2011: fim superbike world championship,18.0
 sbk generations,21.0
@@ -25271,7 +25272,7 @@ swordy,
 swr jst dx selective memory erase effect,1.5
 sx superstar,
 symmetry (2018),
-synthetik,
+synthetik,4.0
 saga 2: hihou densetsu - goddess of destiny,
 saga 3: jikuu no hasha - shadow or light,
 saga frontier,7.0
@@ -25438,7 +25439,7 @@ samba de amigo ver. 2000,
 samoliotik,0.75
 samorost,0.25
 samorost 2,1.0
-samorost 3,
+samorost 3,4.65
 samphi,
 samsa and the knights of light,
 samudai,
@@ -25522,7 +25523,7 @@ satellite command,
 satellite reign,24.5
 satellite repairman,
 satellite rush,3.0
-satisfactory,
+satisfactory,91.12
 saturday morning rpg,4.0
 saturday night slam masters,1.0
 saturn bomberman,4.0
@@ -25563,7 +25564,7 @@ saya no uta,4.5
 scalak,2.0
 scalebound,
 scaler,6.5
-scania truck driving simulator,
+scania truck driving simulator,12.83
 scanner sombre,1.5
 scapeland,
 scar of the doll,
@@ -25627,7 +25628,7 @@ scramble,
 scrap attack,
 scrap garden,2.0
 scrap garden: the day before,0.4
-scrap mechanic,
+scrap mechanic,31.65
 scrap metal,7.5
 scrapland,19.0
 scraps: modular vehicle combat,
@@ -25658,7 +25659,7 @@ scurvy scallywags in the voyage to discover the ultimate sea shanty,
 scythe (doom 2 wad),
 scythe (doom ii wad),2.5
 scythe ii (doom ii wad),2.5
-scythe: digital edition,
+scythe: digital edition,1.58
 sea battle: through the ages,
 sea dogs: an epic adventure at sea,
 sea dogs: caribbean tales,10.0
@@ -25669,7 +25670,7 @@ sea monsters: a prehistoric adventure,
 sea trader: rise of taipan,
 sea of fatness,
 sea of solitude,
-sea of thieves,
+sea of thieves,36.29
 seabed,
 sealife safari,
 seaworld adventure parks tycoon,
@@ -25707,7 +25708,7 @@ secret service (2008),4.5
 secret service: in harm's way,
 secret service: security breach,5.0
 secret weapons over normandy,
-secret world legends,
+secret world legends,37.75
 secret in story,
 secret of evermore,14.0
 secret of harrow manor,
@@ -25860,7 +25861,7 @@ serious sam hd: the second encounter,7.5
 serious sam hd: the second encounter - legend of the beast dlc,0.8
 serious sam ii,10.0
 serious sam vr: the first encounter,5.0
-serious sam vr: the last hope,
+serious sam vr: the last hope,2.0
 serious sam vr: the second encounter,
 serious sam's bogus detour,9.5
 serious sam: double d,2.5
@@ -26065,7 +26066,7 @@ sharpe investigations: death on the seine,0.9333333333333333
 shatter,2.5
 shattered god: quest for the divine relic,
 shattered haven,12.0
-shattered horizon,
+shattered horizon,21.4
 shattered horizon: arconauts,
 shattered pixel dungeon,28.5
 shattered planet,8.5
@@ -26092,7 +26093,7 @@ shelter generations,
 sheltered,20.5
 shelterra the skyworld,
 shenmue,20.0
-shenmue i & ii,
+shenmue i & ii,37.61
 shenmue ii,27.0
 shenmue iii,
 shep hard,0.08333333333333333
@@ -26483,7 +26484,7 @@ simcity 2000 - special edition,
 simcity 3000,8.0
 simcity 3000 unlimited,
 simcity 4,10.5
-simcity 4 deluxe,
+simcity 4 deluxe,8.31
 simcity 4: rush hour,
 simcity creator,
 simcity ds,3.0
@@ -26507,7 +26508,7 @@ simon the sorcerer 5,6.5
 simple ball: extended edition,
 simple golfing,1.5
 simple spy,
-simple story - alex,
+simple story - alex,0.43
 simplephysics,3.0
 simpleplanes,3.5
 simplerockets,
@@ -26710,7 +26711,7 @@ slam bolt scrappers,1.5
 slam city with scottie pippen,
 slamit pinball: big score,
 slammed!,4.5
-slap city,
+slap city,3.94
 slap fight,
 slap the fly,
 slap village: reality slap,3.5
@@ -26824,7 +26825,7 @@ smash tennis,
 smash up,
 smashzombies,0.016666666666666666
 smashball,
-smashbox arena,
+smashbox arena,4.33
 smashing drive,0.5833333333333334
 smashing pumpkins into small piles of putrid debris,
 smashing toys,
@@ -26994,7 +26995,7 @@ sol trader,
 sol trigger,23.0
 sol-feace,0.7333333333333333
 sol705,
-solforge,
+solforge,16.5
 solace,
 solar,
 solar 2,2.0
@@ -27307,7 +27308,7 @@ space channel 5: ulala's cosmic attack,
 space chaos,
 space chimps,1.5
 space codex,0.6166666666666667
-space colony,
+space colony,36.98
 space conquest,
 space crusade,6.0
 space debris,
@@ -27720,7 +27721,7 @@ spoko and poko,
 sponchies,
 spongebob heropants,2.5
 spongebob squarepants: battle for bikini bottom,11.0
-spongebob squarepants: battle for bikini bottom - rehydrated,
+spongebob squarepants: battle for bikini bottom - rehydrated,8.72
 spongebob squarepants: creature from the krusty krab,5.0
 spongebob squarepants: employee of the month,2.0
 "spongebob squarepants: lights, camera, pants!",5.5
@@ -28096,7 +28097,7 @@ starcraft: remastered,18.0
 starcraft: retribution,2.0
 starcrawlers,
 starcry,9.0
-stardrive,
+stardrive,18.02
 stardrive 2,
 stardrone,
 stardrone extreme,
@@ -28311,7 +28312,7 @@ stern pinball arcade,2.0
 steven universe: attack the light!,
 steven universe: save the light,11.5
 stick 'em up 2: paper adventures,3.0
-stick fight: the game,
+stick fight: the game,1.91
 stick hero,
 stick man rescue,
 stick nightmare,
@@ -28373,7 +28374,7 @@ storm over the pacific,
 storm: frontline nation,
 stormbound,
 stormlord,1.0
-stormrise,
+stormrise,11.0
 stormworks: build and rescue,
 story of seasons,75.5
 story of seasons: trio of towns,86.5
@@ -28478,7 +28479,7 @@ streets of rage,1.5
 streets of rage 2,1.5
 streets of rage 3,2.0
 streets of rage remake,2.5
-streets of rogue,
+streets of rogue,8.84
 strength of the sword 3,
 stretch panic,4.5
 stretchmo,7.0
@@ -28568,7 +28569,7 @@ submarine commander,
 submarine titans,9.0
 submerged,2.5
 subnautica,26.5
-subnautica: below zero,
+subnautica: below zero,20.16
 subserial network,2.5
 subsiege,
 subsistence (2016),
@@ -28821,7 +28822,7 @@ super jumping finn,2.0
 super k.o. boxing 2,5.0
 super karoshi,1.0
 super killer hornet,
-super killer hornet: resurrection,
+super killer hornet: resurrection,1.88
 super kinky,
 super kitty boing boing,
 super kyuukyoku harikiri stadium,
@@ -29178,7 +29179,7 @@ sutte hakkun,
 suzuki bakuhatsu,2.5
 suzumiya haruhi no yakusoku,
 suzy cube,2.5
-sven co-op,
+sven co-op,9.12
 swag and sorcery,
 swagman,6.0
 swamp thing,2.0
@@ -29361,6 +29362,9 @@ the,2.0
 the,7.0
 the,
 the,1.5
+the,
+the,
+the,
 the 2048,
 the day online,
 the videokid,2.5
@@ -29442,7 +29446,7 @@ tacopocalypse,2.5
 tactera,4.0
 tactical craft online,
 tactical genius,
-tactical intervention,
+tactical intervention,3.45
 tactical mind,
 tactical monsters - rumble arena,
 tactical operations,
@@ -29540,7 +29544,7 @@ tales of destiny 2,34.0
 tales of destiny ii,31.5
 tales of destruction,
 tales of enders,
-tales of escape,
+tales of escape,0.82
 tales of fandom vol.1,
 tales of graces,40.0
 tales of graces f,47.0
@@ -29796,7 +29800,7 @@ teleroboxer,0.48333333333333334
 tell me everything,
 telltale texas hold 'em,0.6166666666666667
 tembo the badass elephant,5.0
-temper tantrum,
+temper tantrum,0.23
 tempest,1.5
 tempest (2015),
 tempest 2000,
@@ -29871,7 +29875,7 @@ terraforming mars,
 terramex,
 terrance the flying eyeball,0.5
 terranigma,15.0
-terraria,50.36
+terraria,50.43
 terrian saga: kr-17,
 terroir,
 terror lab,
@@ -29967,9 +29971,6 @@ that's so raven,
 that's you!,0.6666666666666666
 that’s you,
 thaumistry: in charm's way,4.5
-the,
-the,
-the,
 the 11th hour,9.0
 the 25th ward: the silver case,15.5
 the 2d adventures of rotating octopus character,
@@ -30062,7 +30063,7 @@ the archotek project,
 the armclaw experiment,
 the art of knuckle sandwich,1.0
 the art of fight,
-the artifact,
+the artifact,1.0
 the artist,
 the assembly,4.5
 the asskickers,
@@ -30080,7 +30081,7 @@ the ball,6.0
 the banner saga,10.5
 the banner saga 2,11.5
 the banner saga 3,9.5
-the banner saga: factions,
+the banner saga: factions,15.0
 the barbarian,
 the barbarian and the subterranean caves,
 the bard's tale (1985),25.0
@@ -30322,7 +30323,7 @@ the detail,4.0
 the detail: episode 1 - where the dead lie,1.5
 the detail: episode 2 - from the ashes,1.5
 the detail: episode 3 - devil in the detail,1.5
-the dig,
+the dig,6.85
 the disappearing of gensokyo,12.5
 the dishwasher: dead samurai,
 the dishwasher: vampire smile,4.5
@@ -30337,7 +30338,7 @@ the dolls,
 the dope game,
 the dragons' twilight,
 the dream collector,
-the dream machine,
+the dream machine,13.12
 the dream machine: chapter 1,0.9166666666666666
 the dream machine: chapter 2,0.8333333333333334
 the dream machine: chapter 3,1.0
@@ -30380,7 +30381,7 @@ the elder scrolls iv: oblivion,27.0
 the elder scrolls iv: oblivion - game of the year edition,32.5
 the elder scrolls iv: orrery,2.0
 the elder scrolls iv: shivering isles,11.0
-the elder scrolls online,
+the elder scrolls online,42.3
 the elder scrolls online: morrowind,
 the elder scrolls online: summerset,
 the elder scrolls travels: shadowkey,
@@ -30419,7 +30420,7 @@ the entertainment,0.7333333333333333
 the entity,
 the escapist,
 the escapists,21.0
-the escapists 2,
+the escapists 2,15.99
 the escapists: the walking dead,9.5
 the esoterica: hollow earth,2.5
 the eternal castle [remastered],2.5
@@ -30520,7 +30521,7 @@ the game of life: the official 2016 edition,2.5
 the games: winter challenge,
 the gardens between,2.5
 the garfield show: threat of the space lasagna,
-the gate,
+the gate,6.29
 the gate of firmament,
 the gene machine,4.5
 the genji and the heike clans,
@@ -30543,7 +30544,7 @@ the golf club,12.5
 the golf club 2,
 the golf club 2019 featuring pga tour,26.0
 the golf club vr,
-the good life,
+the good life,13.65
 the goonies,0.5833333333333334
 the goonies ii,3.5
 the grand ball,
@@ -30716,8 +30717,8 @@ the italian job: l.a. heist,
 the itchy & scratchy game,2.0
 the jackbox party pack,3.46
 the jackbox party pack 2,7.0
-the jackbox party pack 3,
-the jackbox party pack 4,
+the jackbox party pack 3,3.42
+the jackbox party pack 4,3.92
 the jackbox party pack 5,3.0
 the janitor,
 the jetsons: invasion of the planet pirates,
@@ -30948,7 +30949,7 @@ the long reach,2.5
 the longest 5 minutes,8.5
 the longest journey,17.0
 the lootcastle,
-the lord of the rings online,
+the lord of the rings online,148.59
 the lord of the rings online: helm's deep,
 the lord of the rings online: mines of moria,
 the lord of the rings online: riders of rohan,
@@ -31038,7 +31039,7 @@ the messenger (2018),10.5
 the metronomicon,5.5
 the mexican dream,
 the midnight station,
-the mighty quest for epic loot,
+the mighty quest for epic loot,35.96
 the mimic,
 the mims beginning,
 the mind of marlo,
@@ -31123,7 +31124,7 @@ the office quest,
 the oil blue,
 the old city: leviathan,1.5
 the old kazulka,
-the old tree,
+the old tree,0.23
 the onion knights,
 the ooze,2.5
 the operative: no one lives forever,13.0
@@ -31145,7 +31146,7 @@ the orphaned soul,
 the other side: tower of souls,3.5
 the otherside: realm of eons,5.0
 the ottifants,
-the outer worlds,
+the outer worlds,13.22
 the outfit,8.0
 the overdreamer,
 the padre,
@@ -31327,7 +31328,7 @@ the secret order 5: the buried kingdom,2.5
 the secret order 6: bloodline,1.5
 the secret order: new horizon,
 the secret saturdays: beasts of the 5th sun,
-the secret world,
+the secret world,37.75
 the secret of hildegards,
 the secret of monkey island,6.5
 the secret of pineview forest,
@@ -31553,7 +31554,7 @@ the thing with mistletoes,
 the thirst of hearts,
 the three musketeers,
 the three stooges,0.8833333333333333
-the thrill of the fight,
+the thrill of the fight,2.51
 the tick,
 the time warp of dr. brain,
 the tiny bang story,3.5
@@ -31625,13 +31626,13 @@ the walking dead - episode 4: around every corner,
 the walking dead - episode 5: no time left,
 the walking dead collection: the telltale series,
 the walking dead: 400 days,
-the walking dead: a new frontier,
+the walking dead: a new frontier,7.57
 the walking dead: a new frontier - episode 1: ties that bind (part i),
 the walking dead: a new frontier - episode 2: ties that bind (part ii),
 the walking dead: a new frontier - episode 3: above the law,
 the walking dead: a new frontier - episode 4: thicker than water,
 the walking dead: a new frontier - episode 5: from the gallows,
-the walking dead: michonne,
+the walking dead: michonne,3.96
 the walking dead: michonne - episode 1: in too deep,
 the walking dead: michonne - episode 2: give no shelter,
 the walking dead: michonne - episode 3: what we deserve,
@@ -31914,7 +31915,7 @@ tic-toc-tower,
 tick tock bang bang,
 tick tock isle,1.5
 tick tock lock,0.2833333333333333
-tick tock: a tale for two,
+tick tock: a tale for two,1.91
 tick's tales,0.8
 tick: the time based puzzle game,
 ticket (2016),
@@ -32212,7 +32213,7 @@ tom clancy's rainbow six 3: gold edition,8.0
 tom clancy's rainbow six 3: iron wrath,
 tom clancy's rainbow six 3: raven shield,11.0
 tom clancy's rainbow six mission pack: eagle watch,3.0
-tom clancy's rainbow six siege,
+tom clancy's rainbow six siege,3.32
 tom clancy's rainbow six: covert ops essentials,
 tom clancy's rainbow six: critical hour,
 tom clancy's rainbow six: lockdown,8.5
@@ -32432,7 +32433,7 @@ total war: shogun 2 - rise of the samurai,10.5
 total war: three kingdoms,42.0
 total war: warhammer,30.5
 total war: warhammer ii,34.5
-totally accurate battle simulator,
+totally accurate battle simulator,8.07
 totally accurate battle zombielator,
 totally accurate battlegrounds,
 totally mayhem,
@@ -32504,7 +32505,7 @@ tower dwellers,
 tower hunter: erza's trial,
 tower island,
 tower slash: only the fastest finger will survive,
-tower unite,
+tower unite,8.72
 tower wars,3.0
 tower of archeos,1.0
 tower of eglathia,
@@ -32531,7 +32532,7 @@ towncraft,6.5
 townopolis,
 towns,15.0
 townsmen (2016),
-townsmen - a kingdom rebuilt,
+townsmen - a kingdom rebuilt,3.45
 townsmen vr,
 towtruck simulator 2015,
 toxic bunny hd,
@@ -32706,7 +32707,7 @@ treasure adventure world,
 treasure gear,
 treasure hunter claire,
 treasure hunter g,19.5
-treasure hunter simulator,
+treasure hunter simulator,7.0
 treasure island,4.5
 treasure island dizzy,4.0
 treasure master,
@@ -33162,9 +33163,9 @@ ultimate board game collection,
 ultimate body blows,
 ultimate booster experience,
 ultimate briefcase,
-ultimate chicken horse,
+ultimate chicken horse,5.1
 ultimate custom night,
-ultimate epic battle simulator,
+ultimate epic battle simulator,0.93
 ultimate fighting championship (dc/ps),1.0
 ultimate fishing simulator,
 ultimate general: civil war,44.0
@@ -33422,12 +33423,12 @@ uriel's chasm 2: nx,0.5333333333333333
 urizen: shadows of the cold,
 urja,
 uru: ages beyond myst,14.5
-uru: complete chronicles,
+uru: complete chronicles,24.83
 uru: the path of the shell,8.0
 uru: to d'ni,5.5
 us and the game industry (2014),
 usagi yojimbo: way of the ronin,
-use your words,
+use your words,0.57
 user error,
 ushio to tora,0.5
 usurper,
@@ -33500,7 +33501,7 @@ vr troopers,
 vr-xterminator,
 vr: vacate the room,0.48333333333333334
 vrc pro,
-vrchat,
+vrchat,96.51
 vriq,
 vrmultigames,
 vrninja,
@@ -33509,7 +33510,7 @@ vrsailing,
 vrz: torment,
 vrblox,
 vrchaeology: prologue,
-vrobot,
+vrobot,0.57
 vrog,
 vs. super mario bros.,0.7
 vtol vr,
@@ -33826,7 +33827,7 @@ virtua tennis,
 virtua tennis 2,
 virtua tennis 2009,30.0
 virtua tennis 3,15.0
-virtua tennis 4,
+virtua tennis 4,8.92
 virtua tennis challenge,
 virtua tennis: world tour,8.0
 virtual bart,2.0
@@ -33908,7 +33909,7 @@ voidexpanse,19.5
 voidspire tactics,12.0
 volchaos,
 volantia: kingdom in the sky,3.0
-volcanoids,
+volcanoids,12.6
 volfied,
 volgarr the viking,9.5
 volley fire,1.5
@@ -34177,7 +34178,7 @@ warframe,107.06
 warfront defenders: westerplatte,
 wargame: airland battle,
 wargame: european escalation,40.0
-wargame: red dragon,
+wargame: red dragon,123.53
 wargasm,
 wargroove,18.5
 "warhammer 40,000: armageddon",
@@ -34221,7 +34222,7 @@ warhammer: dark omen,15.0
 warhammer: end times - vermintide,8.0
 warhammer: mark of chaos,19.0
 warhammer: shadow of the horned rat,
-warhammer: vermintide 2,
+warhammer: vermintide 2,10.54
 warhammer: vermintide vr - hero trials,
 warhawk (1995),2.5
 warhawk (2007),
@@ -34331,7 +34332,7 @@ watch this!,
 watchmen: the end is nigh - complete,5.0
 watchmen: the end is nigh - part 1,3.0
 watchmen: the end is nigh - part 2,2.0
-water bears vr,
+water bears vr,1.24
 water heroes: a game for change,
 water planet,1.5
 water warfare,
@@ -34389,8 +34390,8 @@ we love katamari,8.0
 we need to go deeper,
 we ski,
 we slay monsters,
-we were here,
-we were here too,
+we were here,1.6
+we were here too,2.5
 we're back! a dinosaur's story,1.0
 we. the revolution,13.0
 weakwood throne,
@@ -34456,7 +34457,7 @@ western bank vr,
 western fps,4.0
 western outlaw: wanted dead or alive,7.0
 western press,0.43333333333333335
-westward,
+westward,7.12
 westward 2,
 westward 3,
 westward 4: all aboard,
@@ -34640,7 +34641,7 @@ wildlife park 3,
 wildlife park: wild creatures,11.5
 will fight for food,0.9666666666666667
 will rock,11.0
-will to live online,
+will to live online,40.0
 will of the gods,
 will: a wonderful world,10.0
 willful,
@@ -34783,7 +34784,7 @@ wizard of wor,
 wizard's crown,
 wizard's run,
 wizard's world,
-wizard101,
+wizard101,255.94
 wizardcraft,
 wizardwizard,
 wizardry 8,91.5
@@ -34840,10 +34841,10 @@ wolfenstein ii: the freedom chronicles - episode 2,1.0
 wolfenstein ii: the freedom chronicles - episode 3,2.0
 wolfenstein ii: the new colossus,10.5
 wolfenstein rpg,3.5
-wolfenstein: enemy territory,
+wolfenstein: enemy territory,15.0
 wolfenstein: the new order,11.5
 wolfenstein: the old blood,6.0
-wolfenstein: youngblood,
+wolfenstein: youngblood,9.15
 wolfschanze 1944,2.0
 wolfschanze ii,2.0
 wolfsong,
@@ -34990,7 +34991,7 @@ world of outlaws: sprint cars 2002,
 world of soccer online,
 world of subways: 1 - the path,
 world of subways: 4 - new york line 7,
-world of tanks,
+world of tanks,697.94
 world of tanks: blitz,
 world of tea,
 world of van helsing: deathtrap,7.0
@@ -35097,7 +35098,7 @@ x-blades,7.0
 x-bladez: inline skater,
 x-com: apocalypse,29.0
 x-com: enforcer,4.0
-x-com: interceptor,
+x-com: interceptor,0.61
 x-com: terror from the deep,32.0
 x-com: ufo defense,39.0
 x-change,
@@ -35420,7 +35421,7 @@ yu-gi-oh! arc-v tag force special,
 yu-gi-oh! capsule monster coliseum,10.0
 yu-gi-oh! dark duel stories,8.5
 yu-gi-oh! destiny board traveler,
-yu-gi-oh! duel links,
+yu-gi-oh! duel links,120.97
 yu-gi-oh! dungeon dice monsters,9.5
 yu-gi-oh! forbidden memories,14.0
 yu-gi-oh! gx duel academy,20.5
@@ -35569,7 +35570,7 @@ zero tolerance,11.0
 zero wing,2.0
 zero the kamikaze squirrel,3.5
 zero-g vr,
-zero-k,
+zero-k,80.0
 zeroranger,
 zettai zetsumei toshi 3: kowareyuku machi to kanojo no uta,7.0
 zeus + poseidon,
@@ -35685,7 +35686,7 @@ zombierush,
 zombiethon,
 zombiezoid zenith,
 zombies ate my neighbors,7.5
-zombies monsters robots,
+zombies monsters robots,11.62
 zombies ruined my day,
 zombies on a plane,
 "zombies, run! 5k training",
@@ -35740,7 +35741,7 @@ zork iii,1.0
 zork nemesis: the forbidden lands,6.0
 zork zero: the revenge of megaboz,
 zork: grand inquisitor,5.0
-zotrix,
+zotrix,11.0
 zotrix: solar division,
 zpeciation: tough days (td),
 zubo,
@@ -35921,3 +35922,2358 @@ zomg!,
 猫肉「cat meat」,
 音灵 invaxion,
 ＜/reality＞,
+the elder scrolls v skyrim,33.96
+fallout new vegas,27.32
+tomb raider,11.32
+dead island epidemic,4.0
+dragon age origins - ultimate edition,49.61
+fallout 3 - game of the year edition,
+sega genesis & mega drive classics,
+marvel heroes 2015,
+company of heroes tales of valor,4.58
+counter-strike global offensive,54.62
+the king of fighters xiii steam edition,
+skullgirls,3.51
+company of heroes opposing fronts,13.42
+insurgency,8.36
+metal gear solid v the phantom pain,
+s.t.a.l.k.e.r. shadow of chernobyl,15.15
+s.t.a.l.k.e.r. call of pripyat,15.3
+saints row the third,14.85
+s.t.a.l.k.e.r. clear sky,13.17
+mad max,19.94
+deus ex human revolution,21.45
+middle-earth shadow of mordor,15.63
+deus ex human revolution - director's cut,22.72
+batman arkham city goty,13.54
+dust an elysian tail,10.11
+south park the stick of truth,11.43
+watch_dogs,19.4
+sid meier's civilization iii complete,23.45
+ftl faster than light,12.67
+age of empires ii hd edition,31.09
+batman arkham asylum goty edition,
+rebuild 3 gangs of deadsville,39.2
+recettear an item shop's tale,13.34
+monaco,
+far cry 3 blood dragon,4.48
+burnout paradise the ultimate box,11.02
+sniper elite 3,9.06
+plague inc evolved,3.59
+next car game wreckfest,
+half-life 2 episode two,5.11
+rise of nations extended edition,18.72
+spec ops the line,6.11
+half-life 2 episode one,3.68
+wolfenstein the new order,11.45
+metro last light,10.34
+f.e.a.r. 2 project origin,7.14
+lego the lord of the rings,10.1
+metal gear rising revengeance,
+arma 2 operation arrowhead,7.7
+metal gear solid v ground zeroes,
+dirt showdown,9.04
+sonic adventure 2 ,9.14
+battlestations midway,7.62
+creeper world 3 arc eternal,15.67
+arma 2,
+no time to explain remastered,2.48
+the legend of heroes trails in the sky,40.34
+next car game sneak peek 2.0,
+the stanley parable,1.42
+secrets of rtikon,
+dark souls prepare to die edition,45.8
+half-life 2 lost coast,0.39
+mind path to thalamus enhanced edition,
+amnesia the dark descent,7.9
+lone survivor the director's cut,4.1
+superbrothers sword & sworcery ep,4.13
+call of juarez gunslinger,5.08
+crysis 2 maximum edition,
+lego harry potter,
+wrc 4 fia world rally championship,15.15
+star wars knights of the old republic ii the sith lords,30.7
+phantom breaker battle grounds,3.0
+tom clancy's splinter cell chaos theory,12.99
+the witcher enhanced edition,35.38
+need for speed hot pursuit,14.03
+metro last light redux,9.71
+crimzon clover  world ignition,0.94
+ethan meteor hunter,9.66
+call of duty modern warfare 2 - multiplayer,
+call of duty modern warfare 2,8.06
+call of duty black ops - multiplayer,
+counter-strike source,73.06
+call of duty black ops,7.12
+day of defeat source,2.05
+empire total war,22.13
+ark survival evolved,56.75
+dead island riptide,12.1
+flatout 3,5.46
+counter-strike nexon zombies,
+dcs world,
+medal of honor(tm) multiplayer,
+max payne 2 the fall of max payne,6.24
+painkiller overdose,6.0
+america's army proving grounds,
+tom clancy's ghost recon phantoms - na,
+apb reloaded,39.0
+orion prelude,3.5
+hotline miami 2 wrong number,8.76
+amnesia a machine for pigs,4.14
+counter-strike condition zero,3.76
+counter-strike,28.61
+mount & blade warband,72.68
+tom clancy's ghost recon phantoms - eu,
+kane & lynch 2 dog days,4.09
+diggeronline,
+defense grid the awakening,11.28
+ghostbusters the video game,8.09
+portal stories mel,7.76
+deus ex game of the year edition,22.93
+portal 2 - the final hours,
+mission control nanomech,
+defense grid 2 a matter of endurance,
+sam & max 101 culture shock,2.47
+back to the future ep 2 - get tannen!,2.25
+back to the future ep 5 - outatime,2.36
+sam & max 102 situation comedy,2.02
+oozi earth adventure,4.48
+back to the future ep 1 - it's about time,2.61
+back to the future ep 4 - double visions,2.5
+organ trail director's cut,2.66
+back to the future ep 3 - citizen brown,2.37
+fester mudd curse of the gold - episode 1,2.37
+atom zombie smasher ,4.18
+penumbra overture,5.65
+the elder scrolls iv oblivion ,27.29
+assassin's creed brotherhood,15.26
+grand theft auto episodes from liberty city,18.74
+batman arkham origins,12.44
+the witcher 2 assassins of kings enhanced edition,
+the elder scrolls iii morrowind,43.93
+bookworm adventures deluxe,7.22
+star wars knights of the old republic,29.19
+grid,20.72
+hidden object bundle 4 in 1,10.0
+worms reloaded,9.47
+flatout ultimate carnage,14.95
+chivalry medieval warfare,14.8
+sherlock holmes nemesis,10.18
+alice madness returns,13.99
+guacamelee! gold edition,6.17
+the walking dead,0.5
+bully scholarship edition,14.44
+indigo prophecy,8.12
+the secret of monkey island special edition,6.49
+kingdoms of amalur reckoning,31.63
+deponia the complete journey,26.16
+tales of monkey island chapter 1 - launch of the screaming narwhal,3.13
+dirt 2,14.13
+worms clan wars,8.07
+monkey island 2 special edition,6.87
+cryostasis,8.43
+trackmania stadium,9.75
+aura fate of the ages,5.5
+trials 2 second edition,7.89
+grim legends the forsaken bride,4.3
+nightmares from the deep 2 the siren`s call,
+tales of monkey island chapter 2 - the siege of spinner cay ,2.57
+abyss the wraiths of eden,3.3
+tales of monkey island chapter 3 - lair of the leviathan ,2.9
+penumbra black plague,5.05
+rocketbirds hardboiled chicken,3.48
+nightmares from the deep the cursed heart,3.42
+cities skylines,25.75
+alchemy mysteries prague legends,2.99
+clockwork tales of glass and ink,3.14
+tales of monkey island chapter 4 - the trial and execution of guybrush threepwood ,3.05
+9 clues the secret of serpent creek,2.64
+wallace & gromit ep 1 fright of the bumblebees,2.59
+plants vs. zombies game of the year,8.22
+sam & max 105 reality 2.0,2.26
+tales of monkey island chapter 5 - rise of the pirate god,2.97
+ibb & obb,6.32
+sam & max 106 bright side of the moon,2.12
+rollercoaster tycoon 3 platinum!,20.66
+sam & max 104 abe lincoln must die!,2.32
+hector ep 1,
+resident evil 5 / biohazard 5,
+octodad dadliest catch,2.41
+trials evolution gold edition,10.2
+"sam & max 103 the mole, the mob and the meatball",1.72
+penumbra requiem,3.28
+just cause 2 multiplayer mod,17.22
+you don't know jack vol. 1 xl,
+hydrophobia prophecy,3.6
+the path - prologue,
+tomb raider i,15.69
+the sims(tm) 3,
+payday the heist,9.76
+need for speed undercover,11.09
+battlefield bad company 2,6.94
+easyanticheat esports,
+commandos 3 destination berlin,12.83
+age of chivalry,2.5
+counter-strike condition zero deleted scenes,6.11
+war inc. battlezone,
+labyronia rpg,16.32
+aftermath,
+world of guns gun disassembly,
+mortal kombat komplete edition,8.85
+call of duty advanced warfare,7.13
+napoleon total war,29.38
+rising storm/red orchestra 2 multiplayer,
+arma 2 private military company,6.0
+arma 2 operation arrowhead beta (obsolete),
+arma cold war assault,22.16
+blacklight retribution,22.5
+r.u.s.e,15.23
+total war rome ii - emperor edition,
+star wars - battlefront ii,1.34
+pixel puzzles japan,8.21
+afterfall insanity extended edition,6.74
+anomaly warzone earth,6.38
+woodle tree adventures,1.12
+xcom enemy unknown,26.63
+injustice gods among us ultimate edition,5.01
+marvel puzzle quest,12.0
+naruto shippuden ultimate ninja storm 3 full burst,13.03
+batman arkham city,12.43
+the sims(tm) medieval,
+tom clancy's splinter cell conviction,7.49
+don't starve together beta,
+star wars the force unleashed ultimate sith edition,8.16
+command and conquer 4 tiberian twilight,8.26
+chessmaster,
+age of empires iii complete collection,20.45
+transformers fall of cybertron,7.56
+brtal legend,
+might & magic heroes vi,87.59
+"warhammer 40,000 dawn of war ii",15.16
+star wars the clone wars republic heroes,6.27
+star wars jedi knight jedi academy,10.03
+dungeon siege 2,
+"warhammer 40,000 space marine",7.61
+star wars empire at war gold,23.41
+halo spartan assault,4.08
+tom clancy's h.a.w.x. 2,
+free to play,1.3
+call of duty black ops ii - multiplayer,
+call of duty black ops ii,7.04
+titan quest immortal throne,15.46
+half-life blue shift,3.04
+half-life 2 deathmatch,2.78
+call of duty modern warfare 3 - multiplayer,
+call of duty modern warfare 3,6.16
+sniper ghost warrior,5.31
+sins of a solar empire rebellion,9.92
+sins of a solar empire trinity,9.0
+wargame red dragon,
+wargame european escalation,35.0
+insurgency modern infantry combat,2.46
+red orchestra ostfront 41-45,
+men of war assault squad 2,63.75
+command and conquer red alert 3,21.19
+darkest hour europe '44-'45,
+full spectrum warrior ten hammers,10.0
+omerta - city of gangsters,
+a game of thrones - genesis,
+stronghold hd,19.95
+the ship single player,
+red orchestra 2 heroes of stalingrad - single player,
+the ship tutorial,
+arma 2 dayz mod,24.5
+lost saga north america,
+risen 2 - dark waters,1.1
+hitman absolution,12.38
+primal carnage extinction,
+thehunter,
+"warhammer 40,000 dawn of war  dark crusade",15.33
+dark souls ii scholar of the first sin,36.14
+final fantasy iii,18.4
+knights of pen and paper +1,12.04
+king's quest,19.09
+school of dragons how to train your dragon,
+wind of luck arena,
+mount & blade with fire and sword,
+grand theft auto san andreas,30.49
+lego batman 3 beyond gotham,10.31
+lego batman 2,9.2
+teenage mutant ninja turtles out of the shadows,5.74
+lego star wars 3 the clone wars,
+"warhammer 40,000 dawn of war ii - chaos rising",10.4
+aliens vs. predator,8.37
+castlevania lords of shadow - ultimate edition,19.07
+dmc devil may cry,9.21
+magic 2014 ,
+tomb raider anniversary,12.43
+sonic the hedgehog 4 episode ii,
+lego batman the videogame,10.02
+tomb raider legend,7.18
+sonic the hedgehog 4 episode i,2.61
+sonic and sega all stars racing,5.29
+total war shogun 2,26.9
+medieval ii total war,30.46
+the witcher 3 wild hunt,51.3
+total war attila,40.86
+sid meier's civilization iv beyond the sword,30.04
+dark messiah of might & magic single player,
+alien isolation,18.61
+homeworld remastered collection,21.08
+red faction guerrilla steam edition,
+medieval ii total war kingdoms,16.18
+risk factions,2.39
+half-life source,11.16
+prey,16.25
+supreme commander forged alliance,18.15
+wasteland 2 director's cut,40.43
+valiant hearts the great war / soldats inconnus  mmoires de la grande guerre,
+wargame airland battle,30.03
+x3 reunion,24.37
+alien breed 2 assault,5.68
+sin episodes emergence,3.13
+3dmark,
+space empires iv deluxe,
+navy field 2  conqueror of the ocean,
+sniper ghost warrior 2,5.13
+sid meier's civilization beyond earth,15.76
+need for speed shift,12.91
+fable - the lost chapters,
+sang-froid - tales of werewolves,8.92
+thief deadly shadows,16.61
+magicka wizard wars,24.0
+hitman 2 silent assassin,13.84
+robin hood,
+desperados - wanted dead or alive,
+oddworld abe's exoddus,14.72
+dark messiah of might & magic multi-player,
+oddworld abe's oddysee,12.7
+anno 1404 venice,21.89
+source filmmaker,
+dynasty warriors 8 - empires,
+rollercoaster tycoon deluxe,15.26
+king arthur ii - the role-playing wargame,11.45
+dishonored (ru),
+"warhammer 40,000 dawn of war ii  retribution",9.15
+mars war logs,9.04
+space hulk,9.72
+call of duty ghosts,6.0
+aliens colonial marines,6.94
+viking battle for asgard,13.39
+the lord of the rings war in the north,12.15
+horizon,65.0
+lost planet extreme condition,8.02
+jagged alliance - back in action,
+call of duty black ops iii,8.99
+double action boogaloo,2.0
+magic the gathering - duels of the planeswalkers,8.28
+commandos 2 men of courage,20.84
+nobunaga's ambition souzou with power up kit,
+blood bowl legendary edition,3.33
+serious sam hd the second encounter,7.44
+freestyle2 street basketball,
+two worlds epic edition,21.52
+tdp4team battle,
+dwarfs f2p,1.3
+codename gordon,0.84
+king arthur - the role-playing wargame,35.64
+raceroom racing experience ,14.0
+gotham city impostors free to play,
+hitman sniper challenge,0.61
+tom clancy's rainbow six 3 gold edition,8.99
+rome total war,33.56
+rome total war - alexander,9.43
+urizen shadows of the cold,
+dragon age origins,40.32
+borderlands the pre-sequel,18.16
+tomb raider underworld,9.86
+prince of persia the forgotten sands,7.95
+elite dangerous,83.04
+total war battles kingdom,
+eden star  destroy - build - protect,
+mitos.is the game,
+company of heroes (new steam version),
+a.v.a - alliance of valiant arms,
+zombie panic source,
+takedown red sabre,5.0
+e.y.e divine cybermancy,11.21
+tom clancy's splinter cell blacklist,10.85
+everquest secrets of faydwer,
+everquest seeds of destruction,
+the binding of isaac rebirth,5.32
+red faction armageddon,8.01
+broken sword 3 - the sleeping dragon,
+resident evil revelations 2 / biohazard revelations 2,
+oceanhorn monster of uncharted seas,9.28
+styx master of shadows,17.16
+the guild ii,7.0
+blender 2.76b,
+the way of life free edition,0.4
+worms revolution,16.48
+shift 2 unleashed,19.94
+assassin's creed iv black flag,23.32
+guild wars,83.79
+panzar,
+call of duty advanced warfare - multiplayer,
+the walking dead season two,
+rabbit hole 3d steam edition,
+assassins creed unity,17.15
+serious sam hd the first encounter,6.14
+serious sam 2,10.27
+microsoft flight simulator x steam edition,
+nancy drew shadow at the water's edge,9.4
+nancy drew ransom of the seven ships ,
+nancy drew tomb of the lost queen,8.0
+nancy drew warnings at waverly academy,5.64
+nancy drew danger on deception island ,4.53
+nancy drew last train to blue moon canyon,4.65
+duke nukem 3d megaton edition,10.34
+painkiller hell & damnation,4.66
+dirt 3 complete edition,14.75
+space rangers hd a war apart,31.51
+sniper elite nazi zombie army 2,6.04
+bad rats,4.98
+hacker evolution - untold,
+talisman digital edition,2.21
+warlock - master of the arcane,
+serious sam 3 bfe,10.05
+sniper elite nazi zombie army,6.33
+stronghold crusader hd,15.13
+disciples iii resurrection,43.75
+asteroids outpost,
+disciples ii rise of the elves,87.61
+men of war vietnam,6.28
+men of war condemned heroes,14.78
+men of war assault squad,15.45
+resident evil 6 / biohazard 6,
+magic the gathering - duels of the planeswalkers 2013,13.66
+dynasty warriors 8 xtreme legends complete edition,21.22
+agarest generations of war,75.47
+naruto shippuden ultimate ninja storm revolution,4.15
+hyperdimension neptunia re;birth1,
+resident evil operation raccoon city,6.0
+shadow warrior,12.32
+shufflepuck cantina deluxe vr,
+strider,5.37
+onimusha 3 demon siege,12.09
+breath of death vii ,5.13
+cthulhu saves the world ,7.69
+dungeons & dragons chronicles of mystara,2.1
+doom 3 bfg edition,9.58
+trackmania canyon,12.75
+mortal kombat kollection,5.33
+"warhammer 40,000 regicide",13.12
+batman arkham knight,16.44
+heroes of might & magic iii - hd edition,
+castlevania lords of shadow 2,14.83
+tribes ascend,
+puzzle quest,29.93
+skullgirls endless beta,
+grand theft auto vice city,17.98
+lead and gold - gangs of the wild west,
+killing floor mod defence alliance 2,
+race the wtcc game,3.17
+heroes of might & magic v,17.9
+king arthur collection,25.0
+neverwinter nights 2 platinum,
+dominions 4,
+age of mythology extended edition,28.18
+shadowrun dragonfall - director's cut,20.79
+divinity ii developer's cut,29.39
+raw - realms of ancient war,
+fallout tactics,29.35
+game of thrones ,19.09
+star wars - jedi knight ii jedi outcast,
+adventures of bertram fiddle episode 1 a dreadly business,1.67
+call of duty black ops ii - zombies,
+warmachine tactics,29.35
+call of duty world at war,7.34
+worms ultimate mayhem,6.83
+medal of honor(tm) single player,
+the bureau xcom declassified,10.35
+final fantasy xiv a realm reborn,106.49
+dungeons - steam special edition,
+divinity dragon commander,12.14
+command and conquer red alert 3 - uprising,9.98
+leviathan warships,4.51
+prince of persia the sands of time,8.81
+metal war online retribution,
+call of duty 4 modern warfare,6.9
+half-life deathmatch source,3.0
+half-life opposing force,5.31
+call of duty ghosts - multiplayer,
+war of the roses balance beta,
+overlord,17.67
+indiana jones and the last crusade,4.0
+baldur's gate enhanced edition,30.12
+sid meier's pirates!,11.01
+vampire the masquerade - bloodlines,22.86
+star trek d-a-c,
+dragon nest europe,
+bloodrealm battlegrounds,
+age of conan unchained - eu version,
+star crusade ccg,
+forsaken world ,
+epic cards battle(tcg),
+9 clues 2 the ward,3.11
+strife,
+frankenstein master of death,2.25
+nikopol secrets of the immortals,3.32
+teddy floppy ear - the race,
+curse the eye of isis,6.85
+gunz 2 the second duel,5.0
+ai war fleet command,23.64
+red crucible firestorm,
+batman arkham origins blackgate - deluxe edition,
+ultimate general gettysburg,6.49
+sengoku,3.97
+the raven - legacy of a master thief,5.69
+football manager 2016 demo,
+murdered soul suspect,
+thief,10.94
+planetary annihilation titans,4.69
+world in conflict soviet assault,4.42
+unreal tournament 3 black edition,10.75
+magic 2015,9.85
+mystery pi the vegas heist,
+mystery p.i. the lottery ticket,7.75
+amazing adventures around the world,5.52
+mishap an accidental haunting,
+chuzzle deluxe,1.15
+amazing adventures the lost tomb,8.54
+big money! deluxe,0.45
+talismania deluxe,3.0
+dynomite! deluxe,2.93
+bejeweled deluxe,2.27
+feeding frenzy 2 shipwreck showdown deluxe,
+bejeweled 2 deluxe,1.59
+life is feudal your own,
+warhammer end times - vermintide,8.21
+il-2 sturmovik cliffs of dover,10.42
+divinity dragon commander beta,
+the elder scrolls online tamriel unlimited,42.3
+zeno clash 2,5.8
+strike suit zero director's cut,5.91
+x3 albion prelude,33.88
+knights and merchants,47.27
+divinity original sin,66.46
+divinity original sin enhanced edition,61.76
+stealth inc 2,9.07
+gamemaker studio,
+east india company gold,
+penguins arena sedna's world,0.76
+sunrider mask of arcadius,12.68
+tropico 3 - steam special edition,
+shadows on the vatican - act i greed,2.61
+super killer hornet resurrection,1.88
+scourge outbreak,6.11
+nosferatu the wrath of malachi,4.07
+galactic civilizations i ultimate edition,11.23
+you need a budget 4 (ynab),
+half-life 2 update,11.03
+gauntlet ,6.03
+oddworld new 'n' tasty,7.35
+wanderlust rebirth,8.1
+marlow briggs,6.0
+rush bros,3.3
+judge dredd dredd vs death,4.05
+ultionus a tale of petty revenge,1.34
+lego star wars saga,13.31
+rogue shooter the fps roguelike,3.28
+serious sam the random encounter,1.53
+star wars dark forces,8.93
+valdis story abyssal city,10.84
+star wars republic commando,8.91
+joe danger 2 the movie,2.34
+magic duels,16.37
+galactic civilizations ii ultimate edition,20.06
+ride game,
+driver san francisco,9.19
+assassin's creed revelations,12.39
+hunted the demon's forge,12.0
+call of duty black ops - osx,
+call of duty black ops - multiplayer osx,
+x-com terror from the deep,30.66
+x-com interceptor,0.61
+x-com ufo defense,38.45
+operation flashpoint red river,11.87
+serious sam classic the first encounter,6.37
+blood bowl chaos edition,36.08
+the guild ii renaissance,
+king's bounty warriors of the north,51.96
+disciples iii renaissance,25.0
+might & magic heroes vii ,63.36
+king's bounty crossworlds,23.07
+king's bounty dark side,50.17
+spellforce 2 - faith in destiny,3.38
+grotesque tactics 2 - dungeons and donuts,
+magic the gathering  duels of the planeswalkers 2012,14.46
+pinball fx2,12.01
+fallen enchantress legendary heroes,11.52
+grotesque tactics evil heroes,11.92
+pinball arcade,1.03
+lichdom battlemage,14.26
+kings bounty legions,
+lost lands a hidden object adventure,56.83
+rise of the triad,7.26
+hitman codename 47,11.15
+magic barrage - bitferno,
+brothers - a tale of two sons,
+shower with your dad simulator 2015 do you still shower with your dad,1.79
+galaxy on fire 2 full hd,
+x3 terran conflict,48.42
+hitman contracts,9.86
+the musketeers victoria's quest,
+lego harry potter years 5-7,11.04
+12 labours of hercules ii the cretan bull,5.73
+heroes of hellas 3 athens,9.4
+broken sword 5 - the serpent's curse,6.25
+assassins creed chronicles china,6.17
+enigmatis 2 the mists of ravenwood,4.08
+nightmares from the deep 3 davy jones,4.22
+melissa k. and the heart of gold collector's edition,
+portal of evil stolen runes collector's edition,4.03
+time mysteries 2 the ancient spectres,3.9
+fall of the new age premium edition,
+grim legends 2 song of the dark swan,2.99
+time mysteries 3 the final enigma,
+the beast of lycan isle - collector's edition,
+the room,2.56
+mountain crime requital,3.76
+weather lord the successor's path,
+demon hunter chronicles from beyond,3.38
+risen 3 - titan lords,
+ghost encounters deadwood - collector's edition,
+left in the dark no one on board,2.41
+fairy tale mysteries the puppet thief collector's edition,
+night mysteries the amphora prisoner,2.26
+ice age continental drift arctic games,0.75
+castle never judge a book by its cover,4.24
+secret of the magic crystal,9.0
+never alone (kisima ingitchuna),
+dark arcana the carnival,2.68
+season match 3 - curse of the witch crow,
+the egyptian prophecy the fate of ramses,4.5
+black viper sophia's fate,2.8
+star wars starfighter,4.27
+pc gamer,
+operation flashpoint dragon rising,11.61
+divinity ii - the dragon knight saga,
+tom clancy's rainbow six vegas 2,8.25
+x-com apocalypse,28.9
+legend of grimrock 2,23.38
+the chronicles of riddick assault on dark athena,9.19
+swords and soldiers hd,1.5
+sid meier's civilization iv colonization,11.5
+clickteam fusion 2.5,
+medal of honor airborne,5.71
+carrier command gaea mission,15.0
+unity of command,28.56
+avadon the black fortress,39.95
+anarchy arcade,
+iron grip warlord,4.25
+winning post 8 2015,
+tiny and big grandpa's leftovers,2.58
+steel storm burning retribution,5.41
+bit.trip presents... runner2 future legend of rhythm alien,
+call of juarez the cartel,6.95
+lambda wars beta,
+the vanishing of ethan carter redux,3.83
+escape,
+myst masterpiece edition,5.68
+resident evil 4 / biohazard 4,
+resident evil revelations / biohazard revelations,
+infestation survivor stories,
+survival postapocalypse now,8.0
+metal gear solid legacy,73.39
+hegemony iii clash of the ancients,
+commander conquest of the americas,
+hegemony gold wars of ancient greece,
+europa universalis rome - gold edition,18.82
+uncharted waters online gran atlas,
+codename panzers - cold war,15.65
+tropico 3 absolute power,14.99
+shadow warrior classic (1997),
+estranged act i,1.82
+controller companion,
+oddworld stranger's wrath hd,10.45
+hell yeah!,4.0
+rollercoaster tycoon 2 triple thrill pack,24.4
+starbound - unstable,
+final hours of titanfall,
+stronghold crusader extreme hd,
+evga precisionx 16,
+displayfusion,
+world end economica episode.01,8.8
+icewind dale enhanced edition,31.22
+the settlers 7 paths to a kingdom - gold edition,27.62
+empyrion - galactic survival,
+battlestations pacific,11.13
+thief 2,
+the plan,0.11
+ryse son of rome,6.38
+resident evil / biohazard hd remaster,
+cossacks art of war,26.2
+darkwind war on wheels,
+darkest hour a hearts of iron game,36.71
+ace - arena cyber evolution,
+d.i.p.r.i.p. warm up,
+watchmen the end is nigh part 2,2.17
+stronghold crusader 2,9.14
+galcon 2,
+warlock 2 the exiled,18.84
+renowned explorers international society,5.46
+agarest zero,67.55
+zafehouse diaries,7.75
+q.u.b.e director's cut,3.05
+puzzle pirates,55.0
+sleeping dogs definitive edition,14.39
+scribblenauts unmasked,6.69
+alone in the dark,9.35
+savant - ascent,
+viscera cleanup detail santa's rampage,2.03
+devil may cry 3 special edition,11.86
+a.r.e.s.,2.3
+gestureworks gameplay,
+boring man - online tactical stickman combat,
+jigoku kisetsukan sense of the seasons,1.51
+ascend hand of kul,24.12
+aerena,
+dethroned!,
+spore galactic adventures,8.87
+nexuiz,
+warhammer online age of reckoning,
+tom clancy's ghost recon future soldier,10.37
+grey's anatomy the video game,
+transformers war for cybertron,8.64
+motogp14,
+tdp5 arena 3d,
+analogue a hate story,3.1
+artrage studio pro,
+dysfunctional systems learning to manage chaos,2.04
+prince of persia,11.5
+lili child of geos,2.6
+notgtav,0.76
+baldur's gate ii enhanced edition,46.77
+might & magic x - legacy ,
+defender's quest valley of the forgotten,9.83
+everquest free-to-play,
+his (heroes in the sky),
+x-com enforcer,4.13
+gothic ii gold edition,34.97
+insaniquarium! deluxe,4.12
+love,0.57
+minecraft story mode - a telltale games series,12.39
+lisa,10.92
+half minute hero super mega neo climax ultimate boy,4.8
+hitman blood money,11.81
+tome immortal arena,
+construct 2 free,
+viscera cleanup detail shadow warrior,1.55
+dragon the game,
+draw a stickman epic,1.7
+"on the rain-slick precipice of darkness, episode one",5.9
+ohm studio,
+expeditions conquistador,27.01
+universe at war earth assault,15.36
+alien shooter vengeance,5.6
+fortune summoners secret of the elemental stone,
+chantelise,9.61
+sid meier's ace patrol pacific skies,3.44
+helicopter simulator 2014 search and rescue,
+ace combat assault horizon enhanced edition,8.51
+farming simulator 2013 - modding tutorials,
+crimecraft gangwars,
+oddworld munch's oddysee,11.74
+deus ex invisible war,9.14
+doom ii hell on earth,6.93
+myst v,8.38
+cosmic osmo,2.5
+penny arcade's on the rain-slick precipice of darkness 3,
+darksiders ii deathinitive edition,19.75
+giana sisters twisted dreams,7.49
+blood one unit whole blood,10.86
+kung fury,2.22
+cabela's big game hunter pro hunts,11.5
+kingdom,8.27
+gladiators online death before dishonor,
+lightning returns final fantasy xiii,
+eador. masters of the broken world,
+finn and jake's epic quest,2.42
+sword of the stars the pit,27.25
+toy soldiers war chest,10.0
+ys the oath in felghana,10.87
+deus ex human revolution - the missing link,4.46
+meridian new world,10.5
+kung fu strike the warrior's rise,4.4
+call of juarez bound in blood,7.63
+out there  edition,4.89
+galak-z,
+eufloria hd,11.71
+tales from space mutant blobs attack,3.77
+titan attacks,1.61
+might & magic duel of champions,20.0
+shadowrun hong kong,20.43
+assassin's creed syndicate,18.66
+dead rising 2 off the record,12.97
+wolfenstein the old blood ,5.92
+the bard's tale,14.03
+spellforce 2 gold edition,29.92
+the amazing spider-man,8.68
+star wars the force unleashed ii,5.21
+patch testing for chivalry,
+global agenda - beta,
+ionball 2  ionstorm,4.16
+beatbuddy tale of the guardians,5.36
+"warhammer 40,000 dawn of war - game of the year edition",
+heavy fire afghanistan,2.19
+prime world defenders,28.38
+alien breed impact,5.7
+kickbeat steam edition,
+anna - extended edition,
+deus ex the fall,4.35
+radical roach deluxe edition,
+grimm,2.05
+blaster shooter gunguy!,
+dragon age origins character creator,
+teleglitch die more edition,4.93
+anomaly korea,3.29
+arcania,15.56
+might & magic clash of heroes,
+gtr 2 - fia gt racing game,
+grand ages medieval,9.0
+nobunaga's ambition sphere of influence,50.0
+hegemony rome the rise of caesar,
+fx football - the manager for every football fan,
+hegemony philip of macedon,
+sword of the stars ii enhanced edition,
+facerig,
+distant star revenant fleet,
+cities xl - limited edition,
+port royale 3,14.77
+railroad tycoon 2 platinum,63.5
+tomb raider (vi) the angel of darkness,
+the guild ii - pirates of the european seas,
+section 8 prejudice,4.18
+sid meier's civilization iv warlords,6.85
+pre-civilization marble age,2.27
+london 2012 the official video game of the olympic games,
+the escapists the walking dead,6.88
+fahrenheit indigo prophecy remastered,8.12
+electronic super joy groove city,1.15
+serious sam classic the second encounter,8.16
+commandos behind enemy lines,23.24
+serious sam double d xxl,2.59
+construction-simulator 2015,
+majesty 2,18.7
+brothers in arms hell's highway,7.86
+zombie driver,4.92
+magicka wizards of the square tablet,2.4
+gumboy crazy features,
+pid ,9.37
+x-plane 10 global - 64 bit,
+grimoire manastorm,
+syberia 2,7.47
+bloons td5,
+gothic 3 forsaken gods enhanced edition,
+doctor who the eternity clock,7.49
+gameguru,
+kingdom wars 2 battles,
+esenthel engine,
+men of war red tide,37.3
+real warfare,
+the lego movie - videogame,
+painkiller recurring evil,3.55
+saints row gat out of hell,4.38
+wolfenstein the new order german edition,
+basement,9.53
+disciples iii reincarnation,28.37
+madballs in...babo invasion,
+slamit pinball big score,
+star wars jedi knight dark forces ii,9.02
+descent underground,
+painkiller redemption,4.41
+dirt,12.06
+borderlands 2 ru,
+geometry wars retro evolved,4.71
+mxgp - the official motocross videogame,12.0
+enemy territory quake wars,9.26
+wallace & gromit ep 2 the last resort,2.26
+wallace & gromit ep 3 muzzled!,2.25
+sam & max 202 moai better blues,2.2
+sam & max 205 what's new beelzebub?,2.91
+wallace & gromit ep 4 the bogey man,2.44
+sam & max 201 ice station santa,2.84
+sam & max 301 the penal zone,3.76
+rugby league team manager 2015,
+arma 2 british armed forces,5.4
+battle for graxia,
+payday the web series - episode 1,
+guilty gear x2 #reload,0.82
+il-2 sturmovik 1946,
+the hat man shadow ward,2.24
+wtfast gamers private network (gpn),
+saints row iv inauguration station,
+ragnarok,18.87
+3089 -- futuristic action rpg,7.5
+cossacks ii battle for europe,47.21
+loadout campaign beta,
+akaneiro demon hunters,3.0
+ducktales remastered,3.6
+special forces team x,
+emergency 2012,19.72
+thehunter primal,
+"warhammer 40,000 dawn of war  soulstorm",12.9
+cabelas trophy bucks,
+saw,6.85
+command and conquer 3 tiberium wars,23.44
+cossacks ii napoleonic wars,32.5
+"warhammer 40,000 dawn of war  winter assault",10.97
+dungeons & dragons daggerdale,7.02
+command and conquer 3 kane's wrath,8.13
+eternal silence,
+the king of fighters '98 ultimate match final edition,
+spore creepy & cute parts pack,1.92
+medieval total war - gold edition,21.06
+cossacks european wars,30.0
+ring runner flight of the sages,16.86
+dawn of discovery - venice,
+patrician iv rise of a dynasty,
+state of decay year-one,17.15
+pandora first contact,30.0
+patrician iii,60.5
+pac-man championship edition dx+,3.7
+patrician iv steam special edition,6.23
+storm frontline nation,
+disney infinity 3.0 play without limits,4.88
+back to dinosaur island ,
+automation - the car company tycoon game,
+mars colony challenger,
+universe sandbox ,
+day one garry's incident,3.42
+trine 3 the artifacts of power,4.87
+adventures of shuggy,4.46
+jurassic park the game,6.73
+the amazing spider-man 2,7.21
+sideway,4.01
+unreal tournament game of the year edition,10.51
+freedom force,17.46
+h1z1 test server,
+space quest collection,
+dreamfall the longest journey,12.2
+cryengine,
+dogs of war online - beta,
+mafia,16.08
+take command second manassas,
+alien rage - unlimited,
+frozen free fall snowball fight,19.57
+ubersoldier ii,6.74
+arma 2 free,
+deadly premonition the director's cut,18.32
+c9,
+prince of persia warrior within,12.23
+12 labours of hercules iii girl power,5.53
+beware planet earth,9.91
+avernum escape from the pit,40.71
+ravensword shadowlands,5.95
+"warhammer 40,000 kill team",3.32
+virtual villagers a new home,
+mow face off xl,
+theatre of war 2 africa 1943,8.27
+theatre of war 2 kursk 1943 ,8.18
+supreme ruler cold war,
+build-a-lot 4,6.5
+build-a-lot 2,5.07
+iron warriors t-72 tank command,
+petz horsez 2,1.0
+distant worlds universe,
+uncharted waters online,
+naval war arctic circle,
+pt boats knights of the sea,
+east india company pirate bay,3.0
+pacific storm allies,
+east india company privateer,1.0
+pt boats south gambit,
+blood omen 2 legacy of kain,12.63
+postal 3,5.66
+overlord raising hell,7.98
+batman arkham asylum,12.03
+3dmark vantage,
+race caterham expansion,0.42
+motogp13,
+red bull x-fighters,
+agricultural simulator 2011 extended edition,
+blitzkrieg anthology,28.68
+the four kings casino and slots,1.21
+spellforce platinum edition,64.21
+lost planet extreme condition - colonies edition,
+doorways prelude,
+velocityultra,
+slender the arrival,2.06
+ghost in the shell stand alone complex first assault online,18.0
+turok dinosaur hunter,7.35
+x2 the threat,37.18
+tomb raider iii adventures of lara croft,19.29
+x beyond the frontier,31.15
+descent 2,12.64
+clown house (palyao evi),
+trackmania valley,10.82
+empires,
+street fighter v beta,
+blazblue continuum shift extend,9.0
+the mean greens - plastic warfare,
+the haunted hells reach,
+rag doll kung fu,1.83
+lugaru hd ,0.3
+star wars - jedi knight mysteries of the sith,
+brainpipe a plunge to unhumanity,0.64
+bookworm adventures volume 2,5.73
+oscura lost light,2.97
+bridge it (plus),
+secret files tunguska,9.09
+king's bounty the legend,35.38
+the dark eye chains of satinav,9.78
+star traders 4x empires,
+the guild gold edition,54.93
+legend of dungeon masters,
+indie game the movie,
+castlevania lords of shadow  mirror of fate hd,8.43
+enslaved odyssey to the west premium edition,
+bloodrayne betrayal,4.54
+ninja reflex steamworks edition,
+the walking dead survival instinct,5.2
+18 wheels of steel american long haul,20.0
+two worlds ii castle defense,2.96
+governor of poker 2 premium edition,
+star trek,8.15
+sherlock holmes crimes and punishments,12.65
+nancy drew the captive curse,7.94
+nancy drew the deadly device,7.83
+nancy drew ghost of thornton hall,6.0
+nancy drew alibi in ashes,6.63
+black sails,3.88
+black mirror,14.97
+heretic shadow of the serpent riders,7.46
+commander keen complete pack,9.84
+wolfenstein 3d spear of destiny,3.97
+doom 3 resurrection of evil,4.09
+quake iii team arena,4.9
+quake mission pack 1 scourge of armagon,3.12
+quake mission pack 2 dissolution of eternity,3.84
+hexen beyond heretic,10.21
+sphere iii enchanted world,
+space channel 5 part 2,2.69
+air conflicts pacific carriers,10.45
+ship simulator maritime search and rescue,
+age of wonders 2,
+footlol epic fail league,3.05
+hearts of iron ii complete,32.68
+ballpoint universe infinite,3.73
+doc clock the toasted sandwich of time,3.55
+how to survive third person,12.33
+aperture tag the paint gun testing initiative,3.76
+painkiller black edition,10.24
+dungeons - the dark lord (steam special edition),
+mordheim city of the damned,11.82
+necronomicon the dawning of darkness,4.33
+undead overlord,
+silent hill homecoming,9.3
+nyxquest,3.19
+99 spirits,12.85
+typerider,
+level 22,
+strong bad episode 1 homestar ruiner,2.59
+fault milestone two sideabove,
+jade empire special edition,15.4
+planetarian ~the reverie of a little planet~,3.09
+american conquest - fight back,
+you don't know jack,0.94
+emergency 5 - deluxe edition,
+prison tycoon 3 lockdown,
+cossacks back to war,15.6
+foreign legion buckets of blood,1.79
+dragon quest heroes,31.37
+heroes of might & magic v tribes of the east,
+grand ages rome,26.57
+age of wonders shadow magic,32.52
+greed black border,9.76
+"dr. langeskov, the tiger, and the terribly cursed emerald a whirlwind heist",0.43
+schrdinger's cat and the raiders of the lost quark,
+wrc 5,
+sam & max 302 the tomb of sammun-mak,3.19
+sam & max 304 beyond the alley of the dolls,2.54
+sam & max 303 they stole max's brain!,3.1
+sam & max 305 the city that dares not sleep,2.63
+runespell overture,6.7
+why so evil 2 dystopia,
+angels of fasaria version 2.0,
+chronicles of a dark lord episode 1 tides of fate complete,
+starlaxis supernova edition,
+teddy floppy ear - mountain adventure,
+paranormal state poison spring collector's edition,
+edna & harvey harvey's new eyes,7.25
+hostile waters antaeus rising,20.0
+teddy floppy ear - kayaking,
+terra incognita ~ chapter one the descendant,2.63
+time mysteries inheritance - remastered,3.0
+enigmatis the ghosts of maple creek,4.33
+the defenders the second wave,
+doorways the underworld,2.1
+gunspell steam edition,
+edna & harvey the breakout,8.8
+battleplan american civil war,8.0
+skara - the blade remains,
+treeker the lost glasses,2.17
+frederic evil strikes back,1.53
+500 years act 1,
+lilly and sasha curse of the immortals,
+splatter - blood red edition,
+n.p.p.d. rush - the milk of ultra violet,2.18
+marble mayhem fragile ball,1.67
+sugar cube bittersweet factory,2.16
+tiny bridge ratventure,3.5
+catmouth island,
+millennium - a new hope,
+gold rush! classic,6.05
+cobi treasure deluxe,0.57
+sometimes success requires sacrifice,0.21
+pixel puzzles undeadz,7.12
+castle,
+pirates of black cove gold,11.56
+numba deluxe,2.81
+foreign legion multi massacre,0.67
+carmageddon reincarnation,18.1
+saints row the third - initiation station,0.98
+aveyond 3-2 gates of night,
+assassin's creed freedom cry,4.27
+the typing of the dead overkill,3.89
+king's bounty armored princess,28.25
+offspring fling!,
+deathspank thongs of virtue,9.85
+painkiller gold edition,10.24
+"10,000,000",6.07
+unreal ii the awakening,8.54
+bientt l't,
+psychonauts demo,
+zuma's revenge,5.0
+the book of unwritten tales the critter chronicles,7.35
+the journey down chapter one,2.3
+guild wars trilogy,
+crusader kings complete,
+god factory wingmen,
+harvest massive encounter,6.5
+hacker evolution duality,3.99
+ys i,11.43
+legacy of kain soul reaver,11.67
+the settlers 7 paths to a kingdom,20.57
+aion collectors edition,53.59
+blood bowl dark elves edition,3.33
+tom clancy's h.a.w.x.,
+buccaneer the pursuit of infamy,15.0
+age of conan rise of the godslayer,
+crusaders thy kingdom come,
+star wolves 3 civil war,
+shadowgate macventure series,2.0
+silent hunter 5 battle of the atlantic,
+my lands,
+sc2vn - the esports visual novel,
+comamortuary,
+wolfenstein the old blood german edition,
+firefly online cortex,
+community college hero trial by fire,4.64
+scratches director's cut,6.54
+higurashi when they cry - ch.1 onikakushi,
+eden*,
+rising angels reborn,3.75
+akiba's trip undead & undressed,8.81
+damnation city of death,
+warrior kings battles,
+jagged alliance online - steam edition,
+prince of persia the two thrones,9.91
+space trader merchant marine,6.94
+homebrew - vehicle sandbox,
+frontlines fuel of war,5.24
+rip 3 the last hero,2.88
+diamond dan,4.29
+commander conquest of the americas gold,14.0
+chainsaw warrior lords of the night,2.36
+terrain test,
+heroes of might & magic v hammers of fate,
+real horror stories ultimate edition,0.99
+one late night deadline,1.0
+everyday genius squarelogic,17.23
+jagged alliance 2 gold pack,39.0
+broken sword 1 - shadow of the templars director's cut,
+call of cthulhu dark corners of the earth,11.63
+blacklight tango down,2.42
+giana sisters twisted dreams - rise of the owlverlord,1.75
+worms,3.43
+brothers in arms road to hill 30,7.93
+movie studio 13 platinum - steam powered,
+action! - gameplay recording and streaming,
+crawl,1.19
+black ink,10.24
+obscure 2,
+flower shop winter in fairbrook,1.59
+nancy drew the white wolf of icicle creek,7.77
+nancy drew curse of blackmoor manor ,7.44
+nancy drew secrets can kill,3.29
+nancy drew secret of the scarlet hand ,5.45
+one piece pirate warriors 3,
+max the curse of brotherhood,6.22
+tri of friendship and madness,12.18
+castle of illusion,2.63
+a new beginning - final cut,9.74
+test drive ferrari racing legends,25.41
+victory the age of racing,
+axis game factory's agfpro 3.0,
+disciples ii gallean's return,29.6
+borderless gaming,
+rpg maker mv,
+broken sword 4 - the angel of death,
+monopoly,0.59
+kane & lynch dead men,5.33
+aion free-to-play,53.59
+gumboy crazy adventures,5.0
+vigil blood bitterness,2.02
+mlb 2k12,12.0
+magic the gathering  tactics,
+the banner saga factions,15.0
+close combat - gateway to caen,
+battle academy 2 eastern front,
+crossfire europe,
+hard truck apocalypse rise of clans / ex machina meridian 113,
+one way to die steam edition,
+split/second,9.78
+containment the zombie puzzler,2.88
+weird worlds return to infinite space,0.55
+earth defense force insect armageddon,5.22
+tomb raider the last revelation,16.76
+watchmen the end is nigh,2.9
+genesis rising,8.0
+civcity rome,9.0
+nexus the jupiter incident,18.06
+aggression europe under fire,
+"on the rain-slick precipice of darkness, episode two",
+salt,
+nancy drew danger by design,6.48
+making history the calm & the storm,
+battle of empires  1914-1918,0.54
+company of heroes europe at war,
+dawn of discovery,
+broken sword 2 - the smoking mirror remastered,6.83
+silent hunter wolves of the pacific,35.0
+dcs black shark,
+battle los angeles,1.05
+mow face off m,
+super game jam,
+guild wars game of the year,
+runaway a road adventure,7.95
+woody two-legs attack of the zombie pirates,
+tom clancy's splinter cell double agent,11.16
+air conflicts - secret wars,
+transformers rise of the dark spark,6.65
+requiem,
+rwby grimm eclipse,3.69
+dragon's prophet (eu),
+music creator 6 touch,
+albino lullaby episode 1,2.71
+you don't know jack vol. 2,
+carmageddon 2 carpocalypse now,12.39
+aveyond 3-1 lord of twilight,
+sanctuaryrpg black edition,11.17
+numen contest of heroes,14.02
+outcast 1.1,21.91
+tesla effect,10.62
+secret files puritas cordis,9.14
+realmyst masterpiece edition,6.0
+secret files sam peters,2.34
+haunted,6.24
+last knight rogue rider edition,1.43
+huntsman - the orphanage halloween edition,
+cultures - northland,
+chocolatier decadence by design,8.0
+alien breed 3 descent,5.14
+agricultural simulator 2013 steam edition,
+arma combat operations,11.0
+city of steam arkadia,
+"please, dont touch anything",1.14
+ufo aftermath,25.15
+blitzkrieg 2 anthology,20.28
+duke nukem forever ,9.2
+disciples sacred lands gold,43.58
+hard truck apocalypse / ex machina,
+conflict denied ops,6.07
+ys vi the ark of napishtim,12.5
+shellshock 2 blood trails,3.78
+deus ex revision,20.72
+gemcraft - chasing shadows,
+keen dreams,1.42
+the campaign series fall weiss,
+depth hunter 2 deep dive,2.28
+letter quest grimm's journey,8.12
+letter quest grimm's journey remastered,8.04
+colin mcrae rally,9.75
+1953 nato vs warsaw pact,
+into the dark,4.0
+battle vs chess,16.98
+alpha kimori episode one ,6.0
+residue final cut,2.33
+total war battles shogun,10.0
+blazblue calamity trigger,10.34
+smooth operators,
+spellforce 2 - demons of the past,
+schar blue shield alliance,
+demise of nations rome,
+post master ,
+strife veteran edition,6.89
+the lost crown,18.07
+dungeons the eye of draconus,1.15
+silent storm sentinels,22.39
+the incredible adventures of van helsing final cut,19.0
+wizardry 7 crusaders of the dark savant,
+zombie tycoon 2 brainhov's revenge,4.75
+treasure planet battle at procyon,
+seven kingdoms 2 hd,
+ghostbusters sanctum of slime,3.56
+neighbours from hell 2,2.6
+devil may cry 4 special edition,10.73
+commandos beyond the call of duty,15.88
+inside a star-filled sky ,
+imperium romanum gold edition,
+transocean the shipping company,16.44
+children of the nile alexandria,
+airline tycoon deluxe,11.47
+universal combat ce,
+septerra core,43.73
+enforcer police crime action,10.38
+delta force black hawk down - team sabre,6.67
+fractal make blooms not war,5.28
+fiesta online na,
+war in a box paper tanks,3.91
+jagged alliance crossfire,
+combat wings battle of britain,3.06
+divinity ii - ego draconis,
+tyranobuilder visual novel studio,
+westerado double barreled,2.37
+rooms the unsolvable puzzle,12.4
+silent hunter wolves of the pacific u-boat missions,
+assassin's creed rogue,10.48
+gurumin a monstrous adventure,9.44
+nimble writer,
+majesty gold edition,21.43
+spriter pro,
+heroes and titans online,
+rescue 2,
+children of the nile,
+call of duty united offensive,5.64
+stargate resistance,
+deadlings - rotten edition,3.76
+anomaly warzone earth mobile campaign,3.78
+world war ii panzer claws,
+"warhammer 40,000 armageddon",29.87
+sniper elite zombie army 2,6.04
+elite dangerous horizons,
+ufo afterlight,33.33
+camerabag 2,
+aqua kitty - milk mine defender,
+blazing angels squadrons of wwii,7.7
+blazing angels 2 secret missions of wwii,9.75
+song of the myrne what lies beneath,
+wolfenstein,8.92
+painkiller resurrection,4.96
+substance painter,
+amnesia memories,7.85
+jagged alliance 2 - wildfire ,
+cognition an erica reed thriller,16.28
+dark fall lost souls,7.69
+the whispered world special edition,10.39
+parkan 2,6.5
+dracula origin,6.09
+claire,3.3
+dark fall 1 the journal,
+il-2 sturmovik battle of stalingrad,33.0
+introduction to 3d prop modeling and design - viking armor and weapons,
+shantae risky's revenge - director's cut,5.09
+order of war challenge,
+karate master 2 knock down blow,4.28
+archonclassic,
+tom clancy's rainbow six vegas,8.26
+jagged alliance flashback,28.0
+condemned criminal origins,7.02
+game character hub,
+dungeonbowl knockout edition,
+necrovision lost company,4.66
+runaway a twist of fate,6.94
+bridge constructor medieval,2.6
+need for madness ?,
+the entente gold,
+superpower 2 steam edition,
+pro cycling manager season 2009,
+shadow harvest phantom ops,7.5
+family guy back to the multiverse,5.82
+collapse,9.09
+legacy of kain soul reaver 2,10.02
+3dmark 11,
+tom clancy's ghost recon,11.67
+killing floor beta,
+freight tycoon inc.,
+breach,
+deathtrap,7.52
+penny arcade's on the rain-slick precipice of darkness 4,
+fate undiscovered realms,12.59
+geometry wars 3 dimensions evolved,7.99
+star wars x-wing vs. tie fighter,14.0
+rescue everyday heroes,3.69
+star wars x-wing alliance,20.04
+sniper elite zombie army,6.33
+motorbike,
+adventure chronicles the search for lost treasure,2.7
+reaper - tale of a pale swordsman,
+delta force black hawk down,7.59
+wasteland 1 - the original classic,
+naval warfare,3.61
+bionic commando,6.9
+afterfall insanity - dirty arena edition,6.74
+supreme ruler 2020 gold,
+lords of magic special edition,4.0
+puzzle quest galactrix,14.97
+razor2 hidden skies,1.48
+dinosaur hunt africa contract,
+litecam game 100 fps game capture,
+lego pirates of the caribbean the video game,8.49
+mortal kombat legacy ii - ep. 1 reunited in macau,
+nobunaga's ambition kakushin with power up kit,
+eschalon book 2,
+drakensang,31.05
+eschalon book 1,
+the fish fillets 2,
+over the dream,
+serious sam classics revolution,12.04
+azmd! scorepocalypse ,
+earth 2150 the moon project,12.75
+earth 2150 lost souls,
+nascar the game 2013,37.0
+ufo extraterrestrials gold,53.34
+riding star,4.21
+wildlife park 2 - marine world,
+the clockwork man the hidden world,3.55
+"nancy drew lights, camera, curses!",4.04
+season of mystery  the cherry blossom murders,3.06
+midnight mysteries salem witch trials,3.11
+midnight mysteries 4 haunted houdini,3.71
+midnight mysteries 3 devil on the mississippi,3.14
+recycle,
+decay - the mare,
+spaceforce rogue universe,
+realms of arkania 3 - shadows over riva classic,
+digital combat simulator a-10c warthog,
+1701 a.d. sunken dragon,20.0
+kill the bad guy,5.13
+chrome specforce,6.05
+paranautical activity deluxe atonement edition,
+kung fury street rage,2.22
+nancy drew ghost dogs of moon lake ,4.03
+fast & furious showdown,4.56
+dragon's lair 2 time warp,
+max and the magic marker,2.68
+nostradamus the last prophecy,5.96
+airport madness world edition,6.68
+wildlife park 2 - dino world,
+aerofly rc 7,
+haunt the house terrortown,1.62
+aces wild manic brawling action!,2.27
+d4 dark dreams don't die,4.46
+carmageddon max pack,19.28
+alien shooter revisited,2.17
+kohan immortal sovereigns,15.5
+avadon 2 the corruption,23.5
+drakensang the river of time,28.29
+jacob jones and the bigfoot mystery  episode 2,1.46
+maszyny rolnicze 2015,
+strong bad episode 3 baddest of the bands,2.51
+strong bad episode 2 strong badia the free,2.87
+strong bad episode 4 dangeresque 3,2.08
+nancy drew the haunted carousel,3.69
+abandoned chestnut lodge asylum,
+hector ep 2,
+the otherside,
+drawn the painted tower,3.27
+kuros,
+nancy drew the creature of kapu cave,4.08
+hotel dash,
+diner dash hometown hero,13.58
+worldwide soccer manager 2009,129.85
+mlb 2k10,
+mlb 2k11,25.0
+kohan ii kings of war,15.17
+adventure time  explore the dungeon because i dont know!,8.69
+o.r.b.,
+"star wars: battlefront 2 (classic, 2005)",
+star wars™: knights of the old republic™,
+star wars™ jedi knight ii: jedi outcast™,
+star wars™ jedi knight: jedi academy™,
+lego® star wars™: the complete saga,
+star wars™ empire at war: gold pack,
+arma 2: operation arrowhead,7.7
+arma 2: operation arrowhead beta (obsolete),
+far cry® 3,
+planetside 2 - test,
+killing floor mod: defence alliance 2,
+red orchestra 2: heroes of stalingrad - single player,
+rust - staging branch,
+darkest dungeon®,
+mount & blade: with fire and sword,
+hover,0.65
+borderlands: the pre-sequel,18.16
+dungeon of the endless™,
+skyrim script extender (skse),
+cpucores :: maximize your fps,
+smite - public test,
+wallpaper engine,
+conan exiles - public beta client,
+tom clancy's rainbow six siege - test server,
+evolve stage 2,
+accounting,0.51
+half-life: alyx,12.15
+the elder scrolls v: skyrim special edition,25.61
+pubg: battlegrounds,
+the wizards,3.97
+fences 3,
+divinity: original sin 2,58.94
+talespire,
+phasmophobia,18.42
+vengeful rites,
+age of empires ii: definitive edition,38.16
+realm royale reforged,
+realm royale - test server,
+boneworks,10.39
+kovaak's,
+until you fall,7.47
+muv-luv photonflowers*,1.82
+muv-luv photonmelodies♮,
+valheim,75.18
+midnight ghost hunt,
+for honor - public test,
+among us,8.71
+the jackbox party pack 6,3.0
+lofi ping pong,1.17
+phantasy star online 2 new genesis,16.43
+ngu idle,595.0
+dragon ball z: kakarot,
+star wars jedi: fallen order™ ,
+the jackbox party pack 7,4.08
+gunfire reborn,13.64
+the walking dead: saints & sinners,11.07
+2md vr football classic,
+2md: vr football evolution,
+titanfall® 2,
+elden ring,
+melvor idle,
+tmodloader,40.5
+star wars™: the old republic™,
+vertigo remastered,3.98
+vtube studio,
+mass effect™ legendary edition,
+"warhammer 40,000: darktide",29.41
+yakuza: like a dragon,45.19
+arcade paradise,24.31
+it takes two,12.26
+isonzo,
+v rising,39.48
+overlord: escape from nazarick,
+vampire survivors,10.41
+monster hunter rise,
+divine knockout (dko),
+sin multiplayer,
+sin gold,7.74
+deus ex: game of the year edition,22.93
+doom ii,3.61
+burnout paradise: the ultimate box,11.02
+star wars™ republic commando,
+call of duty: modern warfare 2 (2009),
+call of duty: modern warfare 2 (2009) - multiplayer,
+bioshock 2 remastered,10.66
+batman: arkham asylum goty edition,
+arma 2: british armed forces,5.4
+sega mega drive & genesis classics,
+mafia ii (classic),
+mafia ii: definitive edition,11.26
+borderlands goty,21.61
+borderlands goty enhanced,21.61
+call of duty: black ops - multiplayer,
+arma 2: private military company,6.0
+titan quest anniversary edition,30.17
+batman: arkham city™,
+"warhammer 40,000: space marine - anniversary edition",
+call of duty: modern warfare 3 - multiplayer,
+serious sam fusion 2017 (beta),
+kingdoms of amalur: reckoning™,
+hitman: sniper challenge,0.61
+indie game: the movie,
+dark souls™: prepare to die edition,
+sleeping dogs™,
+star wars™ knights of the old republic™ ii: the sith lords™,
+call of duty: black ops ii - multiplayer,
+call of duty: black ops ii - zombies,
+retro city rampage™ dx,
+company of heroes - legacy edition,
+company of heroes ,15.2
+darksiders warmastered edition,17.07
+"warhammer 40,000: dawn of war - game of the year edition",
+far cry® 3 blood dragon,
+gothic playable teaser,2.02
+pixeljunk™ monsters ultimate,
+rocksmith® 2014 edition - remastered,
+batman™: arkham origins,
+enslaved™: odyssey to the west™ premium edition,
+blood bowl: legendary edition,3.33
+the walking dead: season two,
+trackmania² canyon,
+trackmania² stadium,
+trackmania² valley,
+evga precision x1,
+south park™: the stick of truth™,
+dark souls™ ii,
+valkyria chronicles™,
+just survive test server,
+z1 battle royale,68.63
+h1z1: test server,
+divinity: original sin (classic),
+divinity: original sin enhanced edition,61.76
+wasteland 2: director's cut,40.43
+jotun: valhalla edition,5.2
+middle-earth™: shadow of mordor™,
+endless™ legend,
+oddworld: new 'n' tasty,7.35
+wolfenstein: the old blood ,5.92
+tree of savior (english ver.),
+dark souls™ iii,
+epistory - typing chronicles,
+call of cthulhu,3.15
+squad - public testing,
+lords of magic: special edition,4.0
+resident evil 7 biohazard,9.29
+batman™: arkham knight,
+tom clancy's the division pts,
+bigscreen beta,
+doom,
+thehunter: call of the wild™,
+blocks,
+deus ex: mankind divided™,
+watch_dogs 2,19.14
+okami hd,33.32
+hunt: showdown (test server),
+nier:automata™,
+veer vr,
+generation zero®,
+gizmovr video player,
+dark souls™: remastered,
+hitman™ 2,
+spyro™ reignited trilogy,
+survivalist: invisible strain,
+rad,8.47
+"warhammer 40,000: inquisitor - prophecy",9.59
+resident evil village,9.66
+new world,48.8
+resident evil re:verse,
+bless unleashed,280.0
+injustice: gods among us ultimate edition,5.01
+outriders,
+lost ark,45.63
+elyon,
+halo infinite,11.15
+judgment,27.51
+multiversus,3.01
+bioshock remastered,12.11
+unreal tournament 3: black edition,10.75
+unreal tournament: game of the year edition,10.51
+the witcher: enhanced edition,35.38
+mass effect (2007),
+command and conquer: red alert 3,21.19
+dead space (2008),
+the elder scrolls iv: oblivion ,27.29
+star wars™ jedi knight: dark forces ii,
+command and conquer: red alert 3 - uprising,9.98
+command and conquer 3: tiberium wars,23.44
+mass effect 2 (2010),
+battlefield: bad company™ 2,
+f.e.a.r.: extraction point,
+f.e.a.r.: perseus mandate,
+the secret of monkey island: special edition,6.49
+monkey island 2: special edition,6.87
+back to the future: ep 1 - it's about time,2.61
+back to the future: ep 2 - get tannen!,2.25
+back to the future: ep 3 - citizen brown,2.37
+back to the future: ep 4 - double visions,2.5
+back to the future: ep 5 - outatime,2.36
+universe sandbox legacy,5.84
+the witcher 2: assassins of kings enhanced edition,
+age of empires® iii (2007),
+thief™ ii: the metal age,
+sonic & all-stars racing transformed collection,
+marvel heroes omega,22.88
+final fantasy® xi: ultimate collection seekers edition na,
+final fantasy xiv online,
+master of orion,12.57
+fahrenheit: indigo prophecy remastered,8.12
+gauntlet™ ,
+sid meier's colonization (classic),
+lego® batman™: the videogame,
+lego® batman™ 2: dc super heroes,
+lego® batman™ 3: beyond gotham,
+dead island retro revenge,3.84
+company of heroes: europe at war,
+shadowrun: hong kong - extended edition,
+evoland legendary edition,20.81
+star trek™: 25th anniversary,
+star trek™: judgment rites,
+star trek™: starfleet academy,
+halcyon 6: starbase commander (classic),
+magicka 2: spell balance beta,
+valley,3.74
+dead island definitive edition,16.52
+dead island riptide definitive edition,9.91
+day of the tentacle remastered,4.92
+helldivers™,
+system shock: classic,12.81
+system shock: enhanced edition,12.81
+marmoset hexels 3,
+sins of the demon rpg,8.95
+planescape: torment: enhanced edition,
+uno,
+gtfo,16.8
+ace combat™ 7: skies unknown,
+life is strange™,
+marvel's guardians of the galaxy: the telltale series,8.78
+endless™ space - definitive edition,
+ni no kuni™ ii: revenant kingdom,
+tokaido,0.33
+dishonored®: death of the outsider™ ,
+hellblade: senua's sacrifice vr edition,7.54
+world war z: aftermath,9.91
+crash bandicoot™ n. sane trilogy,
+star ocean™ - the last hope™ - 4k & full hd remaster,
+call of duty: wwii - multiplayer,
+final fantasy xii the zodiac age,40.59
+team sonic racing™,
+ni no kuni wrath of the white witch™ remastered,
+final fantasy xv windows edition,
+noita,23.18
+resident evil 2,8.67
+elex ii,36.21
+encased,
+back 4 blood,11.8
+metro exodus enhanced edition,15.31
+dungeon crowley,
+the dark pictures anthology: man of medan,4.35
+terminator: resistance,9.19
+paradise lost,3.47
+grandia hd remaster,42.03
+kingdoms of amalur: re-reckoning,24.41
+evil west,11.03
+baldur's gate 3,22.85
+zombie army 4: dead war,11.57
+solasta: crown of the magister,38.81
+twelve minutes,4.19
+chrono cross: the radical dreamers edition,
+remnant: from the ashes,13.29
+final fantasy viii - remastered,
+trine 4: the nightmare prince,10.12
+tell me why,9.59
+marvel's avengers,12.27
+the dark pictures anthology: little hope,5.06
+the dark pictures anthology: little hope - friend's pass,
+command & conquer™ remastered collection,
+sir whoopass,9.67
+mass effect™: andromeda deluxe edition,
+need for speed™ heat ,
+resident evil 3,6.0
+resident evil resistance,
+mafia iii: definitive edition,25.18
+mafia: definitive edition,10.6
+wasteland 3,37.0
+nickelodeon all-star brawl,1.15
+battlefield™ v,
+ghostwire: tokyo,11.17
+dungeons & dragons: dark alliance,11.63
+marvel's guardians of the galaxy,17.65
+aliens: fireteam elite,8.61
+sherlock holmes chapter one,12.4
+the ascent,11.97
+marvel’s spider-man remastered,
+marvel's spider-man: miles morales,7.56
+the quarry,9.08
+star ocean the divine force,
+lost judgment,23.15
+crisis core –final fantasy vii– reunion,
+the callisto protocol,10.04
+ dead space,11.89
+grand theft auto iii - the definitive edition,15.09
+grand theft auto: vice city - the definitive edition,17.98
+grand theft auto: san andreas - the definitive edition,30.49
+plants vs. zombies: game of the year,8.22
+the lord of the rings online™,
+star wars™ starfighter™,
+star wars™ jedi knight: mysteries of the sith™,
+star wars™: dark forces,
+star wars™: the clone wars - republic heroes™,
+star wars™: the force unleashed™ ultimate sith edition,
+star wars™: the force unleashed™ ii,
+the sims™ 3,
+final fantasy iii (3d remake),
+rebuild: original rebuild 2,
+final fantasy iv (3d remake),
+out there: ω edition,4.89
+cultures - 8th wonder of the world,
+death's gambit: afterlife,15.19
+car trader simulator,13.0
+blacksmith,
+battletech,
+endless world idle rpg,
+overcooked! 2,6.84
+fantasy blacksmith,
+pixel puzzles illustrations & anime,
+pixel puzzles traditional jigsaws,17.37
+day of dragons,
+pesterquest,5.49
+princess remedy in a heap of trouble,1.24
+dragon age™ inquisition,
+mass effect™ 3 n7 digital deluxe edition (2012),
+oddworld: stranger's wrath hd,10.45
+dungeons - the dark lord,
+telltale texas hold'em,0.83
+hector: ep 1,
+hector: ep 2,
+hector: ep 3,
+"sam & max 103: the mole, the mob and the meatball",1.72
+sam & max 205: what's new beelzebub?,2.91
+thehunter classic,
+resident evil revelations,8.4
+you don't know jack vol. 3,
+you don't know jack vol. 4 the ride,
+you don't know jack movies,
+you don't know jack sports,
+you don't know jack television,
+you don't know jack headrush,
+age of empires ii (2013),
+aer memories of old,3.04
+turmoil,8.21
+shadowrun chronicles - boston lockdown,
+minecraft: story mode - a telltale games series,12.39
+hitman™,
+god eater 2 rage burst,55.51
+god eater resurrection,
+batman - the telltale series,1.48
+holy potatoes! we’re in space?!,
+laser league: world arena,
+street fighter v new cfn beta,
+psychonauts 2,14.98
+maneater,8.12
+raft,22.51
+planet zoo,37.73
+genesis noir,4.6
+project winter,9.63
+othercide,22.08
+booty calls,13.54
+"honey, i joined a cult",12.17
+tribes of midgard,15.75
+backbone,4.68
+spellcaster university,8.39
+driver booster for steam,
+huniepop 2: double date,14.17
+endzone - a world apart,17.78
+omno,3.49
+dwarf fortress,74.6
+emily is away <3,4.25
+space haven,
+subverse,5.0
+call of the sea,5.67
+conan chop chop,12.04
+timberborn,19.38
+main assembly,
+the henry stickmin collection,2.08
+the bard's tale iv: director's cut,45.3
+inscryption,12.42
+venture seas,
+fall guys,8.88
+shady part of me,5.17
+people playground,4.78
+watchers,
+gas station simulator,10.22
+nebuchadnezzar,31.0
+futa fix dick dine and dash,1.87
+pathfinder: wrath of the righteous - enhanced edition,
+hot wheels unleashed™,
+a town uncovered,
+stray,5.04
+dyson sphere program,66.56
+mind scanners,4.39
+surviving the aftermath,16.66
+the serpent rogue,3.2
+leaf blower revolution - idle game,56.16
+farmer against potatoes idle,
+kubifaktorium,
+siege survival: gloria victis,8.22
+age of empires iv: anniversary edition,
+clanfolk,
+in sound mind,9.88
+aperture desk job,0.52
+lawn mowing simulator,23.0
+hexen: beyond heretic,10.21
+heretic: shadow of the serpent riders,
+lone survivor: the director's cut,4.1
+assassin's creed® iii,
+divinity: dragon commander beta,
+agarest: generations of war,75.47
+skullgirls ∞endless beta∞,
+wreckfest throw-a-santa + sneak peek 2.0,
+murdered: soul suspect™,
+carmageddon 2: carpocalypse now,12.39
+tilt brush,
+dark souls™ ii: scholar of the first sin,
+virtual desktop,
+adventurequest 3d,15.0
+learn japanese to survive - hiragana battle,9.95
+middle-earth™: shadow of war™,
+battlerite public test,
+vampire: the masquerade - bloodhunt,12.0
+atlas,42.5
+snow daze,3.25
+deadside,
+sekiro™: shadows die twice,
+pacify,1.67
+swords and soldiers 2 shawarmageddon,6.33
+dota underlords,51.08
+vr paradise,
+the legend of bum-bo,10.94
+knockout city™,
+warhammer underworlds: online,2.11
+seraph's last stand,
+call of duty®: modern warfare® ii | warzone™ 2.0,
+shelter 1,
+counter-strike nexon: studio,
+eco,62.05
+paladins - public test,
+foundation,9.73
+knights of honor ii: sovereign,8.82
+bean battles,
+rogue company,14.57
+crsed,0.56
+going medieval,
+sapiens,
+medieval dynasty,27.28
+icarus,7.4
+diplomacy is not an option,
+port royale 4,18.65
+becastled,5.78
+patron,12.98
+ozymandias,
+the planet crafter,18.41
+judge dredd: dredd vs death,4.05
+spaceforce: rogue universe,
+madballs in...babo: invasion,
+command and conquer 4: tiberian twilight,8.26
+total war: empire - definitive edition,43.8
+total war: napoleon - definitive edition,
+need for speed: hot pursuit,14.03
+airmech strike,
+small world,
+prime world: defenders 2,
+mysterium,1.98
+carcassonne: the official board game,0.39
+barotrauma,38.55
+guns of icarus alliance,1.79
+"warhammer 40,000: dawn of war iii open beta",
+splitgate,19.04
+deceit,2.7
+cloudpunk,9.02
+potion explosion,0.54
+the cycle: frontier,
+conqueror's blade,552.93
+love letter,1.88
+techwars: global conflict,
+wordabeasts,
+crucible,
+risk: global domination,26.5
+frozenheim,
+the lord of the rings: adventure card game - definitive edition,
+cyber hunter,
+star wars™: squadrons,
+star wars™ battlefront™ ii,
+ninja kiwi archive,
+the riftbreaker: prologue,1.27
+spellforce 3: versus edition,
+escape simulator,6.94
+dorfromantik,5.5
+predator: hunting grounds,15.1
+warlander,
+tiny tina's assault on dragon keep: a wonderlands one-shot adventure,5.81
+crash time 2,9.46
+arma: cold war assault,22.16
+deus ex: human revolution - the missing link,4.46
+galaxy on fire 2™ full hd,
+lego® the lord of the rings™,
+sonic adventure™ 2 ,
+guacamelee! super turbo championship edition,7.04
+aveyond 3-2: gates of night,
+the guild ii: renaissance,
+killing floor - toy master,
+grandia ii hd remaster,31.0
+guardians of orion (phase 2),
+manual samuel - anniversary edition,
+downward,6.13
+we were here together,6.47
+bravery and greed,6.53
+gene shift auto,1.57
+a sceptic's guide to magic,
+goat of duty,
+between two castles - digital edition,
+keyboard killers,1.5
+transpose,5.89
+arcade moonlander,0.88
+showdown bandit,1.95
+raji: an ancient epic prologue,0.63
+chip's challenge 1,
+yu-gi-oh!  master duel,21.53
+blackout z: slaughterhouse edition,0.37
+chimeraland,
+waves 2: notorious,0.33
+command and conquer 3: kane's wrath,8.13
+duke nukem 2,5.42
+project nimbus: complete edition,
+resident evil 4 (2005),
+resident evil revelations 2,10.25
+vicious circle,
+derail valley,
+doki doki literature club,4.19
+shantae: half-genie hero ultimate edition,7.54
+112 operator,11.15
+evergate,5.41
+radio commander,7.79
+death's door,9.1
+automachef,25.93
+trombone champ,2.77
+transport fever 2,38.69
+motorcycle mechanic simulator 2021,
+yakuza 3 remastered,16.79
+yakuza 4 remastered,20.91
+yakuza 5 remastered,36.58
+sayonara wild hearts,1.34
+shantae and the seven sirens,8.1
+cyber manhunt,7.23
+everhood,6.45
+bpm: bullets per minute,3.33
+pga tour 2k21,22.26
+nimbus infinity,
+lil gator game,3.34
+tiny tina's wonderlands,16.41
+the stanley parable: ultra deluxe,2.13
+cursed to golf,8.09
+gundam evolution,
+sonic origins,9.97
+portal with rtx,3.12
+shadowgrounds: survivor,
+lego® harry potter: years 1-4,
+lego® star wars™ iii: the clone wars™,
+q.u.b.e: director's cut,
+lego® harry potter: years 5-7,
+crazy machines 1.5 new from the lab,
+crazy machines 1.5 inventors training camp,1.28
+ace combat™ assault horizon enhanced edition,
+lego® marvel super heroes,
+spintires®,
+neighbours back from hell,4.57
+the lego® movie - videogame,
+assassin's creed liberation,7.98
+woolfe - the red hood diaries,
+adr1ft,4.72
+devil may cry 3: special edition,11.86
+lego® pirates of the caribbean the video game,
+bridge constructor playground,2.14
+assassin's creed unity,17.15
+lego® worlds,
+rooms: the toymaker's mansion,
+popup dungeon,4.0
+lego® jurassic world,
+batman™: arkham origins blackgate - deluxe edition,
+shadow complex remastered,5.14
+out of space,6.2
+vikings - wolves of midgard,
+lego® marvel's avengers,
+the uncertain: last quiet day,3.0
+tank mechanic simulator,25.15
+form,1.05
+earth defense force 4.1  the shadow of new despair,21.29
+forts,8.74
+cloudlands : vr minigolf,
+deliver us the moon,4.99
+rock of ages 2,4.26
+detached,2.5
+overload,8.38
+police simulator: patrol duty,
+the pedestrian,4.06
+executive assault 2,
+redout: enhanced edition,11.48
+recore: definitive edition,12.18
+echo,7.4
+the station,1.85
+little big workshop,20.19
+evergarden,7.58
+colourise,
+lego® city undercover,
+inceptionvr,
+tom clancy's ghost recon® wildlands,
+when ski lifts go wrong ,6.67
+endless™ space 2,
+the lego® ninjago® movie video game,
+cooking simulator,8.88
+interplanetary: enhanced edition,4.0
+red faction: guerrilla steam edition,
+red faction guerrilla re-mars-tered,11.12
+desolate,12.5
+floor plan: hands-on edition,0.75
+time lock vr 1 ,
+total tank simulator,7.0
+nowhere prophet,6.47
+discord bot maker,
+darksiders genesis,14.32
+genesis alpha one deluxe edition,
+little misfortune,2.99
+south park the fractured but whole,17.76
+lego® marvel super heroes 2,
+drake hollow,10.95
+deadly days,9.69
+disassembly 3d,
+after the fall,3.03
+the spy who shrunk me,1.85
+liv,
+headsnatchers,0.89
+witching tower,2.67
+crazy machines vr,
+per aspera,20.26
+plane mechanic simulator,
+etherborn,2.22
+roarr! jurassic edition,
+lego® the incredibles,
+deovr video player,
+moss,4.03
+creeper world 4,15.59
+secret neighbor,
+rover mechanic simulator,8.0
+aperture hand lab,0.22
+takelings house party,
+juno: new origins,
+zero caliber vr,3.6
+xcom: chimera squad,21.42
+layers of fear (2016),
+in other waters,4.73
+iron danger,12.0
+last oasis,
+heave ho,3.81
+train station renovation,13.12
+bee simulator,2.58
+telefrag vr,
+felix the reaper,4.59
+proze: enlightenment,4.65
+swine hd remaster,
+macdows 95,1.83
+marble combat,
+carrion,
+bright memory,0.8
+bright memory: infinite,2.07
+clash of chefs vr,7.0
+grounded,21.65
+boomerang fu,0.87
+the dungeon of naheulbeuk: the amulet of chaos,29.86
+rebel cops,14.06
+failspace,
+sniper ghost warrior contracts,12.56
+autonauts,95.8
+cepheus protocol,
+grip: combat racing,13.4
+lightmatter,3.95
+neoverse,4.12
+moving out,5.07
+firestone: online idle rpg,
+unrailed!,2.15
+struggling,7.06
+dirt 5,8.34
+no time,15.52
+mech mechanic simulator,0.33
+curious cases,1.86
+deleveled,8.61
+superliminal,2.62
+fling to the finish,1.63
+wolfenstein: cyberpilot,1.91
+still there,5.48
+ovr toolkit,
+earthx,8.67
+before we leave,15.44
+doctor who: the edge of time,2.71
+banners of ruin,6.84
+song beater: quite my tempo!,
+pistol whip,2.11
+garden of the sea,3.75
+the surge 2,21.15
+rock of ages 3: make & break,7.64
+monster train,2.96
+the room vr: a dark matter,3.9
+mo:astray,7.67
+hydroneer,11.25
+as far as the eye,4.22
+builder simulator,3.05
+remothered: broken porcelain ,6.53
+fun with ragdolls: the game,0.18
+timelie,5.01
+going under,9.09
+hardspace: shipbreaker,26.25
+midnight protocol,8.5
+teardown,11.23
+molek-syntez,11.08
+industria,
+kill it with fire,2.86
+path of giants,1.97
+worms rumble,50.0
+pumpkin jack,4.63
+turnip boy commits tax evasion,2.09
+she will punish them,
+blue fire,10.86
+blue fire: void maker,1.0
+partisans 1941,18.34
+dead space™ 3,
+overcooked! all you can eat,10.63
+skully,5.36
+vampire: the masquerade - shadows of new york,4.82
+powerwash simulator,34.18
+biped,2.73
+shapez,26.1
+operation tango,3.98
+bridge constructor: the walking dead,9.21
+the room 4: old sins,3.95
+control ultimate edition,12.67
+observer: system redux,7.19
+ancestors: the humankind odyssey ,19.71
+zenith mmo,
+ghostrunner,6.85
+what the dub?!,0.72
+peaky blinders: mastermind,6.06
+cook-out,
+coloring game 4,5.72
+forgive me father,7.12
+sackboy™: a big adventure,
+just die already,4.71
+doors: paradox,4.96
+slime rancher 2,9.11
+farming simulator 22,
+deathloop,
+embr,
+fresh start cleaning simulator,5.17
+lego® star wars™: the skywalker saga,
+golf gang,6.07
+railroad corporation,38.3
+ghost recon breakpoint,23.76
+hogwarts legacy,25.68
+zen bound® 2,
+bit.trip presents... runner2: future legend of rhythm alien,
+the apogee throwback pack,
+those who remain,5.62
+rogue heroes: ruins of tasos,11.33
+spirit hunter: death mark,10.41
+loop hero,28.8
+neon abyss,11.12
+the jackbox party pack 8,3.09
+forewarned,3.42
+sucker for love,0.45
+core keeper,15.72
+marauders,
+sniper elite 5,9.91
+total war: medieval ii - definitive edition,
+gotham city impostors: free to play,
+driver fusion,
+total war: rome ii - emperor edition,
+valiant hearts: the great war™ / soldats inconnus : mémoires de la grande guerre™,
+salt and sanctuary,16.3
+chronicles of teddy,
+company of heroes: modern combat,
+star wars™ galactic battlegrounds saga,
+turok,7.66
+war of rights,
+halo wars: definitive edition,9.01
+brigador: up-armored edition,11.0
+kards - the wwii card game,
+ion fury,9.95
+tom clancy's ghost recon wildlands open beta,
+shovel knight: shovel of hope,6.66
+quake champions pts,
+postal 4: no regerts,10.69
+lonely mountains: downhill,6.03
+wytchwood,10.44
+hellbound,2.17
+secret of mana,22.14
+worlds adrift island creator,4.8
+hrot,3.07
+dragon quest® xi: echoes of an elusive age™,
+total war: rome remastered,
+age of empires iii: definitive edition,19.0
+blood: fresh supply,11.51
+nightmare reaper,22.73
+dinkum,24.75
+hedon bloodrite,20.91
+regiments,19.09
+slapshot: rebound,8.92
+talvisota - winter war,
+rubber bandits,1.26
+microsoft flight simulator,24.23
+tails of iron,7.27
+dread templar,6.71
+zero hour,28.0
+cruelty squad,5.89
+age of darkness: final stand,7.0
+battlefield™ 2042,
+dread delusion,
+dune: spice wars,7.31
+wrestling empire,
+cultic,
+total war: warhammer iii,33.35
+i maed a gam3 w1th z0mb1es 1nit!!!1,
+nightmare of decay,2.32
+company of heroes 3,16.16
+fallen earth classic,
+stomping land,
+relic hunters zero: remix,
+gamemaker: studio,
+undermine,18.52
+snkrx,5.57
+summer in mara,20.4
+sons of the forest,11.13
+neophyte,
+pico park,2.93
+lego® builder's journey,
+tomb raider iii: adventures of lara croft,19.29
+tomb raider: chronicles,
+tomb raider (vi): the angel of darkness,
+ratz instagib 2.0,
+call of duty: advanced warfare - multiplayer,
+infestation: survivor stories 2020,
+perception,3.56
+darq,2.06
+don't be afraid,3.08
+moonbreaker,
+amnesia: rebirth,8.5
+palmyra orphanage,1.62
+blair witch,5.19
+tesla force,4.61
+song of horror,
+little nightmares ii,5.6
+marvel snap,
+call of duty 4: modern warfare (2007),
+magic: the gathering — duels of the planeswalkers 2012,
+star wars™: x-wing special edition,
+star wars™: tie fighter special edition,
+star wars™: x-wing alliance™,
+star wars™ x-wing vs tie fighter: balance of power campaigns™,
+mechwarrior 5: mercenaries,37.24
+trials of mana,20.73
+orcs must die! 3,9.69
