@@ -1,38 +1,26 @@
 from surprise import SVD, Dataset, accuracy, Reader
 from surprise.model_selection import train_test_split
 from helper_functions import getGamesList
+from dataset_merging import merge_datasets, add_ratings
 import pandas as pd
 import numpy as np
 
 class Steam_Recommender:
 
-    def __init__(self, csv_filepath, modelName, uid):
+    def __init__(self, modelName, uid):
         self.uid = uid
-        self.data = self.get_data(csv_filepath)
+        self.data = self.get_data()
         self.train = self.get_train()
         self.model = self.model_create_fit(modelName)
 
     #Import our csv as a dataframe to use as data
-    def get_data(self, filepath):
-        games = getGamesList(self.uid)
-        if games == 0:
-            print("Error, profile is private or has no games")
-        df = pd.read_csv(filepath)
-        user_df = df.loc[df['uid'] == self.uid]
-        if user_df.empty:
-            for game in games:
-                df.loc[len(df.index)] = [self.uid, game['name'], game['playtime_forever']/60.0]
-        else:
-            for game in games:
-                test_df = user_df.loc[user_df['title'] == game['name']]
-                if test_df.empty:
-                    df.loc[len(df.index)] = [self.uid, game['name'], game['playtime_forever']/60.0]
-                else:
-                    df.loc[(df['uid'] == self.uid) & (df['title'] == game)] = [self.uid, game['name'], game['playtime_forever']/60.0]
+    def get_data(self):
+        df = merge_datasets(self.uid)
+        df, df_utr = add_ratings(df)
         ##Uncomment to update csv with data of new users running this code
-        #df.to_csv("created-datasets/user-title-rating.csv", index=False)
+        #df_utr.to_csv("created-datasets/user-title-rating.csv", index=False)
         reader = Reader(rating_scale=(0,10))
-        data = Dataset.load_from_df(df, reader=reader)
+        data = Dataset.load_from_df(df_utr, reader=reader)
         return data
     
     #This function is only necessary if we want to make rating estimates for every user in the dataset
@@ -69,8 +57,6 @@ class Steam_Recommender:
     
     #Get top n titles and estimated ratings for a user
     def get_top_predictions(self, n):
-        #Add user to dataset
-
         #Creating the test set for the user with uid = uid
         rating_mean = self.data.df["rating"].mean()
         user_df = self.data.df.loc[self.data.df['uid'] == self.uid]
@@ -93,7 +79,7 @@ class Steam_Recommender:
         return top_user_titles, top_user_ratings
 
 #Example
-steam_recommender = Steam_Recommender("created-datasets/user-title-rating.csv", "SVD", 76561198229936744)
+steam_recommender = Steam_Recommender("SVD", 76561198229936744)
 top_user_titles, top_user_ratings = steam_recommender.get_top_predictions(100)
 print("top user titles: ", top_user_titles)
 rmse = steam_recommender.model_rmse()
