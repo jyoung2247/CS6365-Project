@@ -1,12 +1,12 @@
 from helper_functions import getFriendsList, getGamesList
 import pandas as pd
 
-# d = {'uid': [0], 'title': ['placeholder'], 'hours': [0.0]}
-# df = pd.DataFrame(data = d)
-
-df = pd.DataFrame(columns=['uid', 'title', 'hours'])
+#df = pd.DataFrame(columns=['uid', 'title', 'hours'])
 depth = 0
-df_visited_users = pd.DataFrame(columns=['uid'])
+#df_visited_users = pd.DataFrame(columns=['uid'])
+
+df = pd.read_csv("created-datasets/added-users.csv")
+df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
 
 def dfs(uid, max_depth):
     global depth
@@ -25,12 +25,16 @@ def dfs(uid, max_depth):
         return
     friends = friends.split(",")
     for friend in friends:
+        friend = int(friend)
         if (depth >= max_depth):
             return
-        if friend not in df_visited_users['uid']:
+        if friend not in df_visited_users['uid'].values:
             depth += 1
-            dfs(int(friend), max_depth)
+            dfs(friend, max_depth)
 
-dfs(76561198058962258, 500)
-df.to_csv("added-users.csv", index=False)
-df_visited_users.to_csv("visited-users.csv", index=False)
+uid = 76561198064813625
+df_visited_users = df_visited_users.drop(df_visited_users.index[1953])
+if uid not in df_visited_users['uid'].values:
+    dfs(uid, 500)
+df.to_csv("created-datasets/added-users.csv", index=False)
+df_visited_users.to_csv("created-datasets/visited-users.csv", index=False)

@@ -29,5 +29,8 @@ def getGamesList(steam_id):
         #print("user owns no games, or is private")
         return 0
     # Extract the list of games from the response
-    gamesList = (data["response"]["games"])
+    if 'games' in data['response']:
+        gamesList = (data["response"]["games"])
+    else:
+        return 0
     return gamesList
