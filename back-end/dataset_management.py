@@ -220,9 +220,10 @@ def update_datasets(uid, max_depth):
     df.to_csv("created-datasets/users-hltb-ratings.csv", index=False)
     df_utr.to_csv("created-datasets/user-title-rating.csv", index=False)
 
+depth = 0
+df_added_users = pd.read_csv("created-datasets/added-users.csv")
+df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
+
 # #Uncomment to update dataset, otherwise keep commented so it doesn't run updates when imported by steam_recommender.py
-# depth = 0
-# df_added_users = pd.read_csv("created-datasets/added-users.csv")
-# df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
 # update_datasets(76561197972651946, 10)
 
