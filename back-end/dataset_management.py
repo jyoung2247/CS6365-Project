@@ -186,6 +186,7 @@ def combine_hltb():
     df_joined_updated['main_story'] = hltb_combined
 
     df_joined_updated = df_joined_updated.iloc[2:, :]
+    df_joined_updated = df_joined_updated[~df_joined_updated['main_story'].isna()]
     df_joined_updated.to_csv("created-datasets/hltb-combined.csv", index=False)
 
 
@@ -193,9 +194,9 @@ def combine_hltb():
 depth = 0
 df_added_users = pd.read_csv("created-datasets/added-users.csv")
 df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
-uid = 76561198025447556
+uid = 76561198067964691
 if uid not in df_visited_users['uid'].values:
-    dfs(uid, 500)
+    dfs(uid, 10)
 df_added_users.to_csv("created-datasets/added-users.csv", index=False)
 df_visited_users.to_csv("created-datasets/visited-users.csv", index=False)
 
