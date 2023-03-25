@@ -32,8 +32,7 @@ def dfs(uid, max_depth):
             depth += 1
             dfs(friend, max_depth)
 
-uid = 76561198064813625
-df_visited_users = df_visited_users.drop(df_visited_users.index[1953])
+uid = 76561198044591301
 if uid not in df_visited_users['uid'].values:
     dfs(uid, 500)
 df.to_csv("created-datasets/added-users.csv", index=False)
