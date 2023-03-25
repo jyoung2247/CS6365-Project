@@ -1,7 +1,6 @@
 from surprise import SVD, Dataset, accuracy, Reader
 from surprise.model_selection import train_test_split
-from helper_functions import getGamesList
-from dataset_merging import merge_datasets, add_ratings
+from dataset_management import merge_datasets, add_ratings
 import pandas as pd
 import numpy as np
 
@@ -79,7 +78,7 @@ class Steam_Recommender:
         return top_user_titles, top_user_ratings
 
 #Example
-steam_recommender = Steam_Recommender("SVD", 76561198229936744)
+steam_recommender = Steam_Recommender("SVD", 76561198064813625)
 top_user_titles, top_user_ratings = steam_recommender.get_top_predictions(100)
 print("top user titles: ", top_user_titles)
 rmse = steam_recommender.model_rmse()

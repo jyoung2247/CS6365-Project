@@ -1,5 +1,5 @@
 import pandas as pd
-from helper_functions import getGamesList
+from steam_api_functions import getGamesList
 
 def merge_datasets(uid):
     #Clean games
