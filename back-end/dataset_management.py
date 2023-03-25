@@ -190,37 +190,39 @@ def combine_hltb():
     df_joined_updated.to_csv("created-datasets/hltb-combined.csv", index=False)
 
 
-#Run DFS to add to dataset
-depth = 0
-df_added_users = pd.read_csv("created-datasets/added-users.csv")
-df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
-uid = 76561198067964691
-if uid not in df_visited_users['uid'].values:
-    dfs(uid, 10)
-df_added_users.to_csv("created-datasets/added-users.csv", index=False)
-df_visited_users.to_csv("created-datasets/visited-users.csv", index=False)
+def update_datasets(uid, max_depth):
+    #Run DFS to add to dataset
+    if uid not in df_visited_users['uid'].values:
+        dfs(uid, max_depth)
+    df_added_users.to_csv("created-datasets/added-users.csv", index=False)
+    df_visited_users.to_csv("created-datasets/visited-users.csv", index=False)
 
-## Create datasets
-df_users_hltb = merge_datasets(None)
-df, df_utr = add_ratings(df_users_hltb)
+    ## Create datasets
+    df_users_hltb = merge_datasets(None)
+    df, df_utr = add_ratings(df_users_hltb)
 
-#Write to csvs
-df_users_hltb.to_csv("created-datasets/users-hltb.csv", index=False)
-df.to_csv("created-datasets/users-hltb-ratings.csv", index=False)
-df_utr.to_csv("created-datasets/user-title-rating.csv", index=False)
+    #Write to csvs
+    df_users_hltb.to_csv("created-datasets/users-hltb.csv", index=False)
+    df.to_csv("created-datasets/users-hltb-ratings.csv", index=False)
+    df_utr.to_csv("created-datasets/user-title-rating.csv", index=False)
 
-#Find hltb values for newly added titles
-update_hltb()
-#Combine new hltb values with hltb values from original dataset
-combine_hltb()
+    #Find hltb values for newly added titles
+    update_hltb()
+    #Combine new hltb values with hltb values from original dataset
+    combine_hltb()
 
-#Run dataset merging and add ratings again with updated hltb values
-df_users_hltb = merge_datasets(None)
-df, df_utr = add_ratings(df_users_hltb)
+    #Run dataset merging and add ratings again with updated hltb values
+    df_users_hltb = merge_datasets(None)
+    df, df_utr = add_ratings(df_users_hltb)
 
-#Write to csvs
-df_users_hltb.to_csv("created-datasets/users-hltb.csv", index=False)
-df.to_csv("created-datasets/users-hltb-ratings.csv", index=False)
-df_utr.to_csv("created-datasets/user-title-rating.csv", index=False)
+    #Write to csvs
+    df_users_hltb.to_csv("created-datasets/users-hltb.csv", index=False)
+    df.to_csv("created-datasets/users-hltb-ratings.csv", index=False)
+    df_utr.to_csv("created-datasets/user-title-rating.csv", index=False)
 
+# #Uncomment to update dataset, otherwise keep commented so it doesn't run updates when imported by steam_recommender.py
+# depth = 0
+# df_added_users = pd.read_csv("created-datasets/added-users.csv")
+# df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
+# update_datasets(76561197972651946, 10)
 
