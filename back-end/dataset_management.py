@@ -123,9 +123,10 @@ def get_main_story_hours(gameName):
 #         return x
     
 def update_hltb():
-    df = pd.read_csv("created-datasets/users-hltb.csv")
-    #Get rid of uid and hours
-    df = df.iloc[:, [1, 3]]
+    # df = pd.read_csv("created-datasets/users-hltb.csv")
+    # #Get rid of uid and hours
+    # df = df.iloc[:, [1, 3]]
+    df = pd.read_csv("created-datasets/user-title-rating")
     #Drop duplicate rows
     df = df.drop_duplicates(subset='title')
 
