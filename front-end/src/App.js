@@ -1,56 +1,37 @@
 import './App.css';
 import Checkbox from 'muicss/lib/react/checkbox';
 import { Link } from "react-router-dom";
-import papa from 'papaparse';
-import { readString } from 'react-papaparse';
-import file from './Games-HLTB.csv';
+import {useState} from "react";
+//import papa from 'papaparse';
+//import { readString } from 'react-papaparse';
+//import file from './Games-HLTB.csv';
 
+let glist = [];
 export function App() {
 
-    console.log("Console log not working");
+    const [id, setId] = useState('');
+    const [data, setData] = useState(null);
 
-    let record;
-    let record_data;
-    let result;
-    let result_data;
-    const games = file;
-
-    papa.parse(games, {
-        download: true,
-        complete: function (input) {
-            record = input;
-            record_data = input.data;
-            console.log("Records: " + record);
+    const handleClick = async () => {
+        try {
+            const response = await (await fetch(`http://localhost:8888/getGamesList?steam_id=%2076561198064813625`)).json()
+            setData(response.games)
+            glist = data;
+            console.log(data[0].name)
+        } catch (err) {
+            console.log(err.message)
         }
-    });
-
-    const PapaConfig = {
-        complete: (results, file) => {
-            console.log('Parsing complete:', results, file);
-            console.log("Results: " + results);
-            console.log("Results Data: " + results.data);
-            result = results;
-            result_data = results.data;
-        },
-        download: true,
-        error: (error, file) => {
-            console.log('Error while parsing:', error, file);
-        },
-    };
-    readString(games, PapaConfig);
-
-    console.log("Console log still not working");
+    }
 
     return (
         <div className="App">
             <header className="App-header">
-                <div className="data">{record}{record_data}{result}{result_data}</div>
                 <div className="circle1">1</div>
                 <div className="circle2">2</div>
                 <div className="contain">
                     <div className="profile-link">
                         My Steam Public Profile Link
-                        <input className="profile" type="text" placeholder="Paste profile link here"/>
+                        <input className="profile" type="text" placeholder="Paste Steam ID here" value={id} onChange={e => setId(e.target.value)}/>
                     </div>
                     OR
                     <div className="faves">
@@ -82,8 +63,9 @@ export function App() {
                     </div>
                 </div>
                 <div className="link">
+                    <button onClick={handleClick} className="next">Go</button>
                     <Link to="/list">
-                        <button className="next">Next</button>
+                        <button onClick={handleClick} className="next">Next</button>
                     </Link>
                 </div>
             </header>
@@ -109,30 +91,30 @@ export function List() {
                 </div>
                 <div className="rec-box">
                     <div className="headers">
-                        <div className="header">
+                        <div className="header1">
                             Name
                         </div>
-                        <div className="header">
+                        <div className="header2">
                             Rank
                         </div>
                     </div>
                     <div className="rec-list">
                         <div className="names">
-                            <div> Fortnite </div>
-                            <div> Apex Legends </div>
-                            <div> PUBG </div>
-                            <div> Warzone </div>
-                            <div> Super Smash Bros </div>
-                            <div> Brawlhalla </div>
-                            <div> Minecraft </div>
-                            <div> Multiversus </div>
-                            <div> Rainbow Six Siege </div>
-                            <div> Elder Scrolls Online </div>
-                            <div> Destiny 2 </div>
-                            <div> World of Warcraft </div>
-                            <div> League of Legends </div>
-                            <div> For Honor </div>
-                            <div> Overwatch 2 </div>
+                            <div> {glist[0].name} </div>
+                            <div> {glist[1].name} </div>
+                            <div> {glist[2].name} </div>
+                            <div> {glist[3].name} </div>
+                            <div> {glist[4].name} </div>
+                            <div> {glist[5].name} </div>
+                            <div> {glist[6].name} </div>
+                            <div> {glist[7].name} </div>
+                            <div> {glist[8].name} </div>
+                            <div> {glist[9].name} </div>
+                            <div> {glist[11].name} </div>
+                            <div> {glist[12].name} </div>
+                            <div> {glist[13].name} </div>
+                            <div> {glist[14].name} </div>
+                            <div> {glist[15].name} </div>
                         </div>
                         <div className="ranks">
                             <div> 1 </div>

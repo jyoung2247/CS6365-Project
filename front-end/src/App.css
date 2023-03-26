@@ -201,7 +201,11 @@
   flex-direction: row;
 }
 
-.header {
+.header1 {
+  margin: 10px 375px 0px 10px;
+}
+
+.header2 {
   margin: 10px 375px 0px 10px;
 }
 
