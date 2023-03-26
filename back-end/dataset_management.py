@@ -104,9 +104,9 @@ def add_ratings(df):
     df = df.iloc[:, [0, 1, 4, 2, 3]]
 
     #Get just userid, game title, rating
-    df_utr = df.iloc[:, 0:3]
+    df = df.iloc[:, 0:3]
     
-    return df, df_utr
+    return df
 
 def get_main_story_hours(gameName):
     results_list = HowLongToBeat().search(str(gameName))
@@ -122,11 +122,10 @@ def get_main_story_hours(gameName):
 #     else:
 #         return x
     
-def update_hltb():
+def update_hltb(df_users_hltb):
     # df = pd.read_csv("created-datasets/users-hltb.csv")
     # #Get rid of uid and hours
-    # df = df.iloc[:, [1, 3]]
-    df = pd.read_csv("created-datasets/user-title-rating")
+    df = df_users_hltb.iloc[:, [1, 3]]
     #Drop duplicate rows
     df = df.drop_duplicates(subset='title')
 
@@ -134,16 +133,17 @@ def update_hltb():
     #df['main_story'] = df['main_story'].apply(lambda x: replace_zero(x))
 
     #df to hold games which can't be found on hltb
-    df_missing_games = pd.DataFrame(columns=['title'])
+    #df_missing_games = pd.DataFrame(columns=['title'])
     df_missing_games = pd.read_csv("created-datasets/missing-hltb.csv")
 
-    main_story = df["main_story"].to_numpy()
-    main_nan = pd.isna(df["main_story"]).to_numpy()
-    nan_indices = np.argwhere(main_nan).squeeze()
+    #main_story = df["main_story"].to_numpy()
+    #main_nan = pd.isna(df["main_story"]).to_numpy()
+    #nan_indices = np.argwhere(main_nan).squeeze()
 
     unavailable_titles = df_missing_games['title']
 
-    missing_titles = df['title'].iloc[nan_indices]
+    #missing_titles = df['title'].iloc[nan_indices]
+    missing_titles = df['title'][df['main_story'].isna()]
 
     titles_to_check = set(np.setdiff1d(missing_titles, unavailable_titles))
 
@@ -159,7 +159,7 @@ def update_hltb():
             if main_story != 0:
                 count_added += 1
                 print(game_name)
-                df.loc[df['title'] == game_name] = main_story
+                df['main_story'].loc[df['title'] == game_name] = main_story
             else:
                 df_missing_games.loc[len(df_missing_games.index)] = game_name
         else:
@@ -167,6 +167,8 @@ def update_hltb():
     print(count_added)
 
     print("games added: ", count_added)
+
+    df = df[~df['main_story'].isna()]
     df.to_csv("created-datasets/hltb-new.csv", index=False)
     df_missing_games.to_csv("created-datasets/missing-hltb.csv", index=False)
 
@@ -182,24 +184,9 @@ def update_datasets(uid, max_depth):
 
     ## Create datasets
     df_users_hltb = merge_datasets(None)
-    df, df_utr = add_ratings(df_users_hltb)
-
-    #Write to csvs
-    df_users_hltb.to_csv("created-datasets/users-hltb.csv", index=False)
-    df.to_csv("created-datasets/users-hltb-ratings.csv", index=False)
-    df_utr.to_csv("created-datasets/user-title-rating.csv", index=False)
 
     #Find hltb values for newly added titles
-    update_hltb()
-
-    #Run dataset merging and add ratings again with updated hltb values
-    df_users_hltb = merge_datasets(None)
-    df, df_utr = add_ratings(df_users_hltb)
-
-    #Write to csvs
-    df_users_hltb.to_csv("created-datasets/users-hltb.csv", index=False)
-    df.to_csv("created-datasets/users-hltb-ratings.csv", index=False)
-    df_utr.to_csv("created-datasets/user-title-rating.csv", index=False)
+    update_hltb(df_users_hltb)
 
 depth = 0
 df_added_users = pd.read_csv("created-datasets/added-users.csv")

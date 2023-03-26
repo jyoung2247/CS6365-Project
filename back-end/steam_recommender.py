@@ -15,11 +15,9 @@ class Steam_Recommender:
     #Import our csv as a dataframe to use as data
     def get_data(self):
         df = merge_datasets(self.uid)
-        df, df_utr = add_ratings(df)
-        ##Uncomment to update csv with data of new users running this code
-        #df_utr.to_csv("created-datasets/user-title-rating.csv", index=False)
+        df = add_ratings(df)
         reader = Reader(rating_scale=(0,10))
-        data = Dataset.load_from_df(df_utr, reader=reader)
+        data = Dataset.load_from_df(df, reader=reader)
         return data
     
     #This function is only necessary if we want to make rating estimates for every user in the dataset
@@ -78,7 +76,7 @@ class Steam_Recommender:
         return top_user_titles, top_user_ratings
 
 #Example
-steam_recommender = Steam_Recommender("SVD", 76561198064813625)
+steam_recommender = Steam_Recommender("SVD", 76561198058962258)
 top_user_titles, top_user_ratings = steam_recommender.get_top_predictions(100)
 print("top user titles: ", top_user_titles)
 rmse = steam_recommender.model_rmse()
