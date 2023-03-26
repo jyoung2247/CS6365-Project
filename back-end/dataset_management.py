@@ -50,37 +50,43 @@ def merge_datasets(uid):
     df_hltb_concat = pd.concat([df_hltb_added, df_hltb_original], axis=0)
     df_hltb_concat.drop_duplicates(subset='title')
 
-    #Clean users
-    df_users = pd.read_csv("original-datasets/users.csv")
-    df_users = df_users[df_users.behavior == "play"]
-    df_users = df_users.loc[:, ["uid", "title", "hours"]]
+    #Create lower case game name column for the purpose of joins
+    df_hltb_concat["name_lower"] = df_hltb_concat['title'].str.lower()
+
+    #Drop title column for joins
+    df_hltb_concat.drop(columns=["title"], inplace=True)
+
+    # #Clean users
+    # df_users = pd.read_csv("original-datasets/users.csv")
+    # df_users = df_users[df_users.behavior == "play"]
+    # df_users = df_users.loc[:, ["uid", "title", "hours"]]
 
     #Add scraped users to original dataset
-    df_added_users = pd.read_csv("created-datasets/added-users.csv")
-    df_users_concat = pd.concat([df_users, df_added_users], axis=0)
+    df_users = pd.read_csv("created-datasets/added-users.csv")
+    #df_users_concat = pd.concat([df_users, df_added_users], axis=0)
 
     #Add new user to dataset
     if uid != None:
         games = getGamesList(uid)
         if games == 0:
             print("Error, profile is private or has no games")
-        user_df = df_users_concat.loc[df_users_concat['uid'] == uid]
+        user_df = df_users.loc[df_users['uid'] == uid]
         if user_df.empty:
             for game in games:
-                df_users_concat.loc[len(df_users_concat.index)] = [uid, game['name'], game['playtime_forever']/60.0]
+                df_users.loc[len(df_users.index)] = [uid, game['name'], game['playtime_forever']/60.0]
         else:
             for game in games:
                 test_df = user_df.loc[user_df['title'] == game['name']]
                 if test_df.empty:
-                    df_users_concat.loc[len(df_users_concat.index)] = [uid, game['name'], game['playtime_forever']/60.0]
+                    df_users.loc[len(df_users.index)] = [uid, game['name'], game['playtime_forever']/60.0]
                 else:
-                    df_users_concat.loc[(df_users_concat['uid'] == uid) & (df_users_concat['title'] == game['name'])] = [uid, game['name'], game['playtime_forever']/60.0]
+                    df_users.loc[(df_users['uid'] == uid) & (df_users['title'] == game['name'])] = [uid, game['name'], game['playtime_forever']/60.0]
     
     #Create lower case game name column for the purpose of joins
-    df_users_concat["name_lower"] = df_users_concat['title'].str.lower()
+    df_users["name_lower"] = df_users['title'].str.lower()
 
     #Joining data
-    df_users_hltb = pd.merge(df_users_concat, df_hltb_concat, on="name_lower", how="left")
+    df_users_hltb = pd.merge(df_users, df_hltb_concat, on="name_lower", how="left")
 
     #Drop name lower since all we need is title column now
     df_users_hltb.drop(columns=["name_lower"], inplace=True)
@@ -167,6 +173,9 @@ def update_datasets(uid, max_depth):
     #Run DFS to add to dataset
     if uid not in df_visited_users['uid'].values:
         dfs(uid, max_depth)
+    else:
+        print("User has already been visited. Please choose a new user to start DFS on")
+        return
     df_added_users.to_csv("created-datasets/added-users.csv", index=False)
     df_visited_users.to_csv("created-datasets/visited-users.csv", index=False)
 
@@ -196,5 +205,5 @@ df_added_users = pd.read_csv("created-datasets/added-users.csv")
 df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
 
 # #Uncomment to update dataset, otherwise keep commented so it doesn't run updates when imported by steam_recommender.py
-update_datasets(76561197972651946, 500)
+#update_datasets(76561197972651946, 500)
 
