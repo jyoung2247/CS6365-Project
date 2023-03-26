@@ -34,17 +34,21 @@ def dfs(uid, max_depth):
 def merge_datasets(uid):
 
     # #Clean HLTB - only used before updated HLTB created
-    # df_hltb = pd.read_csv("original-datasets/hltb-original.csv")
-    # df_hltb = df_hltb.loc[:, ["title", "main_story"]]
+    # df = pd.read_csv("original-datasets/hltb-original.csv")
+    # df = df[~df['main_story'].isna()]
+    # df = df.drop_duplicates(subset='title')
+    # df = df.iloc[:, [1, 2]]
     # #Strip h from main_story
-    # df_hltb["main_story"] = df_hltb["main_story"].str.replace('h', '', regex=True).astype("float64")
-    # #Create lower case game name column for the purpose of joins
-    # df_hltb["name_lower"] = df_hltb.title.str.lower()
-    # #Delete previous title column for purpose of joins
-    # df_hltb.drop(columns="title", inplace=True)
+    # df["main_story"] = df["main_story"].str.replace('h', '', regex=True).astype("float64")
+    # df.to_csv("created-datasets/hltb-original-clean.csv", index=False)
 
-    #Use updated HLTB
-    df_hltb = pd.read_csv("created-datasets/hltb-combined.csv")
+    #Use cleaned hltb
+    df_hltb_original = pd.read_csv("created-datasets/hltb-original-clean.csv")
+
+    #Add scraped hltb times to original
+    df_hltb_added = pd.read_csv("created-datasets/hltb-new.csv")
+    df_hltb_concat = pd.concat([df_hltb_added, df_hltb_original], axis=0)
+    df_hltb_concat.drop_duplicates(subset='title')
 
     #Clean users
     df_users = pd.read_csv("original-datasets/users.csv")
@@ -76,7 +80,7 @@ def merge_datasets(uid):
     df_users_concat["name_lower"] = df_users_concat['title'].str.lower()
 
     #Joining data
-    df_users_hltb = pd.merge(df_users_concat, df_hltb, on="name_lower", how="left")
+    df_users_hltb = pd.merge(df_users_concat, df_hltb_concat, on="name_lower", how="left")
 
     #Drop name lower since all we need is title column now
     df_users_hltb.drop(columns=["name_lower"], inplace=True)
@@ -106,11 +110,11 @@ def get_main_story_hours(gameName):
     else:
         return np.nan
 
-def replace_zero(x):
-    if x == 0:
-        return np.nan
-    else:
-        return x
+# def replace_zero(x):
+#     if x == 0:
+#         return np.nan
+#     else:
+#         return x
     
 def update_hltb():
     df = pd.read_csv("created-datasets/users-hltb.csv")
@@ -120,7 +124,7 @@ def update_hltb():
     df = df.drop_duplicates(subset='title')
 
     #Get rid of 0s
-    df['main_story'] = df['main_story'].apply(lambda x: replace_zero(x))
+    #df['main_story'] = df['main_story'].apply(lambda x: replace_zero(x))
 
     #df to hold games which can't be found on hltb
     df_missing_games = pd.DataFrame(columns=['title'])
@@ -159,37 +163,6 @@ def update_hltb():
     df.to_csv("created-datasets/hltb-new.csv", index=False)
     df_missing_games.to_csv("created-datasets/missing-hltb.csv", index=False)
 
-def combine_hltb():
-    df_hltb_updated = pd.read_csv("created-datasets/hltb-new.csv")
-    #Create lower case game name column for the purpose of joins
-    df_hltb_updated['main_story'] = df_hltb_updated['main_story'].apply(lambda x: replace_zero(x))
-    df_hltb_updated["name_lower"] = df_hltb_updated.title.str.lower()
-
-    #Clean HLTB
-    df_hltb = pd.read_csv("original-datasets/hltb-original.csv")
-    df_hltb = df_hltb.loc[:, ["title", "main_story"]]
-    #Strip non-digits from main_story
-    df_hltb["main_story"] = df_hltb["main_story"].str.replace('h', '', regex=True).astype("float64")
-    #Create lower case game name column for the purpose of joins
-    df_hltb["name_lower"] = df_hltb.title.str.lower()
-
-    #Joining data
-    df_combined = pd.merge(df_hltb, df_hltb_updated, on="name_lower", how="outer")
-
-    #Combine hltb-values
-    hltb_original = df_combined['main_story_x'].to_numpy()
-    hltb_added = df_combined['main_story_y'].to_numpy()
-
-    hltb_combined = np.where(pd.isna(hltb_original), hltb_added, hltb_original)
-    df_joined_updated = pd.DataFrame(columns=['name_lower', 'main_story'])
-    df_joined_updated['name_lower'] = df_combined.loc[:, 'name_lower']
-    df_joined_updated['main_story'] = hltb_combined
-
-    df_joined_updated = df_joined_updated.iloc[2:, :]
-    df_joined_updated = df_joined_updated[~df_joined_updated['main_story'].isna()]
-    df_joined_updated.to_csv("created-datasets/hltb-combined.csv", index=False)
-
-
 def update_datasets(uid, max_depth):
     #Run DFS to add to dataset
     if uid not in df_visited_users['uid'].values:
@@ -208,8 +181,6 @@ def update_datasets(uid, max_depth):
 
     #Find hltb values for newly added titles
     update_hltb()
-    #Combine new hltb values with hltb values from original dataset
-    combine_hltb()
 
     #Run dataset merging and add ratings again with updated hltb values
     df_users_hltb = merge_datasets(None)
@@ -225,5 +196,5 @@ df_added_users = pd.read_csv("created-datasets/added-users.csv")
 df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
 
 # #Uncomment to update dataset, otherwise keep commented so it doesn't run updates when imported by steam_recommender.py
-# update_datasets(76561197972651946, 10)
+update_datasets(76561197972651946, 500)
 
