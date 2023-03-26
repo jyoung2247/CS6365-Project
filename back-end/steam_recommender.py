@@ -76,7 +76,7 @@ class Steam_Recommender:
         return top_user_titles, top_user_ratings
 
 #Example
-steam_recommender = Steam_Recommender("SVD", 76561198058962258)
-top_user_titles, top_user_ratings = steam_recommender.get_top_predictions(100)
-print("top user titles: ", top_user_titles)
-rmse = steam_recommender.model_rmse()
+# steam_recommender = Steam_Recommender("SVD", 76561198058962258)
+# top_user_titles, top_user_ratings = steam_recommender.get_top_predictions(100)
+# print("top user titles: ", top_user_titles)
+# rmse = steam_recommender.model_rmse()
