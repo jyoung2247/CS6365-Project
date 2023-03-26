@@ -71,12 +71,13 @@ class Steam_Recommender:
         df.sort_values(by="est", ascending=False, inplace=True)
         if n > df.shape[0]:
             n = df.shape[0]
-        top_user_titles = df.iloc[:n, [1]]['iid'].values.tolist()
-        top_user_ratings = df.iloc[:n, [3]]['est'].values.tolist()
-        return top_user_titles, top_user_ratings
 
-#Example
+        top_titles_ratings = list(zip(df.iloc[:n, [1]]['iid'], df.iloc[:n, [3]]['est']))
+
+        return top_titles_ratings
+
+# Example
 # steam_recommender = Steam_Recommender("SVD", 76561198058962258)
-# top_user_titles, top_user_ratings = steam_recommender.get_top_predictions(100)
-# print("top user titles: ", top_user_titles)
+# top_titles_ratings = steam_recommender.get_top_predictions(100)
+# #print("top user titles: ", top_titles_ratings)
 # rmse = steam_recommender.model_rmse()
