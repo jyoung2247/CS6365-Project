@@ -2,22 +2,20 @@ import './App.css';
 import Checkbox from 'muicss/lib/react/checkbox';
 import { Link } from "react-router-dom";
 import {useState} from "react";
-//import papa from 'papaparse';
-//import { readString } from 'react-papaparse';
-//import file from './Games-HLTB.csv';
+//import {usePromiseTracker} from "react-promise-tracker";
 
 let glist = [];
 export function App() {
 
+    const url = `http://localhost:8888/getRecs?steam_id=%20`;
     const [id, setId] = useState('');
-    const [data, setData] = useState(null);
 
     const handleClick = async () => {
         try {
-            const response = await (await fetch(`http://localhost:8888/getGamesList?steam_id=%2076561198064813625`)).json()
-            setData(response.games)
-            glist = data;
-            console.log(data[0].name)
+            alert("Please close this dialog and wait for the 'Steam Data Acquired' message before pressing Next")
+            const response = await (await fetch(url+id)).json()
+            alert("Steam Data Acquired!")
+            glist = response.top_titles_ratings
         } catch (err) {
             console.log(err.message)
         }
@@ -31,7 +29,10 @@ export function App() {
                 <div className="contain">
                     <div className="profile-link">
                         My Steam Public Profile Link
-                        <input className="profile" type="text" placeholder="Paste Steam ID here" value={id} onChange={e => setId(e.target.value)}/>
+                        <div className="link-profile">
+                            <input className="profile" type="text" placeholder="Paste Steam ID here" value={id} onChange={e => setId(e.target.value)}/>
+                            <button className="submit" onClick={handleClick}>Enter</button>
+                        </div>
                     </div>
                     OR
                     <div className="faves">
@@ -63,9 +64,8 @@ export function App() {
                     </div>
                 </div>
                 <div className="link">
-                    <button onClick={handleClick} className="next">Go</button>
                     <Link to="/list">
-                        <button onClick={handleClick} className="next">Next</button>
+                        <button className="next">Next</button>
                     </Link>
                 </div>
             </header>
@@ -82,7 +82,7 @@ export function List() {
                 </Link>
                 Results
             </div>
-            <div className="profile-link">
+            <div className="results">
                 <div className="filters">
                     Filter:
                     <button className="filter">Genre</button>
@@ -100,21 +100,56 @@ export function List() {
                     </div>
                     <div className="rec-list">
                         <div className="names">
-                            <div> {glist[0].name} </div>
-                            <div> {glist[1].name} </div>
-                            <div> {glist[2].name} </div>
-                            <div> {glist[3].name} </div>
-                            <div> {glist[4].name} </div>
-                            <div> {glist[5].name} </div>
-                            <div> {glist[6].name} </div>
-                            <div> {glist[7].name} </div>
-                            <div> {glist[8].name} </div>
-                            <div> {glist[9].name} </div>
-                            <div> {glist[11].name} </div>
-                            <div> {glist[12].name} </div>
-                            <div> {glist[13].name} </div>
-                            <div> {glist[14].name} </div>
-                            <div> {glist[15].name} </div>
+                            <div> {glist[0][0]} </div>
+                            <div> {glist[1][0]} </div>
+                            <div> {glist[2][0]} </div>
+                            <div> {glist[3][0]} </div>
+                            <div> {glist[4][0]} </div>
+                            <div> {glist[5][0]} </div>
+                            <div> {glist[6][0]} </div>
+                            <div> {glist[7][0]} </div>
+                            <div> {glist[8][0]} </div>
+                            <div> {glist[9][0]} </div>
+                            <div> {glist[10][0]} </div>
+                            <div> {glist[11][0]} </div>
+                            <div> {glist[12][0]} </div>
+                            <div> {glist[13][0]} </div>
+                            <div> {glist[14][0]} </div>
+                            <div> {glist[15][0]} </div>
+                            <div> {glist[16][0]} </div>
+                            <div> {glist[17][0]} </div>
+                            <div> {glist[18][0]} </div>
+                            <div> {glist[19][0]} </div>
+                            <div> {glist[20][0]} </div>
+                            <div> {glist[21][0]} </div>
+                            <div> {glist[22][0]} </div>
+                            <div> {glist[23][0]} </div>
+                            <div> {glist[24][0]} </div>
+                            {/*<div> one </div>
+                            <div> two </div>
+                            <div> three </div>
+                            <div> four </div>
+                            <div> five </div>
+                            <div> six </div>
+                            <div> seven </div>
+                            <div> eight </div>
+                            <div> nine </div>
+                            <div> ten </div>
+                            <div> eleven </div>
+                            <div> twelve </div>
+                            <div> thirteen </div>
+                            <div> fourteen </div>
+                            <div> fifteen </div>
+                            <div> sixteen </div>
+                            <div> seventeen </div>
+                            <div> eighteen </div>
+                            <div> nineteen </div>
+                            <div> twenty </div>
+                            <div> twenty-one </div>
+                            <div> twenty-two </div>
+                            <div> twenty-three </div>
+                            <div> twenty-four </div>
+                            <div> twenty-five </div>*/}
                         </div>
                         <div className="ranks">
                             <div> 1 </div>
@@ -132,6 +167,16 @@ export function List() {
                             <div> 13 </div>
                             <div> 14 </div>
                             <div> 15 </div>
+                            <div> 16 </div>
+                            <div> 17 </div>
+                            <div> 18 </div>
+                            <div> 19 </div>
+                            <div> 20 </div>
+                            <div> 21 </div>
+                            <div> 22 </div>
+                            <div> 23 </div>
+                            <div> 24 </div>
+                            <div> 25 </div>
                         </div>
                     </div>
                 </div>
