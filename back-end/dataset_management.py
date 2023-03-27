@@ -159,7 +159,7 @@ def update_hltb(df_users_hltb):
             if main_story != 0:
                 count_added += 1
                 print(game_name)
-                df['main_story'].loc[df['title'] == game_name] = main_story
+                df.loc[df['title'] == game_name] = [game_name, main_story]
             else:
                 df_missing_games.loc[len(df_missing_games.index)] = game_name
         else:
@@ -193,5 +193,5 @@ df_added_users = pd.read_csv("created-datasets/added-users.csv")
 df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
 
 # #Uncomment to update dataset, otherwise keep commented so it doesn't run updates when imported by steam_recommender.py
-#update_datasets(76561197972651946, 500)
+# update_datasets(76561199015606058, 3)
 
