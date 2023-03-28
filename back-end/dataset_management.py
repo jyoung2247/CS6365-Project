@@ -2,6 +2,7 @@ import pandas as pd
 from steam_api_functions import getFriendsList, getGamesList, getAppList, getAppDetails
 from howlongtobeatpy import HowLongToBeat
 import numpy as np
+from time import sleep
 
 #Needed for initial run before added-users and visitied-users created
 #df_added_users = pd.DataFrame(columns=['uid', 'title', 'hours'])
@@ -103,13 +104,17 @@ def add_game_details():
     # df_users_hltb_appid = pd.merge(df_users_hltb, df_applist, on="name_lower", how="left")
     # df_users_hltb_appid['categories'] = np.nan
     # df_users_hltb_appid['genres'] = np.nan
+    # df_users_hltb_appid['price'] = np.nan
+    # df_users_hltb_appid['developer'] = np.nan
+    # df_users_hltb_appid['publisher'] = np.nan
     # df_appid_details_category = df_users_hltb_appid.drop_duplicates(subset='title')
-    # df_appid_details_category = df_appid_details_category.iloc[:, [1, 5, 6, 7]]
+    # df_appid_details_category = df_appid_details_category.iloc[:, [1, 5, 6, 7, 8, 9, 10]]
+    # df_appid_details_category = df_appid_details_category[~df_appid_details_category['appid'].isna()]
 
     df_appid_details_category = pd.read_csv("created-datasets/game-details.csv")
     nan_indicies = np.where(df_appid_details_category['categories'].isna())[0]
     
-    total_len = len(nan_indicies)
+    total_len = len(df_appid_details_category.index)
     for idx in nan_indicies:
         print(idx, total_len)
         id = df_appid_details_category['appid'].iloc[idx]
@@ -118,9 +123,11 @@ def add_game_details():
             if (details == 1):
                 #save game details csv if data returned as None, meaning steam is limiting api calls
                 df_appid_details_category.to_csv("created-datasets/game-details.csv", index=False)
-                print("Rate limited")
-                return
+                print("Rate limited, waiting 5 minutes")
+                sleep(300)
+                add_game_details()
             if (details == 0):
+                df_appid_details_category.iloc[idx, 2:] = "None"
                 continue
             if 'categories' in details:
                 categories = [dict['description'] for dict in details['categories']]
@@ -134,6 +141,20 @@ def add_game_details():
                 df_appid_details_category.iloc[idx, 3] = genres
             else:
                 df_appid_details_category.iloc[idx, 3] = "None"
+            if 'price_overview' in details:
+                df_appid_details_category.iloc[idx, 4] = details['price_overview']['final_formatted']
+            else:
+                df_appid_details_category.iloc[idx, 4] = "None"
+            if 'developers' in details:
+                developers = ",".join(details['developers'])
+                df_appid_details_category.iloc[idx, 5] = developers
+            else:
+                df_appid_details_category.iloc[idx, 5] = "None"
+            if 'publishers' in details:
+                developers = ",".join(details['publishers'])
+                df_appid_details_category.iloc[idx, 6] = developers
+            else:
+                df_appid_details_category.iloc[idx, 6] = "None"
 
     #save game details csv
     df_appid_details_category.to_csv("created-datasets/game-details.csv", index=False)
@@ -233,7 +254,7 @@ df_added_users = pd.read_csv("created-datasets/added-users.csv")
 df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
 
 #Uncomment to update dataset with game details, otherwise keep commented
-#df_appid_details_category = add_game_details()
+df_appid_details_category = add_game_details()
 
 # #Uncomment to update dataset, otherwise keep commented so it doesn't run updates when imported by steam_recommender.py
 # update_datasets(76561199015606058, 3)
