@@ -94,7 +94,8 @@ def merge_datasets(uid):
 
     return df_users_hltb
 
-def add_game_details():
+def add_game_details(df_users_hltb):
+    #Use this when initially creating game-details.csv
     # df_users_hltb['name_lower'] = df_users_hltb['title'].str.lower()
     # #Joining users_hltb with appIDlist to generate initial dataset of title, app id, title, genre
     # appList = getAppList()
@@ -111,7 +112,19 @@ def add_game_details():
     # df_appid_details_category = df_appid_details_category.iloc[:, [1, 5, 6, 7, 8, 9, 10]]
     # df_appid_details_category = df_appid_details_category[~df_appid_details_category['appid'].isna()]
 
-    df_appid_details_category = pd.read_csv("created-datasets/game-details.csv")
+    if df_users_hltb == None:
+        df_appid_details_category = pd.read_csv("created-datasets/game-details.csv")
+    else:
+        #Use this when just updating after DFS
+        df_users_hltb['name_lower'] = df_users_hltb['title'].str.lower()
+        df_users_hltb = df_users_hltb.drop_duplicates(subset='title')
+        df_users_hltb = df_users_hltb.drop(columns=["title"])
+        df_appid_details_category = pd.read_csv("created-datasets/game-details.csv")
+        df_appid_details_category['name_lower'] = df_appid_details_category['title'].str.lower()
+        df_users_hltb_appid = pd.merge(df_users_hltb, df_appid_details_category, on="name_lower", how="left")
+        df_appid_details_category = df_users_hltb_appid.iloc[:, 4:]
+        df_appid_details_category = df_appid_details_category[~df_appid_details_category['appid'].isna()]
+
     nan_indicies = np.where(df_appid_details_category['categories'].isna())[0]
     
     total_len = len(df_appid_details_category.index)
@@ -254,7 +267,7 @@ df_added_users = pd.read_csv("created-datasets/added-users.csv")
 df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
 
 #Uncomment to update dataset with game details, otherwise keep commented
-df_appid_details_category = add_game_details()
+df_appid_details_category = add_game_details(None)
 
 # #Uncomment to update dataset, otherwise keep commented so it doesn't run updates when imported by steam_recommender.py
 # update_datasets(76561199015606058, 3)
