@@ -1,5 +1,6 @@
 import requests
 import json
+import pandas as pd
 
 steam_api_key = "46A0582A14B15A1C4B377ECC8639676B"
 
@@ -34,3 +35,19 @@ def getGamesList(steam_id):
     else:
         return 0
     return gamesList
+
+def getAppList():
+    # Make a request to the Steam Web API to retrieve the friend list
+    url = f"https://api.steampowered.com/ISteamApps/GetAppList/v2"
+    data = requests.get(url).json()
+    return data['applist']['apps']
+
+def getAppDetails(app_id):
+    url = f"http://store.steampowered.com/api/appdetails?appids={app_id}&l=en"
+    data = requests.get(url).json()
+    if data == None:
+        return 1
+    if 'data' in data[str(app_id)]:
+        return data[str(app_id)]['data']
+    else:
+        return 0
