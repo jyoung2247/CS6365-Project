@@ -1,20 +1,25 @@
 import './App.css';
-import Checkbox from 'muicss/lib/react/checkbox';
+//import Checkbox from 'muicss/lib/react/checkbox';
 import { Link } from "react-router-dom";
 import {useState} from "react";
-//import {usePromiseTracker} from "react-promise-tracker";
+import {trackPromise} from "react-promise-tracker";
+import BarLoader from "react-spinners/BarLoader";
+import link from "./link.png";
 
 let glist = [];
 export function App() {
 
     const url = `http://localhost:8888/getRecs?steam_id=%20`;
     const [id, setId] = useState('');
+    let [loading, setLoading] = useState(false);
 
     const handleClick = async () => {
         try {
-            alert("Please close this dialog and wait for the 'Steam Data Acquired' message before pressing Next")
+            //alert("Please close this dialog and wait for the 'Steam Data Acquired' message before pressing Next")
+            setLoading(true)
             const response = await (await fetch(url+id)).json()
-            alert("Steam Data Acquired!")
+            setLoading(false)
+            //alert("Steam Data Acquired!")
             glist = response.top_titles_ratings
         } catch (err) {
             console.log(err.message)
@@ -24,17 +29,30 @@ export function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <div className="circle1">1</div>
-                <div className="circle2">2</div>
+                <div className="circle1">
+                    <img className="img" src={link} alt=""/>
+                </div>
+                {/*<div className="circle2">2</div>*/}
                 <div className="contain">
+                    <div className="welcome">
+                        Welcome to the Steam Game Recommender! {'\n'}{'\n'} Input your Steam ID below, press Submit, wait for your
+                        recommendations to be generated, and then click Next to view them.
+                    </div>
                     <div className="profile-link">
                         My Steam Public Profile Link
                         <div className="link-profile">
                             <input className="profile" type="text" placeholder="Paste Steam ID here" value={id} onChange={e => setId(e.target.value)}/>
-                            <button className="submit" onClick={handleClick}>Enter</button>
+                            <button className="submit" onClick={handleClick}>Submit</button>
                         </div>
                     </div>
-                    OR
+                    <BarLoader
+                        //color={blue}
+                        marginTop={100}
+                        loading={loading}
+                        height={25}
+                        width={1000}
+                    />
+                    {/*OR
                     <div className="faves">
                         Select Favorite Games
                         <div className="fave-list">
@@ -61,12 +79,12 @@ export function App() {
                                 <Checkbox name="g19" label="Spider-Man"/>
                             </div>
                         </div>
+                    </div>*/}
+                    <div className="link">
+                        <Link to="/list">
+                            <button className="next">Next</button>
+                        </Link>
                     </div>
-                </div>
-                <div className="link">
-                    <Link to="/list">
-                        <button className="next">Next</button>
-                    </Link>
                 </div>
             </header>
         </div>
@@ -125,31 +143,32 @@ export function List() {
                             <div> {glist[22][0]} </div>
                             <div> {glist[23][0]} </div>
                             <div> {glist[24][0]} </div>
-                            {/*<div> one </div>
-                            <div> two </div>
-                            <div> three </div>
-                            <div> four </div>
-                            <div> five </div>
-                            <div> six </div>
-                            <div> seven </div>
-                            <div> eight </div>
-                            <div> nine </div>
-                            <div> ten </div>
-                            <div> eleven </div>
-                            <div> twelve </div>
-                            <div> thirteen </div>
-                            <div> fourteen </div>
-                            <div> fifteen </div>
-                            <div> sixteen </div>
-                            <div> seventeen </div>
-                            <div> eighteen </div>
-                            <div> nineteen </div>
-                            <div> twenty </div>
-                            <div> twenty-one </div>
-                            <div> twenty-two </div>
-                            <div> twenty-three </div>
-                            <div> twenty-four </div>
-                            <div> twenty-five </div>*/}
+                            <div> {glist[25][0]} </div>
+                            <div> {glist[26][0]} </div>
+                            <div> {glist[27][0]} </div>
+                            <div> {glist[28][0]} </div>
+                            <div> {glist[29][0]} </div>
+                            <div> {glist[30][0]} </div>
+                            <div> {glist[31][0]} </div>
+                            <div> {glist[32][0]} </div>
+                            <div> {glist[33][0]} </div>
+                            <div> {glist[34][0]} </div>
+                            <div> {glist[35][0]} </div>
+                            <div> {glist[36][0]} </div>
+                            <div> {glist[37][0]} </div>
+                            <div> {glist[38][0]} </div>
+                            <div> {glist[39][0]} </div>
+                            <div> {glist[40][0]} </div>
+                            <div> {glist[41][0]} </div>
+                            <div> {glist[42][0]} </div>
+                            <div> {glist[43][0]} </div>
+                            <div> {glist[44][0]} </div>
+                            <div> {glist[45][0]} </div>
+                            <div> {glist[46][0]} </div>
+                            <div> {glist[47][0]} </div>
+                            <div> {glist[48][0]} </div>
+                            <div> {glist[49][0]} </div>
+                            {/*<div> Pathfinder: Wrath of the Righteous - Enhanced Edition </div>*/}
                         </div>
                         <div className="ranks">
                             <div> 1 </div>
@@ -177,6 +196,31 @@ export function List() {
                             <div> 23 </div>
                             <div> 24 </div>
                             <div> 25 </div>
+                            <div> 26 </div>
+                            <div> 27 </div>
+                            <div> 28 </div>
+                            <div> 29 </div>
+                            <div> 30 </div>
+                            <div> 31 </div>
+                            <div> 32 </div>
+                            <div> 33 </div>
+                            <div> 34 </div>
+                            <div> 35 </div>
+                            <div> 36 </div>
+                            <div> 37 </div>
+                            <div> 38 </div>
+                            <div> 39 </div>
+                            <div> 40 </div>
+                            <div> 41 </div>
+                            <div> 42 </div>
+                            <div> 43 </div>
+                            <div> 44 </div>
+                            <div> 45 </div>
+                            <div> 46 </div>
+                            <div> 47 </div>
+                            <div> 48 </div>
+                            <div> 49 </div>
+                            <div> 50 </div>
                         </div>
                     </div>
                 </div>
