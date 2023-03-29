@@ -44,10 +44,14 @@ def getAppList():
 
 def getAppDetails(app_id):
     url = f"http://store.steampowered.com/api/appdetails?appids={app_id}&l=en"
-    data = requests.get(url).json()
-    if data == None:
+    try:
+        data = requests.get(url).json()
+        if data == None:
+            return 1
+        if 'data' in data[str(app_id)]:
+            return data[str(app_id)]['data']
+        else:
+            return 0
+    except:
         return 1
-    if 'data' in data[str(app_id)]:
-        return data[str(app_id)]['data']
-    else:
-        return 0
+    

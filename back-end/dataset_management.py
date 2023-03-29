@@ -171,7 +171,7 @@ def add_game_details(df_users_hltb):
 
     #save game details csv
     df_appid_details_category.to_csv("created-datasets/game-details.csv", index=False)
-    return df_appid_details_category
+    #return df_appid_details_category
 
 def add_ratings(df):
     #Add rating column
@@ -258,6 +258,7 @@ def update_datasets(uid, max_depth):
 
     ## Create datasets
     df_users_hltb = merge_datasets(None)
+    add_game_details(df_users_hltb)
 
     #Find hltb values for newly added titles
     update_hltb(df_users_hltb)
@@ -265,9 +266,6 @@ def update_datasets(uid, max_depth):
 depth = 0
 df_added_users = pd.read_csv("created-datasets/added-users.csv")
 df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
-
-#Uncomment to update dataset with game details, otherwise keep commented
-df_appid_details_category = add_game_details(None)
 
 # #Uncomment to update dataset, otherwise keep commented so it doesn't run updates when imported by steam_recommender.py
 # update_datasets(76561199015606058, 3)
