@@ -138,7 +138,7 @@ def add_game_details(df_users_hltb):
                 df_appid_details_category.to_csv("created-datasets/game-details.csv", index=False)
                 print("Rate limited, waiting 5 minutes")
                 sleep(300)
-                add_game_details()
+                add_game_details(None)
             if (details == 0):
                 df_appid_details_category.iloc[idx, 2:] = "None"
                 continue
