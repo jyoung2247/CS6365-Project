@@ -11,7 +11,7 @@ __pycache__/
 # testing
 /coverage
 
-# production
+# productiongit
 /build
 
 # misc
@@ -24,3 +24,13 @@ __pycache__/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.idea
+.json
+.pb
+/idea
+/.idea
+package-lock.json
+package.json
+.idea/sonarlint/issuestore/index.pb
+
