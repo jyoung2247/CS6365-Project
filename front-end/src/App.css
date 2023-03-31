@@ -192,7 +192,7 @@
 
 .recs {
   background-color: #171a21;
-  min-height: 100vh;
+  min-height: 140vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -268,11 +268,7 @@
 }
 
 .header1 {
-  margin: 10px 375px 0 10px;
-}
-
-.header2 {
-  margin: 10px 0 0 725px;
+  margin: 5px 5px 5px 5px;
 }
 
 .rec-list {
@@ -282,22 +278,16 @@
   width: 100%;
   height: 40vh;
   overflow: auto;
+  font-size: 42px;
 }
 
-.names {
+.games {
   display: flex;
   flex-direction: column;
   margin-left: 5px;
-  margin-right: 150px;
-}
-
-.ranks {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
-  margin-left: 225px;
+  margin-right: 5px;
 }
 
 .game {
-  margin-top: 10px;
+  margin-top: 5px;
 }

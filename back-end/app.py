@@ -15,7 +15,7 @@ def getRecs():
         steam_id = request.args.get('steam_id')
         steam_recommender = Steam_Recommender("SVD", steam_id)
         top_titles_ratings_details = steam_recommender.get_top_predictions(100)
-        return json.dumps({"top_titles_ratings": top_titles_ratings_details}), 200, {"Content-Type": "application/json"}
+        return json.dumps(top_titles_ratings_details), 200, {"Content-Type": "application/json"}
     except Exception as e:
         print("Error:", e)
         return jsonify({"error": str(e)}), 400

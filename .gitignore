@@ -32,5 +32,9 @@ yarn-error.log*
 /.idea
 package-lock.json
 package.json
+front-end/package-lock.json
+front-end/package.json
+node-modules/
+front-end/node-modules/
 .idea/sonarlint/issuestore/index.pb
 
