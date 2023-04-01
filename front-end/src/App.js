@@ -137,7 +137,7 @@ export function List() {
                 break;
         }
         list = data;
-    };
+    }
 
     return (
         <div className="recs">
