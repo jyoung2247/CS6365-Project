@@ -96,13 +96,12 @@ def merge_datasets(uid):
 
 def add_game_details(df_users_hltb):
     #Use this when initially creating game-details.csv
-    # df_users_hltb['name_lower'] = df_users_hltb['title'].str.lower()
-    # #Joining users_hltb with appIDlist to generate initial dataset of title, app id, title, genre
+
+    #Joining users_hltb with appIDlist to generate initial dataset of title, app id, title, genre
     # appList = getAppList()
     # df_applist = pd.DataFrame(appList)
-    # df_applist['name_lower'] = df_applist['name'].str.lower()
-    # df_applist.drop(columns=['name'], inplace=True)
-    # df_users_hltb_appid = pd.merge(df_users_hltb, df_applist, on="name_lower", how="left")
+    # df_applist.rename(columns={'name':'title'}, inplace=True)
+    # df_users_hltb_appid = pd.merge(df_users_hltb, df_applist, on="title", how="left")
     # df_users_hltb_appid['categories'] = np.nan
     # df_users_hltb_appid['genres'] = np.nan
     # df_users_hltb_appid['price'] = np.nan
@@ -112,27 +111,32 @@ def add_game_details(df_users_hltb):
     # df_appid_details_category = df_appid_details_category.iloc[:, [1, 5, 6, 7, 8, 9, 10]]
     # df_appid_details_category = df_appid_details_category[~df_appid_details_category['appid'].isna()]
 
-    if df_users_hltb == None:
+    if df_users_hltb is None:
         df_appid_details_category = pd.read_csv("created-datasets/game-details.csv")
+        #df_appid_details_category.drop_duplicates(subset='title', inplace=True)
     else:
         #Use this when just updating after DFS
-        df_users_hltb['name_lower'] = df_users_hltb['title'].str.lower()
         df_users_hltb = df_users_hltb.drop_duplicates(subset='title')
-        df_users_hltb = df_users_hltb.drop(columns=["title"])
         df_appid_details_category = pd.read_csv("created-datasets/game-details.csv")
-        df_appid_details_category['name_lower'] = df_appid_details_category['title'].str.lower()
-        df_users_hltb_appid = pd.merge(df_users_hltb, df_appid_details_category, on="name_lower", how="left")
-        df_appid_details_category = df_users_hltb_appid.iloc[:, 4:]
-        df_appid_details_category = df_appid_details_category[~df_appid_details_category['appid'].isna()]
+        df_users_hltb_appid = pd.merge(df_users_hltb, df_appid_details_category, on="title", how="left")
+        df_appid_details_category = df_users_hltb_appid.iloc[:, [1, 4, 5, 6, 7, 8, 9]]
+        appList = getAppList()
+        df_applist = pd.DataFrame(appList)
+        df_applist.rename(columns={'name':'title'}, inplace=True)
+        df_applist.drop_duplicates(subset='title', inplace=True)
+        df_appid_details_category.drop(columns=['appid'], inplace=True)
+        df_appid_details_category = pd.merge(df_appid_details_category, df_applist, on="title", how="left")
+        df_appid_details_category = df_appid_details_category.iloc[:, [0, 6, 1, 2, 3, 4, 5]]
 
-    nan_indicies = np.where(df_appid_details_category['categories'].isna())[0]
+    nan_indicies = np.where(df_appid_details_category['publisher'].isna())[0]
     
-    total_len = len(df_appid_details_category.index)
-    for idx in nan_indicies:
-        print(idx, total_len)
+    total_len = len(nan_indicies)-1
+    for i, idx in enumerate(nan_indicies):
+        print(i, total_len)
         id = df_appid_details_category['appid'].iloc[idx]
         if (not pd.isna(id) and id is not None):
-            details = getAppDetails(int(id))
+            id = int(float(id))
+            details = getAppDetails(id)
             if (details == 1):
                 #save game details csv if data returned as None, meaning steam is limiting api calls
                 df_appid_details_category.to_csv("created-datasets/game-details.csv", index=False)
@@ -164,10 +168,15 @@ def add_game_details(df_users_hltb):
             else:
                 df_appid_details_category.iloc[idx, 5] = "None"
             if 'publishers' in details:
-                developers = ",".join(details['publishers'])
-                df_appid_details_category.iloc[idx, 6] = developers
+                if details['publishers'][0] == '' or details['publishers'][0] == 'N/A':
+                    df_appid_details_category.iloc[idx, 6] = "None"
+                else:
+                    publishers = ",".join(details['publishers'])
+                    df_appid_details_category.iloc[idx, 6] = publishers
             else:
                 df_appid_details_category.iloc[idx, 6] = "None"
+        else:
+            df_appid_details_category.iloc[idx, 1:] = "None"
 
     #save game details csv
     df_appid_details_category.to_csv("created-datasets/game-details.csv", index=False)
@@ -267,6 +276,6 @@ depth = 0
 df_added_users = pd.read_csv("created-datasets/added-users.csv")
 df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
 
-# #Uncomment to update dataset, otherwise keep commented so it doesn't run updates when imported by steam_recommender.py
-# update_datasets(76561199015606058, 3)
+##Uncomment to update dataset, otherwise keep commented so it doesn't run updates when imported by steam_recommender.py
+#update_datasets(76561198295606106, 3)
 
