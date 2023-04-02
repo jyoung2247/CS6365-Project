@@ -208,7 +208,7 @@
   flex-direction: row;
   text-align: center;
   align-items: flex-start;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   align-self: flex-start;
 }
 
@@ -257,6 +257,7 @@
   border-radius: 15px;
   align-self: center;
   min-width: 95%;
+  overflow: auto;
   margin: 50px;
   border: 2px solid #66c0f4;
   padding: 10px;
@@ -267,27 +268,74 @@
   flex-direction: row;
 }
 
-.header1 {
-  margin: 5px 5px 5px 5px;
+.header {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .rec-list {
   font-weight: normal;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 150vh;
   height: 40vh;
   overflow: auto;
-  font-size: 42px;
+  font-size: 32px;
 }
 
 .games {
   display: flex;
   flex-direction: column;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: fit-content;
 }
 
+.titles {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  margin-right: 0px;
+  min-width: 1000px;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  margin-right: 0px;
+  min-width: 150px;
+}
+
+.genres {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  margin-right: 0px;
+  min-width: 350px;
+}
+
+.devs {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  margin-right: 0px;
+  min-width: 1050px;
+}
+
+.pubs {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  margin-right: 0px;
+  min-width: 1000px;
+}
+
+
+
 .game {
-  margin-top: 5px;
+  margin-top: 0x;
+  border-top: 1px solid #66c0f4;
+  border-bottom: 1px solid #66c0f4;
 }
