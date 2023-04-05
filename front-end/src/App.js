@@ -128,6 +128,16 @@ export function List() {
     //create your forceUpdate hook
     const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
 
+    const dummy = {
+        categories: "",
+        developer: "",
+        est: 0,
+        genres: [],
+        price: "",
+        publisher: "",
+        title: ""
+    };
+
     function handleSort(term){
         switch (term) {
             case "ran":
@@ -162,6 +172,39 @@ export function List() {
         }
     }
 
+    //List of Features: [Steam Achievements,Full controller support,Steam Trading Cards,Steam Workshop,Partial Controller Support,Steam Cloud,Stats,Steam Leaderboards,Includes level editor,Remote Play on Phone,Remote Play on Tablet,Remote Play on TV,Remote Play Together]
+    //List of Multiplayer: [Single-player,Multi-player,PvP,Online PvP,Co-op,Online Co-op,Shared/Split Screen PvP,Shared/Split Screen,Cross-Platform Multiplayer]
+    //List of Genres: [] -3
+
+    function handleFilter(term) {
+        switch (term) {
+            case "feats":
+                list = list.filter(g => g.categories.includes("Full controller support"));
+                for (let i = list.length; i++; i<99) {
+                    list[i] = dummy;
+                }
+                forceUpdate();
+                break;
+            case "multi":
+                forceUpdate();
+                break;
+            case "genre":
+                forceUpdate();
+                break;
+            case "price":
+                forceUpdate();
+                break;
+            case "devos":
+                forceUpdate();
+                break;
+            case "pubrs":
+                forceUpdate();
+                break;
+            default:
+                break;
+        }
+    }
+
     return (
         <div className="recs">
             <div className="top">
@@ -187,11 +230,12 @@ export function List() {
                 </div>
                 <div className="Filter">
                     Filter:
-                    <button className="filter">Multiplayer</button>
-                    <button className="filter">Genre</button>
-                    <button className="filter">Price</button>
-                    <button className="filter">Developer</button>
-                    <button className="filter">Publisher</button>
+                    <button className="filter" onClick={() => handleFilter("feats")}>Features</button>
+                    <button className="filter" onClick={() => handleFilter("feats")}>Multiplayer</button>
+                    <button className="filter" onClick={() => handleFilter("feats")}>Genre</button>
+                    <button className="filter" onClick={() => handleFilter("feats")}>Price</button>
+                    <button className="filter" onClick={() => handleFilter("feats")}>Developer</button>
+                    <button className="filter" onClick={() => handleFilter("feats")}>Publisher</button>
                     {/*<button className="filter">Length</button>
                     <button className="filter">Content Rating</button>
                     <button className="filter">User Rating</button>
