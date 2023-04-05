@@ -27,22 +27,26 @@ export function App() {
                 }
                 g.genres = g.genres.split(',');
                 let devs = g.developer.split(',').length;
-                let ubi = g.developer.split("Ubisoft").length - 1;
-                if (devs === ubi) {
-                    g.developer = "Ubisoft";
+                let pubs = g.publisher.split(',').length;
+                if (devs >= 3) {
+                    g.developer = devs[0];
                 }
-                if (g.publisher.includes("FromSoftware")) {
+                if (pubs >= 3) {
+                    g.publisher = pubs[0];
+                } else if (g.publisher.includes("FromSoftware")) {
                     g.publisher = "FromSoftware";
-                }
-                if (g.publisher.includes("Eidos Montreal")) {
-                    g.publisher = "Eidos Montreal";
+                } else if (g.publisher.includes("Eidos Montreal")) {
+                    g.developer = "Eidos Montreal";
                     g.publisher = "Eidos Interactive";
+                } else if (g.publisher.includes("Warner Bros.")) {
+                    g.publisher = "Warner Bros.";
                 }
                 if (g.title.includes("龙崖")) {
                     g.title.replace("龙崖", "");
                 }
             });
-            list = list.filter(g => g.price !== "Unknown");
+            list = list.filter(g => g.price !== "Unknown" && g.genre !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown");
+            console.log(list.size);
             console.log(list);
             setLoading(false);
         } catch (err) {
@@ -127,7 +131,7 @@ export function List() {
     function handleSort(term){
         switch (term) {
             case "ran":
-                list = list.sort((a, b) => (a.est - b.est) ? 1 : -1);
+                list = list.sort((a, b) => (parseFloat(a.est*100000) < parseFloat(b.est*100000)) ? 1 : -1);
                 forceUpdate();
                 break;
             case "tit":
@@ -151,7 +155,9 @@ export function List() {
                 forceUpdate();
                 break;
             default:
-                forceUpdate();
+                if (ignored) {
+                    forceUpdate();
+                }
                 break;
         }
     }
