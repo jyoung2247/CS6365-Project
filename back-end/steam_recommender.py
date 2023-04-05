@@ -84,4 +84,4 @@ class Steam_Recommender:
 #steam_recommender = Steam_Recommender("SVD", 76561198058962258)
 #top_titles_ratings = steam_recommender.get_top_predictions(100)
 #print("top user titles: ", top_titles_ratings)
-# rmse = steam_recommender.model_rmse()
+#rmse = steam_recommender.model_rmse()

@@ -38,9 +38,12 @@ export function App() {
                     g.publisher = "Eidos Montreal";
                     g.publisher = "Eidos Interactive";
                 }
-
+                if (g.title.includes("龙崖")) {
+                    g.title.replace("龙崖", "");
+                }
             });
             list = list.filter(g => g.price !== "Unknown");
+            console.log(list);
             setLoading(false);
         } catch (err) {
             console.log(err.message);
@@ -123,6 +126,10 @@ export function List() {
 
     function handleSort(term){
         switch (term) {
+            case "ran":
+                list = list.sort((a, b) => (a.est - b.est) ? 1 : -1);
+                forceUpdate();
+                break;
             case "tit":
                 list = list.sort((a, b) => (a.title > b.title) ? 1 : -1);
                 forceUpdate();
@@ -160,6 +167,7 @@ export function List() {
             <div className="results">
                 <div className="Sort">
                     Sort:
+                    <button className="filter" onClick={() => handleSort("ran")}>Rank</button>
                     <button className="filter" onClick={() => handleSort("tit")}>Title</button>
                     <button className="filter" onClick={() => handleSort("gen")}>Genre</button>
                     <button className="filter" onClick={() => handleSort("pri")}>Price</button>
@@ -262,7 +270,7 @@ export function List() {
                             <div className="game"> 73 </div>
                             <div className="game"> 74 </div>
                             <div className="game"> 75 </div>
-                            {/*<div className="game"> 76 </div>
+                            <div className="game"> 76 </div>
                             <div className="game"> 77 </div>
                             <div className="game"> 78 </div>
                             <div className="game"> 79 </div>
@@ -285,7 +293,7 @@ export function List() {
                             <div className="game"> 96 </div>
                             <div className="game"> 97 </div>
                             <div className="game"> 98 </div>
-                            <div className="game"> 99 </div>*/}
+                            <div className="game"> 99 </div>
                         </div>
                         <div className="titles">
                             <div className="header"> Title </div>
@@ -364,7 +372,7 @@ export function List() {
                             <div className="game"> {list[72].title} </div>
                             <div className="game"> {list[73].title} </div>
                             <div className="game"> {list[74].title} </div>
-                            {/*<div className="game"> {list[75].title} </div>
+                            <div className="game"> {list[75].title} </div>
                             <div className="game"> {list[76].title} </div>
                             <div className="game"> {list[77].title} </div>
                             <div className="game"> {list[78].title} </div>
@@ -387,7 +395,7 @@ export function List() {
                             <div className="game"> {list[95].title} </div>
                             <div className="game"> {list[96].title} </div>
                             <div className="game"> {list[97].title} </div>
-                            <div className="game"> {list[98].title} </div>*/}
+                            <div className="game"> {list[98].title} </div>
                         </div>
                         <div className="prices">
                             <div className="header"> Price </div>
@@ -466,7 +474,7 @@ export function List() {
                             <div className="game"> {list[72].price} </div>
                             <div className="game"> {list[73].price} </div>
                             <div className="game"> {list[74].price} </div>
-                            {/*<div className="game"> {list[75].price} </div>
+                            <div className="game"> {list[75].price} </div>
                             <div className="game"> {list[76].price} </div>
                             <div className="game"> {list[77].price} </div>
                             <div className="game"> {list[78].price} </div>
@@ -489,7 +497,7 @@ export function List() {
                             <div className="game"> {list[95].price} </div>
                             <div className="game"> {list[96].price} </div>
                             <div className="game"> {list[97].price} </div>
-                            <div className="game"> {list[98].price} </div>*/}
+                            <div className="game"> {list[98].price} </div>
                         </div>
                         <div className="genres">
                             <div className="header"> Genre </div>
@@ -568,7 +576,7 @@ export function List() {
                             <div className="game"> {list[72].genres[0]} </div>
                             <div className="game"> {list[73].genres[0]} </div>
                             <div className="game"> {list[74].genres[0]} </div>
-                            {/*<div className="game"> {list[75].genres[0]} </div>
+                            <div className="game"> {list[75].genres[0]} </div>
                             <div className="game"> {list[76].genres[0]} </div>
                             <div className="game"> {list[77].genres[0]} </div>
                             <div className="game"> {list[78].genres[0]} </div>
@@ -591,7 +599,7 @@ export function List() {
                             <div className="game"> {list[95].genres[0]} </div>
                             <div className="game"> {list[96].genres[0]} </div>
                             <div className="game"> {list[97].genres[0]} </div>
-                            <div className="game"> {list[98].genres[0]} </div>*/}
+                            <div className="game"> {list[98].genres[0]} </div>
                         </div>
                         <div className="devs">
                             <div className="header"> Developer </div>
@@ -670,7 +678,7 @@ export function List() {
                             <div className="game"> {list[72].developer} </div>
                             <div className="game"> {list[73].developer} </div>
                             <div className="game"> {list[74].developer} </div>
-                            {/*<div className="game"> {list[75].developer} </div>
+                            <div className="game"> {list[75].developer} </div>
                             <div className="game"> {list[76].developer} </div>
                             <div className="game"> {list[77].developer} </div>
                             <div className="game"> {list[78].developer} </div>
@@ -693,7 +701,7 @@ export function List() {
                             <div className="game"> {list[95].developer} </div>
                             <div className="game"> {list[96].developer} </div>
                             <div className="game"> {list[97].developer} </div>
-                            <div className="game"> {list[98].developer} </div>*/}
+                            <div className="game"> {list[98].developer} </div>
                         </div>
                         <div className="pubs">
                             <div className="header"> Publisher </div>
@@ -772,7 +780,7 @@ export function List() {
                             <div className="game"> {list[72].publisher} </div>
                             <div className="game"> {list[73].publisher} </div>
                             <div className="game"> {list[74].publisher} </div>
-                            {/*<div className="game"> {list[75].publisher} </div>
+                            <div className="game"> {list[75].publisher} </div>
                             <div className="game"> {list[76].publisher} </div>
                             <div className="game"> {list[77].publisher} </div>
                             <div className="game"> {list[78].publisher} </div>
@@ -795,7 +803,7 @@ export function List() {
                             <div className="game"> {list[95].publisher} </div>
                             <div className="game"> {list[96].publisher} </div>
                             <div className="game"> {list[97].publisher} </div>
-                            <div className="game"> {list[98].publisher} </div>*/}
+                            <div className="game"> {list[98].publisher} </div>
                         </div>
                     </div>
                 </div>

@@ -192,7 +192,7 @@
 
 .recs {
   background-color: #171a21;
-  min-height: 140vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,7 +208,7 @@
   flex-direction: row;
   text-align: center;
   align-items: flex-start;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   align-self: flex-start;
 }
 
