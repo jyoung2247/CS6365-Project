@@ -43,6 +43,8 @@ export function App() {
                 }
                 if (g.title.includes("龙崖")) {
                     g.title.replace("龙崖", "");
+                } else if (g.title.includes("Hamlet")) {
+                    g.title = "Hamlet";
                 }
             });
             list = list.filter(g => g.price !== "Unknown" && g.genre !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown");
