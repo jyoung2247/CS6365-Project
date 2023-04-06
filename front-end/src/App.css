@@ -19,12 +19,12 @@
   height: 5vh;
   width: 5vh;
   border-radius: 100px;
-  align-items: center;
   border: 3px solid #66c0f4;
-  position: absolute;
+  position: relative;
   z-index: 1;
-  left: 94%;
-  top: 38%;
+  left: 99%;
+  top: -10%;
+  margin-top: -15px;
 }
 
 .img {
@@ -94,6 +94,8 @@
 .link-profile {
   display: flex;
   flex-direction: row;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .profile {

@@ -17,7 +17,6 @@ export function App() {
         borderRadius: "5px",
         marginTop: "90px"
     };
-
     const handleClick = async () => {
         try {
             setLoading(true);
