@@ -21,7 +21,14 @@ export function App() {
         try {
             setLoading(true);
             list = await (await fetch(url + id)).json();
+            list = list.filter(g => g.genres !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown").slice(0,99);
             list.forEach((g)=>{
+                g.price.replace(" ", "");
+                if (g.price === "Unknown") {
+                    g.price = "$0.00"
+                }
+                //g.price.replace("$","");
+                //g.price = parseFloat(g.price);
                 if (g.genres.split(',').length > 2 && g.genres.split(',')[0] === "Action") {
                     g.genres = g.genres.replace("Action,", "");
                 }
@@ -50,7 +57,7 @@ export function App() {
                     g.title = "Hamlet";
                 }
             });
-            list = list.filter(g => g.price !== "Unknown" && g.genres !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown").slice(0,99);
+            console.log(list);
             og_list = list;
             setLoading(false);
         } catch (err) {
