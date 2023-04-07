@@ -36,11 +36,15 @@ npm install
 
 *Backend*
 
+conda activate steamrec
+
 cd CS6365-Project
 
 python back-end/app.py
 
 *Frontend*
+
+conda activate steamrec
 
 Open second miniconda terminal
 
