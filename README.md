@@ -20,6 +20,8 @@ conda install -c conda-forge pandas=1.5.3
 
 pip install howlongtobeatpy
 
+pip install Flask-Cors
+
 python back-end/app.py
 
 *Frontend*
