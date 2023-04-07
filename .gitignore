@@ -36,5 +36,6 @@ front-end/package-lock.json
 front-end/package.json
 node-modules/
 front-end/node-modules/
+front-end/node_modules/
 .idea/sonarlint/issuestore/index.pb
 
