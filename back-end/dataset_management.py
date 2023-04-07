@@ -49,7 +49,7 @@ def merge_datasets(uid):
     #Add scraped hltb times to original
     df_hltb_added = pd.read_csv("created-datasets/hltb-new.csv")
     df_hltb_concat = pd.concat([df_hltb_added, df_hltb_original], axis=0)
-    df_hltb_concat.drop_duplicates(subset='title')
+    df_hltb_concat.drop_duplicates(subset='title', inplace=True)
 
     #Create lower case game name column for the purpose of joins
     df_hltb_concat["name_lower"] = df_hltb_concat['title'].str.lower()
@@ -113,9 +113,9 @@ def add_game_details(df_users_hltb):
 
     if df_users_hltb is None:
         df_appid_details_category = pd.read_csv("created-datasets/game-details.csv")
-        #df_appid_details_category.drop_duplicates(subset='title', inplace=True)
+        df_appid_details_category.drop_duplicates(subset='title', inplace=True)
     else:
-        #Use this when just updating after DFS
+        #Use this when updating for a user
         df_users_hltb = df_users_hltb.drop_duplicates(subset='title')
         df_appid_details_category = pd.read_csv("created-datasets/game-details.csv")
         df_users_hltb_appid = pd.merge(df_users_hltb, df_appid_details_category, on="title", how="left")
@@ -127,6 +127,8 @@ def add_game_details(df_users_hltb):
         df_appid_details_category.drop(columns=['appid'], inplace=True)
         df_appid_details_category = pd.merge(df_appid_details_category, df_applist, on="title", how="left")
         df_appid_details_category = df_appid_details_category.iloc[:, [0, 6, 1, 2, 3, 4, 5]]
+        #Drop duplicates that sometimes are created
+        df_appid_details_category.drop_duplicates(subset='title', inplace=True)
 
     nan_indicies = np.where(df_appid_details_category['publisher'].isna())[0]
     

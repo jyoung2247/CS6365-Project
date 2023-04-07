@@ -88,7 +88,7 @@ class Steam_Recommender:
         #Add scraped hltb times to original
         df_hltb_added = pd.read_csv("created-datasets/hltb-new.csv")
         df_hltb_concat = pd.concat([df_hltb_added, df_hltb_original], axis=0)
-        df_hltb_concat.drop_duplicates(subset='title')
+        df_hltb_concat.drop_duplicates(subset='title', inplace=True)
 
         #Create lower case game name column for the purpose of joins
         df_hltb_concat["name_lower"] = df_hltb_concat['title'].str.lower()
@@ -101,7 +101,7 @@ class Steam_Recommender:
 
         df = pd.merge(df, df_hltb_concat, on="name_lower", how="left")
         df_hltb_concat.drop(columns=["name_lower"], inplace=True)
-
+        df.drop_duplicates(subset='title', inplace=True)
         df.loc[df['main_story'].isna(), 'main_story'] = "Unknown"
 
         df.sort_values(by="est", ascending=False, inplace=True)
@@ -111,7 +111,7 @@ class Steam_Recommender:
         return top_titles_ratings_details
 
 # Example
-# steam_recommender = Steam_Recommender("KNN_WM", 76561198058962258)
-# top_titles_ratings = steam_recommender.get_top_predictions()
-# print("top user titles: ", top_titles_ratings)
+steam_recommender = Steam_Recommender("KNN_WM", 76561198058962258)
+top_titles_ratings = steam_recommender.get_top_predictions()
+print("top user titles: ", top_titles_ratings)
 #rmse = steam_recommender.model_rmse()
