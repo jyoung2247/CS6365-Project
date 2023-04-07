@@ -6,11 +6,12 @@ import link from "./link.png";
 
 let list = [];
 let og_list = [];
-const features = ["Steam Achievements", "Full controller support", "Steam Trading Cards", "Steam Workshop", "Partial Controller Support", "Steam Cloud", "Stats", "Steam Leaderboards", "Includes level editor", "Remote Play on Phone", "Remote Play on Tablet", "Remote Play on TV", "Remote Play Together"];
-const multiplayer = ["Single-player", "Multi-player", "MMO", "PvP", "Online PvP", "Co-op", "Online Co-op", "Shared/Split Screen Co-op", "Shared/Split Screen PvP", "Shared/Split Screen", "Cross-Platform Multiplayer"];
+const features = ["Steam Achievements", "Full controller support", "Steam Trading Cards", "Steam Workshop", "Partial Controller Support", "Steam Cloud", "Stats", "Steam Leaderboards", "Includes level editor", "Remote Play on Phone", "Remote Play on Tablet", "Remote Play on TV", "Remote Play Together"].sort();
+const multiplayer = ["Single-player", "Multi-player", "MMO", "PvP", "Online PvP", "Co-op", "Online Co-op", "Shared/Split Screen Co-op", "Shared/Split Screen PvP", "Shared/Split Screen", "Cross-Platform Multiplayer"].sort();
 let genres = [];
 let developers = [];
 let publishers = [];
+let price = [];
 export function App() {
 
     const url = `http://localhost:8888/getRecs?steam_id=%20`;
@@ -33,12 +34,12 @@ export function App() {
             list = await (await fetch(url + id)).json();
             list = list.filter(g => g.genres !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown").slice(0,99);
             list.forEach((g)=>{
-                g.price.replace(" ", "");
+                g.price = g.price.replace(" ", "");
                 if (g.price === "Unknown") {
                     g.price = "$0.00"
                 }
-                //g.price.replace("$","");
-                //g.price = parseFloat(g.price);
+                g.price = g.price.replace("$","");
+                g.price = parseFloat(g.price);
                 if (g.genres.split(',').length > 2 && g.genres.split(',')[0] === "Action") {
                     g.genres = g.genres.replace("Action,", "");
                 }
@@ -46,38 +47,90 @@ export function App() {
                 if (g.genres[0] === "Massively Multiplayer") {
                     g.genres[0] = "MMO";
                 }
-                let devs = g.developer.split(',');
-                let d = devs.length;
-                let pubs = g.publisher.split(',');
-                let p = pubs.length;
-                if (d >= 3) {
-                    g.developer = devs[0];
-                } else if (g.developer.includes("Wangyuan Shengtang Entertainment Technology")) {
-                    g.developer = "Wangyuan Shengtang Entertainment Technology";
+
+                if (g.developer.includes(", Inc.")) {
+                    g.developer = g.developer.replace(", Inc.", "");
+                } else if (g.developer.includes(", LLC.")) {
+                    g.developer = g.developer.replace(", LLC.", "");
+                } else if (g.developer.includes(", Inc")) {
+                    g.developer = g.developer.replace(", Inc", "");
+                } else if (g.developer.includes(", LLC")) {
+                    g.developer = g.developer.replace(", LLC", "");
+                } else if (g.developer.includes(", LTD.")) {
+                    g.developer = g.developer.replace(", LTD.", "");
+                } else if (g.developer.includes(", Ltd.")) {
+                    g.developer = g.developer.replace(", Ltd.", "");
+                } else if (g.developer.includes(", LTD")) {
+                    g.developer = g.developer.replace(", LTD", "");
+                } else if (g.developer.includes(", Ltd")) {
+                    g.developer = g.developer.replace(", Ltd", "");
+                } else if (g.developer.includes(", INC.")) {
+                    g.developer = g.developer.replace(", INC.", "");
                 }
-                if (p >= 3) {
-                    g.publisher = pubs[0];
-                } else if (g.publisher.includes("FromSoftware")) {
+
+                if (g.developer.includes("FromSoftware")) {
+                    g.developer = "FromSoftware";
                     g.publisher = "FromSoftware";
                 } else if (g.publisher.includes("Eidos Montreal")) {
                     g.developer = "Eidos Montreal";
                     g.publisher = "Eidos Interactive";
                 } else if (g.publisher.includes("Warner Bros.")) {
                     g.publisher = "Warner Bros.";
+                } else if (g.developer.includes("Wangyuan Shengtang Entertainment Technology")) {
+                    g.developer = "Wangyuan Shengtang Entertainment Technology";
+                } else if (g.developer.includes(", a Ubisoft Studio")) {
+                    g.developer = g.developer.replace(", a Ubisoft Studio", "(a Ubisoft Studio)")
+                } else if (g.publisher.includes("Raiser Games")) {
+                    g.publisher = "Raiser Games";
                 }
+
+                if (g.publisher.includes(", Inc.")) {
+                    g.publisher = g.publisher.replace(", Inc.", "");
+                } else if (g.publisher.includes(", LLC.")) {
+                    g.publisher = g.publisher.replace(", LLC.", "");
+                } else if (g.publisher.includes(", Inc")) {
+                    g.publisher = g.publisher.replace(", Inc", "");
+                } else if (g.publisher.includes(", LLC")) {
+                    g.publisher = g.publisher.replace(", LLC", "");
+                } else if (g.publisher.includes(", LTD.")) {
+                    g.publisher = g.publisher.replace(", LTD.", "");
+                } else if (g.publisher.includes(", Ltd.")) {
+                g.publisher = g.publisher.replace(", Ltd.", "");
+                } else if (g.publisher.includes(", LTD")) {
+                    g.publisher = g.publisher.replace(", LTD", "");
+                } else if (g.publisher.includes(", Ltd")) {
+                    g.publisher = g.publisher.replace(", Ltd", "");
+                } else if (g.publisher.includes(", INC.")) {
+                    g.publisher = g.publisher.replace(", INC.", "");
+                }
+
                 if (g.title.includes("龙崖")) {
                     g.title.replace("龙崖", "");
                 } else if (g.title.includes("Hamlet")) {
                     g.title = "Hamlet";
                 }
 
+                let devs = g.developer.split(',');
+                let d = devs.length;
+                let pubs = g.publisher.split(',');
+                let p = pubs.length;
+                if (d >= 3) {
+                    g.developer = devs[0];
+                }
+                if (p >= 3) {
+                    g.publisher = pubs[0];
+                }
+
+                price.push(g.price);
                 genres = [...genres, ...g.genres];
                 developers = [...developers, ...devs];
                 publishers = [...publishers, ...pubs];
             });
-            genres = removeDuplicates(genres);
-            developers = removeDuplicates(developers);
-            publishers = removeDuplicates(publishers);
+            price = removeDuplicates(price.sort((a, b) => (a.price > b.price) ? 1 : -1));
+            genres = removeDuplicates(genres.sort());
+            developers = removeDuplicates(developers.sort());
+            publishers = removeDuplicates(publishers.sort());
+
             console.log(list);
             og_list = list;
             setLoading(false);
@@ -197,19 +250,12 @@ export function List() {
 
     function handleFilter(cat, term) {
         switch (cat) {
-            case "feats":
-                list = list.filter(g => g.categories.includes(term));
-                forceUpdate();
-                break;
-            case "multi":
-                list = list.filter(g => g.categories.includes(term));
-                forceUpdate();
-                break;
             case "genre":
                 list = list.filter(g => g.genres.includes(term));
                 forceUpdate();
                 break;
             case "price":
+                list = list.filter(g => g.price <= term);
                 forceUpdate();
                 break;
             case "devs":
@@ -221,6 +267,8 @@ export function List() {
                 forceUpdate();
                 break;
             default:
+                list = list.filter(g => g.categories.includes(term));
+                forceUpdate();
                 break;
         }
     }
@@ -233,10 +281,12 @@ export function List() {
     return (
         <div className="recs">
             <div className="top">
-                <Link to="/">
-                    <button className="back">Back</button>
-                </Link>
-                Results
+                <div className="link">
+                    <Link to="/">
+                        <button className="back">Back</button>
+                    </Link>
+                </div>
+                <div className="result">Results</div>
             </div>
             <div className="results">
                 <div>
@@ -279,6 +329,14 @@ export function List() {
                         ) : null}
                     </div>
                     <div>
+                        <button className="filter" onClick={() => handleOpen(4)}>Price</button>
+                        {open4 ? (
+                            <ul className="menu">
+                                {price.map((c) => (<li className="menu-item"> <button key={(c)}  onClick={() => handleFilter("price", c)}>{c}</button></li>))}
+                            </ul>
+                        ) : null}
+                    </div>
+                    <div>
                         <button className="filter" onClick={() => handleOpen(5)}>Developer</button>
                         {open5 ? (
                             <ul className="menu">
@@ -307,7 +365,7 @@ export function List() {
                     <div className="rec-list">
                         <div className="games">
                             <div className="header"> Rank </div>
-                            {list.map((g) => (<div className="game" key={list.indexOf(g)}>{list.indexOf(g)+1}</div>))}
+                            {list.map((g) => (<div className="game" key={og_list.indexOf(g)}>{og_list.indexOf(g)+1}</div>))}
                         </div>
                         <div className="titles">
                             <div className="header"> Title </div>

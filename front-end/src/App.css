@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: -250px;
 }
 
 .title {
@@ -163,8 +163,9 @@
 .link {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
-  margin-left: 915px;
+  height: 0vh;
+  width: 0vh;
+  margin-left: 0px;
 }
 
 .next {
@@ -172,8 +173,8 @@
   min-height: 10vh;
   min-width: 40vh;
   font-size: 1.5em;
-  margin-left: 75px;
-  margin-bottom: 30px;
+  margin-left: 300px;
+  margin-top: 100px;
   align-self: flex-end;
   border-radius: 15px;
   border: 3px solid #66c0f4;
@@ -204,6 +205,10 @@
   align-items: flex-start;
   margin-bottom: 20px;
   align-self: flex-start;
+}
+
+.result {
+  margin-left: 725px;
 }
 
 .back {
