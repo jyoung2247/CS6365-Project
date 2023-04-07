@@ -6,6 +6,11 @@ import link from "./link.png";
 
 let list = [];
 let og_list = [];
+const features = ["Steam Achievements", "Full controller support", "Steam Trading Cards", "Steam Workshop", "Partial Controller Support", "Steam Cloud", "Stats", "Steam Leaderboards", "Includes level editor", "Remote Play on Phone", "Remote Play on Tablet", "Remote Play on TV", "Remote Play Together"];
+const multiplayer = ["Single-player", "Multi-player", "MMO", "PvP", "Online PvP", "Co-op", "Online Co-op", "Shared/Split Screen Co-op", "Shared/Split Screen PvP", "Shared/Split Screen", "Cross-Platform Multiplayer"];
+let genres = [];
+let developers = [];
+let publishers = [];
 export function App() {
 
     const url = `http://localhost:8888/getRecs?steam_id=%20`;
@@ -17,6 +22,11 @@ export function App() {
         borderRadius: "5px",
         marginTop: "90px"
     };
+
+    function removeDuplicates(arr) {
+        return arr.filter((item, index) => arr.indexOf(item) === index);
+    }
+
     const handleClick = async () => {
         try {
             setLoading(true);
@@ -36,12 +46,16 @@ export function App() {
                 if (g.genres[0] === "Massively Multiplayer") {
                     g.genres[0] = "MMO";
                 }
-                let devs = g.developer.split(',').length;
-                let pubs = g.publisher.split(',').length;
-                if (devs >= 3) {
+                let devs = g.developer.split(',');
+                let d = devs.length;
+                let pubs = g.publisher.split(',');
+                let p = pubs.length;
+                if (d >= 3) {
                     g.developer = devs[0];
+                } else if (g.developer.includes("Wangyuan Shengtang Entertainment Technology")) {
+                    g.developer = "Wangyuan Shengtang Entertainment Technology";
                 }
-                if (pubs >= 3) {
+                if (p >= 3) {
                     g.publisher = pubs[0];
                 } else if (g.publisher.includes("FromSoftware")) {
                     g.publisher = "FromSoftware";
@@ -56,7 +70,14 @@ export function App() {
                 } else if (g.title.includes("Hamlet")) {
                     g.title = "Hamlet";
                 }
+
+                genres = [...genres, ...g.genres];
+                developers = [...developers, ...devs];
+                publishers = [...publishers, ...pubs];
             });
+            genres = removeDuplicates(genres);
+            developers = removeDuplicates(developers);
+            publishers = removeDuplicates(publishers);
             console.log(list);
             og_list = list;
             setLoading(false);
@@ -68,7 +89,6 @@ export function App() {
     return (
         <div className="App">
             <header className="App-header">
-                {/*<div className="circle2">2</div>*/}
                 <div className="contain">
                     <div className="title">
                         Welcome to the Steam Game Recommender!
@@ -94,34 +114,6 @@ export function App() {
                         width={1000}
                         color={"#2a475e"}
                     />
-                    {/*OR
-                    <div className="faves">
-                        Select Favorite Games
-                        <div className="fave-list">
-                            My games:
-                            <div className="checklist">
-                                <Checkbox name="g1" label="God of War"/>
-                                <Checkbox name="g2" label="Uncharted"/>
-                                <Checkbox name="g3" label="Horizon Zero Dawn"/>
-                                <Checkbox name="g4" label="Sly Cooper"/>
-                                <Checkbox name="g5" label="Halo"/>
-                                <Checkbox name="g6" label="Call of Duty"/>
-                                <Checkbox name="g7" label="Just Cause"/>
-                                <Checkbox name="g8" label="Mass Effect"/>
-                                <Checkbox name="g9" label="Ratchet & Clank"/>
-                                <Checkbox name="g10" label="Dragon Age"/>
-                                <Checkbox name="g11" label="Deus Ex"/>
-                                <Checkbox name="g12" label="BattleBlock Theater"/>
-                                <Checkbox name="g13" label="Borderlands"/>
-                                <Checkbox name="g14" label="Castle Crashers"/>
-                                <Checkbox name="g15" label="Divinity: Original Sin"/>
-                                <Checkbox name="g16" label="A Way Out"/>
-                                <Checkbox name="g17" label="It Takes Two"/>
-                                <Checkbox name="g18" label="Red Dead Redemption"/>
-                                <Checkbox name="g19" label="Spider-Man"/>
-                            </div>
-                        </div>
-                    </div>*/}
                     <div className="link">
                         <Link to="/list">
                             <button className="next">Next</button>
@@ -137,6 +129,37 @@ export function List() {
 
     //create your forceUpdate hook
     const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
+    const [open1, setOpen1] = useState(false);
+    const [open2, setOpen2] = useState(false);
+    const [open3, setOpen3] = useState(false);
+    const [open4, setOpen4] = useState(false);
+    const [open5, setOpen5] = useState(false);
+    const [open6, setOpen6] = useState(false);
+
+    const handleOpen = (num) => {
+        switch (num) {
+            case 1:
+                setOpen1(!open1);
+                break;
+            case 2:
+                setOpen2(!open2);
+                break;
+            case 3:
+                setOpen3(!open3);
+                break;
+            case 4:
+                setOpen4(!open4);
+                break;
+            case 5:
+                setOpen5(!open5);
+                break;
+            case 6:
+                setOpen6(!open6);
+                break;
+            default:
+                break;
+        }
+    };
 
     function handleSort(term){
         switch (term) {
@@ -172,29 +195,29 @@ export function List() {
         }
     }
 
-    //List of Features: [Steam Achievements,Full controller support,Steam Trading Cards,Steam Workshop,Partial Controller Support,Steam Cloud,Stats,Steam Leaderboards,Includes level editor,Remote Play on Phone,Remote Play on Tablet,Remote Play on TV,Remote Play Together]
-    //List of Multiplayer: [Single-player,Multi-player,PvP,Online PvP,Co-op,Online Co-op,Shared/Split Screen PvP,Shared/Split Screen,Cross-Platform Multiplayer]
-    //List of Genres: []
-
-    function handleFilter(term) {
-        switch (term) {
+    function handleFilter(cat, term) {
+        switch (cat) {
             case "feats":
-                list = list.filter(g => g.categories.includes("Full controller support"));
+                list = list.filter(g => g.categories.includes(term));
                 forceUpdate();
                 break;
             case "multi":
+                list = list.filter(g => g.categories.includes(term));
                 forceUpdate();
                 break;
             case "genre":
+                list = list.filter(g => g.genres.includes(term));
                 forceUpdate();
                 break;
             case "price":
                 forceUpdate();
                 break;
             case "devs":
+                list = list.filter(g => g.developer.includes(term));
                 forceUpdate();
                 break;
             case "pubs":
+                list = list.filter(g => g.publisher.includes(term));
                 forceUpdate();
                 break;
             default:
@@ -224,20 +247,53 @@ export function List() {
                     <button className="filter" onClick={() => handleSort("price")}>Price</button>
                     <button className="filter" onClick={() => handleSort("devs")}>Developer</button>
                     <button className="filter" onClick={() => handleSort("pubs")}>Publisher</button>
-                    {/*<button className="filter">Multiplayer</button>
-                    <button className="filter">Length</button>
+                    {/*<button className="filter">Length</button>
                     <button className="filter">Content Rating</button>
                     <button className="filter">User Rating</button>
                     <button className="filter">Critic Rating</button>*/}
                 </div>
-                <div>
+                <div className="filters">
                     Filter:
-                    <button className="filter" onClick={() => handleFilter("feats")}>Features</button>
-                    <button className="filter" onClick={() => handleFilter("multi")}>Multiplayer</button>
-                    <button className="filter" onClick={() => handleFilter("genre")}>Genre</button>
-                    <button className="filter" onClick={() => handleFilter("price")}>Price</button>
-                    <button className="filter" onClick={() => handleFilter("devs")}>Developer</button>
-                    <button className="filter" onClick={() => handleFilter("pubs")}>Publisher</button>
+                    <div>
+                        <button className="filter" onClick={() => handleOpen(1)}>Features</button>
+                        {open1 ? (
+                            <ul className="menu">
+                                {features.map((f) => (<li className="menu-item"> <button key={f}  onClick={() => handleFilter("feats", f)}>{f}</button></li>))}
+                            </ul>
+                        ) : null}
+                    </div>
+                    <div>
+                        <button className="filter" onClick={() => handleOpen(2)}>Multiplayer</button>
+                        {open2 ? (
+                            <ul className="menu">
+                                {multiplayer.map((m) => (<li className="menu-item"> <button key={(m)}  onClick={() => handleFilter("multi", m)}>{m}</button></li>))}
+                            </ul>
+                        ) : null}
+                    </div>
+                    <div>
+                        <button className="filter" onClick={() => handleOpen(3)}>Genre</button>
+                        {open3 ? (
+                            <ul className="menu">
+                                {genres.map((g) => (<li className="menu-item"> <button key={(g)}  onClick={() => handleFilter("genre", g)}>{g}</button></li>))}
+                            </ul>
+                        ) : null}
+                    </div>
+                    <div>
+                        <button className="filter" onClick={() => handleOpen(5)}>Developer</button>
+                        {open5 ? (
+                            <ul className="menu">
+                                {developers.map((d) => (<li className="menu-item"> <button key={(d)}  onClick={() => handleFilter("devs", d)}>{d}</button></li>))}
+                            </ul>
+                        ) : null}
+                    </div>
+                    <div>
+                        <button className="filter" onClick={() => handleOpen(6)}>Publisher</button>
+                        {open6 ? (
+                            <ul className="menu">
+                                {publishers.map((p) => (<li className="menu-item"> <button key={(p)}  onClick={() => handleFilter("pubs", p)}>{p}</button></li>))}
+                            </ul>
+                        ) : null}
+                    </div>
                     {/*<button className="filter">Length</button>
                     <button className="filter">Content Rating</button>
                     <button className="filter">User Rating</button>
