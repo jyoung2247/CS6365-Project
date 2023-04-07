@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Available URLS: /getRecs?steam_id={steam_id}, /getRMSE, /getFriendsList?steam_id={steam_id}, /getGamesList?steam_id={steam_id}"
+    return "Available URLS: /getRecs?steam_id={steam_id}?model_type={model_type}, /getRMSE, /getFriendsList?steam_id={steam_id}, /getGamesList?steam_id={steam_id}"
 
 @app.route('/getRecs', methods=['GET'])
 def getRecs():

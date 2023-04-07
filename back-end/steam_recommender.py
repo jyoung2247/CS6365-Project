@@ -1,6 +1,6 @@
-from surprise import SVD, Dataset, accuracy, Reader, prediction_algorithms
+from surprise import SVD, SVDpp, KNNWithMeans, KNNWithZScore, CoClustering, SlopeOne, Dataset, accuracy, Reader
 from surprise.model_selection import train_test_split
-from dataset_management import merge_datasets, add_ratings
+from dataset_management import get_dataset_for_user
 import pandas as pd
 import numpy as np
 
@@ -14,8 +14,7 @@ class Steam_Recommender:
 
     #Import our csv as a dataframe to use as data
     def get_data(self):
-        df = merge_datasets(self.uid)
-        df = add_ratings(df)
+        df = get_dataset_for_user(self.uid)
         reader = Reader(rating_scale=(0,10))
         data = Dataset.load_from_df(df, reader=reader)
         return data
@@ -33,10 +32,18 @@ class Steam_Recommender:
     
     #Create and fit the model to the training data
     def model_create_fit(self, modelName):
+        if modelName == "KNN_WM":
+            model = KNNWithMeans()
+        if modelName == "KNN_WZ":
+            model = KNNWithZScore()
+        if modelName == "SVDpp":
+            model = SVDpp()
+        if modelName == "CoClustering":
+            model = CoClustering()
+        if modelName == "SlopeOne":
+            model = SlopeOne()
         if modelName == "SVD":
             model = SVD()
-        if modelName == "KWM":
-            model = prediction_algorithms.knns.KNNWithMeans()
         else:
             model = SVD()
         model.fit(self.train)
@@ -104,7 +111,7 @@ class Steam_Recommender:
         return top_titles_ratings_details
 
 # Example
-steam_recommender = Steam_Recommender("KWM", 76561198058962258)
+steam_recommender = Steam_Recommender("KNN_WM", 76561198058962258)
 top_titles_ratings = steam_recommender.get_top_predictions(100)
 print("top user titles: ", top_titles_ratings)
 #rmse = steam_recommender.model_rmse()

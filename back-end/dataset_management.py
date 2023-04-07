@@ -255,6 +255,15 @@ def update_hltb(df_users_hltb):
     df.to_csv("created-datasets/hltb-new.csv", index=False)
     df_missing_games.to_csv("created-datasets/missing-hltb.csv", index=False)
 
+def get_dataset_for_user(uid):
+    df_users_hltb = merge_datasets(uid)
+    add_game_details(df_users_hltb)
+    update_hltb(df_users_hltb)
+    df = merge_datasets(uid)
+    df = add_ratings(df)
+    return df
+
+
 def update_datasets(uid, max_depth):
     #Run DFS to add to dataset
     if uid not in df_visited_users['uid'].values:
