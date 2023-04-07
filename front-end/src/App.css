@@ -263,6 +263,41 @@
   background-color: #2a475e;
 }
 
+.mmenu {
+  position: absolute;
+  list-style-type: none;
+  margin-left: 1245px;
+  margin-top: 75px;
+  width: 20vh;
+  height: 15vh;
+  overflow: auto;
+  border: 0.5px solid #66c0f4;
+  padding-left: 0px;
+}
+
+.mmenu > li {
+  background-color: #171a21;
+  height: 40px;
+  padding: 0px;
+}
+
+.mmenu > li:hover {
+  background-color: #2a475e;
+}
+
+.mmenu > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  background: none;
+  color: #c7d5e0;
+  padding: 0px;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  border: 0px;
+}
+
 .menu {
   position: absolute;
   list-style-type: none;

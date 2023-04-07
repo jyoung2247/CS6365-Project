@@ -4,6 +4,7 @@ import {CSSProperties, useReducer, useState} from "react";
 import BarLoader from "react-spinners/BarLoader";
 import link from "./link.png";
 
+let models = ["SVD", "KNN_WM", "KNN_WZ", "SVDpp", "CoClustering", "SlopeOne"];
 let list = [];
 let og_list = [];
 const features = ["Steam Achievements", "Full controller support", "Steam Trading Cards", "Steam Workshop", "Partial Controller Support", "Steam Cloud", "Stats", "Steam Leaderboards", "Includes level editor", "Remote Play on Phone", "Remote Play on Tablet", "Remote Play on TV", "Remote Play Together"].sort();
@@ -14,9 +15,32 @@ let publishers = [];
 let price = [];
 export function App() {
 
-    const url = `http://localhost:8888/getRecs?steam_id=%20`;
+    const url = `http://localhost:8888/getRecs?steam_id=`;
     const [id, setId] = useState('');
+    const [model, setModel] = useState('SVD');
     let [loading, setLoading] = useState(false);
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = (num) => {
+        setOpen(!open);
+    }
+
+    function handleModel(model) {
+        switch (model) {
+            case "SVD":
+                setModel(model);
+                handleClick();
+                break;
+            case "KWM":
+                setModel(model);
+                handleClick();
+                break;
+            default:
+                setModel("SVD");
+                handleClick();
+                break;
+        }
+    }
 
     const override: CSSProperties = {
         border: "1px solid #66c0f4",
@@ -31,7 +55,7 @@ export function App() {
     const handleClick = async () => {
         try {
             setLoading(true);
-            list = await (await fetch(url + id)).json();
+            list = await (await fetch(url + id + "?model_type=" + model)).json();
             list = list.filter(g => g.genres !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown").slice(0,99);
             list.forEach((g)=>{
                 g.price = g.price.replace(" ", "");
@@ -60,6 +84,8 @@ export function App() {
                     g.developer = g.developer.replace(", LTD.", "");
                 } else if (g.developer.includes(", Ltd.")) {
                     g.developer = g.developer.replace(", Ltd.", "");
+                } else if (g.developer.includes(" Ltd.")) {
+                    g.developer = g.developer.replace(" Ltd.", "");
                 } else if (g.developer.includes(", LTD")) {
                     g.developer = g.developer.replace(", LTD", "");
                 } else if (g.developer.includes(", Ltd")) {
@@ -78,6 +104,8 @@ export function App() {
                     g.publisher = "Warner Bros.";
                 } else if (g.developer.includes("Wangyuan Shengtang Entertainment Technology")) {
                     g.developer = "Wangyuan Shengtang Entertainment Technology";
+                } else if (g.developer.includes("Ubisoft")) {
+                    g.developer = "Ubisoft";
                 } else if (g.developer.includes(", a Ubisoft Studio")) {
                     g.developer = g.developer.replace(", a Ubisoft Studio", "(a Ubisoft Studio)")
                 } else if (g.publisher.includes("Raiser Games")) {
@@ -157,7 +185,13 @@ export function App() {
                         My Steam Public Profile Link
                         <div className="link-profile">
                             <input className="profile" type="text" placeholder="  Paste Steam ID here" value={id} onChange={e => setId(e.target.value)}/>
-                            <button className="submit" onClick={handleClick}>Submit</button>
+                            {/*<button className="submit" onClick={handleClick}>Submit</button>*/}
+                            <button className="submit" onClick={() => handleOpen()}>Submit</button>
+                            {open ? (
+                                <ul className="mmenu">
+                                    {models.map((m) => (<li className="menu-item"> <button key={m}  onClick={() => handleModel(m)}>{m}</button></li>))}
+                                </ul>
+                            ) : null}
                         </div>
                     </div>
                     <BarLoader
