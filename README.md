@@ -35,11 +35,13 @@ npm install
 *Running*
 
 *Backend*
+
 cd CS6365-Project
 
 python back-end/app.py
 
 *Frontend*
+
 Open second miniconda terminal
 
 cd front-end
