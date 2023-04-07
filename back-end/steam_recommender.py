@@ -1,6 +1,6 @@
-from surprise import SVD, Dataset, accuracy, Reader
+from surprise import SVD, SVDpp, KNNWithMeans, KNNWithZScore, CoClustering, SlopeOne, Dataset, accuracy, Reader
 from surprise.model_selection import train_test_split
-from dataset_management import merge_datasets, add_ratings
+from dataset_management import get_dataset_for_user
 import pandas as pd
 import numpy as np
 
@@ -14,8 +14,7 @@ class Steam_Recommender:
 
     #Import our csv as a dataframe to use as data
     def get_data(self):
-        df = merge_datasets(self.uid)
-        df = add_ratings(df)
+        df = get_dataset_for_user(self.uid)
         reader = Reader(rating_scale=(0,10))
         data = Dataset.load_from_df(df, reader=reader)
         return data
@@ -33,6 +32,16 @@ class Steam_Recommender:
     
     #Create and fit the model to the training data
     def model_create_fit(self, modelName):
+        if modelName == "KNN_WM":
+            model = KNNWithMeans()
+        if modelName == "KNN_WZ":
+            model = KNNWithZScore()
+        if modelName == "SVDpp":
+            model = SVDpp()
+        if modelName == "CoClustering":
+            model = CoClustering()
+        if modelName == "SlopeOne":
+            model = SlopeOne()
         if modelName == "SVD":
             model = SVD()
         else:
@@ -72,16 +81,37 @@ class Steam_Recommender:
         df = df.rename(columns={'iid' : 'title'})
         df_details = pd.read_csv("created-datasets/game-details.csv")
         df = pd.merge(df, df_details, on="title", how="left")
+
+        #Add hltb times
+        df_hltb_original = pd.read_csv("created-datasets/hltb-original-clean.csv")
+
+        #Add scraped hltb times to original
+        df_hltb_added = pd.read_csv("created-datasets/hltb-new.csv")
+        df_hltb_concat = pd.concat([df_hltb_added, df_hltb_original], axis=0)
+        df_hltb_concat.drop_duplicates(subset='title')
+
+        #Create lower case game name column for the purpose of joins
+        df_hltb_concat["name_lower"] = df_hltb_concat['title'].str.lower()
+
+        #Drop title column for joins
+        df_hltb_concat.drop(columns=["title"], inplace=True)
+
+        #Create lower case game name column for the purpose of joins
+        df["name_lower"] = df['title'].str.lower()
+
+        df = pd.merge(df, df_hltb_concat, on="name_lower", how="left")
+        df_hltb_concat.drop(columns=["name_lower"], inplace=True)
+
         df.sort_values(by="est", ascending=False, inplace=True)
         if n > df.shape[0]:
             n = df.shape[0]
-        top_titles_ratings_details = df.iloc[:n, [1, 3, 6, 7, 8, 9, 10]].to_dict('records')
+        top_titles_ratings_details = df.iloc[:n, [1, 3, 6, 7, 8, 9, 10, 12]].to_dict('records')
         #top_titles_ratings = list(zip(df.iloc[:n, [1]]['iid'], df.iloc[:n, [3]]['est']))
 
         return top_titles_ratings_details
 
 # Example
-#steam_recommender = Steam_Recommender("SVD", 76561198058962258)
-#top_titles_ratings = steam_recommender.get_top_predictions(100)
-#print("top user titles: ", top_titles_ratings)
+steam_recommender = Steam_Recommender("KNN_WM", 76561198058962258)
+top_titles_ratings = steam_recommender.get_top_predictions(100)
+print("top user titles: ", top_titles_ratings)
 #rmse = steam_recommender.model_rmse()

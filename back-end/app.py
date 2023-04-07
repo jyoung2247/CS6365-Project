@@ -7,14 +7,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Available URLS: /getRecs?steam_id={steam_id}, /getRMSE, /getFriendsList?steam_id={steam_id}, /getGamesList?steam_id={steam_id}"
+    return "Available URLS: /getRecs?steam_id={steam_id}?model_type={model_type}, /getRMSE, /getFriendsList?steam_id={steam_id}, /getGamesList?steam_id={steam_id}"
 
 @app.route('/getRecs', methods=['GET'])
 def getRecs():
     try:
         steam_id = request.args.get('steam_id')
-        steam_recommender = Steam_Recommender("SVD", steam_id)
-        top_titles_ratings_details = steam_recommender.get_top_predictions(150)
+        model_type = request.args.get('model_type')
+        steam_recommender = Steam_Recommender(model_type, steam_id)
+        top_titles_ratings_details = steam_recommender.get_top_predictions(150000)
         return json.dumps(top_titles_ratings_details), 200, {"Content-Type": "application/json"}
     except Exception as e:
         print("Error:", e)
