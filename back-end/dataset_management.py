@@ -144,39 +144,39 @@ def add_game_details(df_users_hltb):
                 sleep(300)
                 add_game_details(None)
             if (details == 0):
-                df_appid_details_category.iloc[idx, 2:] = "None"
+                df_appid_details_category.iloc[idx, 2:] = "Unknown"
                 continue
             if 'categories' in details:
                 categories = [dict['description'] for dict in details['categories']]
                 categories = ",".join(categories)
                 df_appid_details_category.iloc[idx, 2] = categories
             else:
-                df_appid_details_category.iloc[idx, 2] = "None"
+                df_appid_details_category.iloc[idx, 2] = "Unknown"
             if 'genres' in details:
                 genres = [dict['description'] for dict in details['genres']]
                 genres = ",".join(genres)
                 df_appid_details_category.iloc[idx, 3] = genres
             else:
-                df_appid_details_category.iloc[idx, 3] = "None"
+                df_appid_details_category.iloc[idx, 3] = "Unknown"
             if 'price_overview' in details:
                 df_appid_details_category.iloc[idx, 4] = details['price_overview']['final_formatted']
             else:
-                df_appid_details_category.iloc[idx, 4] = "None"
+                df_appid_details_category.iloc[idx, 4] = "Unknown"
             if 'developers' in details:
                 developers = ",".join(details['developers'])
                 df_appid_details_category.iloc[idx, 5] = developers
             else:
-                df_appid_details_category.iloc[idx, 5] = "None"
+                df_appid_details_category.iloc[idx, 5] = "Unknown"
             if 'publishers' in details:
-                if details['publishers'][0] == '' or details['publishers'][0] == 'N/A':
-                    df_appid_details_category.iloc[idx, 6] = "None"
+                if details['publishers'][0] == '' or details['publishers'][0] == 'N/A' or details['publishers'][0] == 'NA':
+                    df_appid_details_category.iloc[idx, 6] = "Unknown"
                 else:
                     publishers = ",".join(details['publishers'])
                     df_appid_details_category.iloc[idx, 6] = publishers
             else:
-                df_appid_details_category.iloc[idx, 6] = "None"
+                df_appid_details_category.iloc[idx, 6] = "Unknown"
         else:
-            df_appid_details_category.iloc[idx, 1:] = "None"
+            df_appid_details_category.iloc[idx, 1:] = "Unknown"
 
     #save game details csv
     df_appid_details_category.to_csv("created-datasets/game-details.csv", index=False)

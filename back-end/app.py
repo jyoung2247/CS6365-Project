@@ -17,7 +17,7 @@ def getRecs():
         steam_id = request.args.get('steam_id')
         model_type = request.args.get('model_type')
         steam_recommender = Steam_Recommender(model_type, steam_id)
-        top_titles_ratings_details = steam_recommender.get_top_predictions(150000)
+        top_titles_ratings_details = steam_recommender.get_top_predictions()
         return json.dumps(top_titles_ratings_details), 200, {"Content-Type": "application/json"}
     except Exception as e:
         print("Error:", e)
