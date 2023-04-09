@@ -111,7 +111,7 @@ class Steam_Recommender:
         return top_titles_ratings_details
 
 # Example
-steam_recommender = Steam_Recommender("KNN_WM", 76561198058962258)
-top_titles_ratings = steam_recommender.get_top_predictions(100)
-print("top user titles: ", top_titles_ratings)
+# steam_recommender = Steam_Recommender("KNN_WM", 76561198058962258)
+# top_titles_ratings = steam_recommender.get_top_predictions(100)
+# print("top user titles: ", top_titles_ratings)
 #rmse = steam_recommender.model_rmse()
