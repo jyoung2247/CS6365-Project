@@ -19,34 +19,38 @@ export function App() {
     const [id, setId] = useState('');
     const [model, setModel] = useState('SVD');
     let [loading, setLoading] = useState(false);
-    const [open, setOpen] = useState(false);
-
-    const handleOpen = (num) => {
-        setOpen(!open);
-    }
-
-    function handleModel(model) {
-        switch (model) {
-            case "SVD":
-                setModel(model);
-                handleClick();
-                break;
-            case "KWM":
-                setModel(model);
-                handleClick();
-                break;
-            default:
-                setModel("SVD");
-                handleClick();
-                break;
-        }
-    }
 
     const override: CSSProperties = {
         border: "1px solid #66c0f4",
         borderRadius: "5px",
-        marginTop: "90px"
+        marginTop: "60px"
     };
+
+/*    function handleModel(model) {
+        switch (model) {
+            case "SVD":
+                setModel(model);
+                break;
+            case "KNN_WM":
+                setModel(model);
+                break;
+            case "KNN_WZ":
+                setModel(model);
+                break;
+            case "SVDpp":
+                setModel(model);
+                break;
+            case "CoClustering":
+                setModel(model);
+                break;
+            case "SlopeOne":
+                setModel(model);
+                break;
+            default:
+                setModel("SVD");
+                break;
+        }
+    }*/
 
     function removeDuplicates(arr) {
         return arr.filter((item, index) => arr.indexOf(item) === index);
@@ -175,8 +179,12 @@ export function App() {
                         Welcome to the Steam Game Recommender!
                     </div>
                     <div className="welcome">
-                        Input your Steam ID, press Submit, wait for
-                        recommendations to be generated, then click Next to view them.
+                        Select a model, input Steam ID, press Submit, generate recommendations,
+                        and click Next to view them.
+                    </div>
+                    <div className="radio">
+                        Model:
+                        {models.map((m) => (<label key={m} className="model"> <input type="radio" value={m} checked={model === m} onChange={() => setModel(m)}/>{m}</label>))}
                     </div>
                     <div className="results">
                         <div className="circle1">
@@ -185,13 +193,7 @@ export function App() {
                         My Steam Public Profile Link
                         <div className="link-profile">
                             <input className="profile" type="text" placeholder="  Paste Steam ID here" value={id} onChange={e => setId(e.target.value)}/>
-                            {/*<button className="submit" onClick={handleClick}>Submit</button>*/}
-                            <button className="submit" onClick={() => handleOpen()}>Submit</button>
-                            {open ? (
-                                <ul className="mmenu">
-                                    {models.map((m) => (<li className="menu-item"> <button key={m}  onClick={() => handleModel(m)}>{m}</button></li>))}
-                                </ul>
-                            ) : null}
+                            <button className="submit" onClick={handleClick}>Submit</button>
                         </div>
                     </div>
                     <BarLoader
@@ -203,7 +205,7 @@ export function App() {
                     />
                     <div className="link">
                         <Link to="/list">
-                            <button className="next">Next</button>
+                            <button disabled={loading} className="next">Next</button>
                         </Link>
                     </div>
                 </div>

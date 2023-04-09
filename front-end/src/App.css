@@ -70,7 +70,18 @@
   margin-left: 20px;
   white-space: pre;
   font-weight: bold;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+
+.model {
+  font-size: 20px;
+  margin: 20px;
 }
 
 .results {
@@ -94,7 +105,7 @@
 .link-profile {
   display: flex;
   flex-direction: row;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   margin-top: 10px;
 }
 
@@ -124,42 +135,6 @@
   background-color: #2a475e;
 }
 
-/*.faves {
-  background-color: #1b2838;
-  min-height: 25vh;
-  max-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 36px;
-  color: #c7d5e0;
-  font-weight: bold;
-  border-radius: 10px;
-  text-align: left;
-  padding: 15px;
-  border: 3px solid #66c0f4;
-}
-
-.fave-list {
-  background-color: #171a21;
-  min-width: 90%;
-  height: 50vh;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  font-weight: normal;
-  border: 2px solid #66c0f4;
-  align-items: flex-start;
-  border-radius: 10px;
-  margin: 15px;
-  font-size: 30px;
-}
-
-.checklist {
-  font-size: 24px;
-  font-weight: normal;
-}*/
-
 .link {
   display: flex;
   flex-direction: column;
@@ -174,7 +149,7 @@
   min-width: 40vh;
   font-size: 1.5em;
   margin-left: 300px;
-  margin-top: 100px;
+  margin-top: 75px;
   align-self: flex-end;
   border-radius: 15px;
   border: 3px solid #66c0f4;
