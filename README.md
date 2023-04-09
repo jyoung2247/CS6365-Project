@@ -2,6 +2,8 @@
 CS6365 Project - Steam Game Recommender
 To run project:
 
+*Installing dependencies*
+
 *Backend*
 
 cd CS6365-Project
@@ -12,6 +14,8 @@ conda activate steamrec
 
 conda install -c conda-forge flask=2.2.3
 
+ conda install -c conda-forge flask_cors=3.0.10
+
 conda install -c conda-forge requests=2.28.2
 
 conda install -c conda-forge scikit-surprise=1.1.3
@@ -20,7 +24,7 @@ conda install -c conda-forge pandas=1.5.3
 
 pip install howlongtobeatpy
 
-python back-end/app.py
+
 
 *Frontend*
 
@@ -28,6 +32,22 @@ cd front-end
 
 npm install
 
-npm install react-spinners
+*Running*
+
+*Backend*
+
+conda activate steamrec
+
+cd CS6365-Project
+
+python back-end/app.py
+
+*Frontend*
+
+conda activate steamrec
+
+Open second miniconda terminal
+
+cd front-end
 
 npm start

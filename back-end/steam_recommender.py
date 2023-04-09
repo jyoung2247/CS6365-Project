@@ -62,7 +62,7 @@ class Steam_Recommender:
         return prediction
     
     #Get top n titles and estimated ratings for a user
-    def get_top_predictions(self, n):
+    def get_top_predictions(self):
         #Creating the test set for the user with uid = uid
         rating_mean = self.data.df["rating"].mean()
         user_df = self.data.df.loc[self.data.df['uid'] == self.uid]
@@ -88,7 +88,7 @@ class Steam_Recommender:
         #Add scraped hltb times to original
         df_hltb_added = pd.read_csv("created-datasets/hltb-new.csv")
         df_hltb_concat = pd.concat([df_hltb_added, df_hltb_original], axis=0)
-        df_hltb_concat.drop_duplicates(subset='title')
+        df_hltb_concat.drop_duplicates(subset='title', inplace=True)
 
         #Create lower case game name column for the purpose of joins
         df_hltb_concat["name_lower"] = df_hltb_concat['title'].str.lower()
@@ -101,11 +101,11 @@ class Steam_Recommender:
 
         df = pd.merge(df, df_hltb_concat, on="name_lower", how="left")
         df_hltb_concat.drop(columns=["name_lower"], inplace=True)
+        df.drop_duplicates(subset='title', inplace=True)
+        df.loc[df['main_story'].isna(), 'main_story'] = "Unknown"
 
         df.sort_values(by="est", ascending=False, inplace=True)
-        if n > df.shape[0]:
-            n = df.shape[0]
-        top_titles_ratings_details = df.iloc[:n, [1, 3, 6, 7, 8, 9, 10, 12]].to_dict('records')
+        top_titles_ratings_details = df.iloc[:, [1, 3, 6, 7, 8, 9, 10, 12]].to_dict('records')
         #top_titles_ratings = list(zip(df.iloc[:n, [1]]['iid'], df.iloc[:n, [3]]['est']))
 
         return top_titles_ratings_details

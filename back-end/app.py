@@ -2,8 +2,10 @@ from flask import Flask, jsonify, request
 import json
 from steam_recommender import Steam_Recommender
 import steam_api_functions
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def hello():
@@ -15,7 +17,7 @@ def getRecs():
         steam_id = request.args.get('steam_id')
         model_type = request.args.get('model_type')
         steam_recommender = Steam_Recommender(model_type, steam_id)
-        top_titles_ratings_details = steam_recommender.get_top_predictions(150000)
+        top_titles_ratings_details = steam_recommender.get_top_predictions()
         return json.dumps(top_titles_ratings_details), 200, {"Content-Type": "application/json"}
     except Exception as e:
         print("Error:", e)
