@@ -13,39 +13,18 @@ let genres = [];
 let developers = [];
 let publishers = [];
 let price = [];
+let length = [];
 export function App() {
 
     const url = `http://localhost:8888/getRecs?steam_id=`;
     const [id, setId] = useState('');
     const [model, setModel] = useState('SVD');
     let [loading, setLoading] = useState(false);
-    const [open, setOpen] = useState(false);
-
-    const handleOpen = (num) => {
-        setOpen(!open);
-    }
-
-    function handleModel(model) {
-        switch (model) {
-            case "SVD":
-                setModel(model);
-                handleClick();
-                break;
-            case "KWM":
-                setModel(model);
-                handleClick();
-                break;
-            default:
-                setModel("SVD");
-                handleClick();
-                break;
-        }
-    }
 
     const override: CSSProperties = {
         border: "1px solid #66c0f4",
         borderRadius: "5px",
-        marginTop: "90px"
+        marginTop: "65px"
     };
 
     function removeDuplicates(arr) {
@@ -56,7 +35,7 @@ export function App() {
         try {
             setLoading(true);
             list = await (await fetch(url + id + "?model_type=" + model)).json();
-            list = list.filter(g => g.genres !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown").slice(0,99);
+            list = list.filter(g => g.genres !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown" && g.main_story !== "Unknown").slice(0,99);
             list.forEach((g)=>{
                 g.price = g.price.replace(" ", "");
                 if (g.price === "Unknown") {
@@ -71,6 +50,7 @@ export function App() {
                 if (g.genres[0] === "Massively Multiplayer") {
                     g.genres[0] = "MMO";
                 }
+                g.main_story = Number(g.main_story.toFixed(3));
 
                 if (g.developer.includes(", Inc.")) {
                     g.developer = g.developer.replace(", Inc.", "");
@@ -150,11 +130,15 @@ export function App() {
                 }
 
                 price.push(g.price);
+                length.push(g.main_story);
                 genres = [...genres, ...g.genres];
                 developers = [...developers, ...devs];
                 publishers = [...publishers, ...pubs];
             });
-            price = removeDuplicates(price.sort((a, b) => (a.price > b.price) ? 1 : -1));
+            price = price.sort((a, b) => (a.price > b.price) ? 1 : -1)
+            price = removeDuplicates(price);
+            length = length.sort((a, b) => (a.main_story > b.main_story) ? 1 : -1)
+            length = removeDuplicates(length);
             genres = removeDuplicates(genres.sort());
             developers = removeDuplicates(developers.sort());
             publishers = removeDuplicates(publishers.sort());
@@ -175,8 +159,12 @@ export function App() {
                         Welcome to the Steam Game Recommender!
                     </div>
                     <div className="welcome">
-                        Input your Steam ID, press Submit, wait for
-                        recommendations to be generated, then click Next to view them.
+                        Select a model, input Steam ID, press Submit, generate recommendations,
+                        and click Next to view them.
+                    </div>
+                    <div className="radio">
+                        Model:
+                        {models.map((m) => (<label key={m} className="model"> <input type="radio" value={m} checked={model === m} onChange={() => setModel(m)}/>{m}</label>))}
                     </div>
                     <div className="results">
                         <div className="circle1">
@@ -185,13 +173,7 @@ export function App() {
                         My Steam Public Profile Link
                         <div className="link-profile">
                             <input className="profile" type="text" placeholder="  Paste Steam ID here" value={id} onChange={e => setId(e.target.value)}/>
-                            {/*<button className="submit" onClick={handleClick}>Submit</button>*/}
-                            <button className="submit" onClick={() => handleOpen()}>Submit</button>
-                            {open ? (
-                                <ul className="mmenu">
-                                    {models.map((m) => (<li className="menu-item"> <button key={m}  onClick={() => handleModel(m)}>{m}</button></li>))}
-                                </ul>
-                            ) : null}
+                            <button className="submit" onClick={handleClick}>Submit</button>
                         </div>
                     </div>
                     <BarLoader
@@ -203,7 +185,7 @@ export function App() {
                     />
                     <div className="link">
                         <Link to="/list">
-                            <button className="next">Next</button>
+                            <button disabled={loading} className="next">Next</button>
                         </Link>
                     </div>
                 </div>
@@ -222,6 +204,13 @@ export function List() {
     const [open4, setOpen4] = useState(false);
     const [open5, setOpen5] = useState(false);
     const [open6, setOpen6] = useState(false);
+
+    const prices = price.sort(function(a, b){
+        return a - b;
+    });
+    const lengths = length.sort(function(a, b){
+        return a - b;
+    });
 
     const handleOpen = (num) => {
         switch (num) {
@@ -266,6 +255,10 @@ export function List() {
                 list = list.sort((a, b) => (a.price > b.price) ? 1 : -1);
                 forceUpdate();
                 break;
+            case "length":
+                list = list.sort((a, b) => (a.main_story > b.main_story) ? 1 : -1);
+                forceUpdate();
+                break;
             case "devs":
                 list = list.sort((a, b) => (a.developer > b.developer) ? 1 : -1);
                 forceUpdate();
@@ -290,6 +283,10 @@ export function List() {
                 break;
             case "price":
                 list = list.filter(g => g.price <= term);
+                forceUpdate();
+                break;
+            case "length":
+                list = list.filter(g => g.main_story <= term);
                 forceUpdate();
                 break;
             case "devs":
@@ -329,9 +326,10 @@ export function List() {
                     <button className="filter" onClick={() => handleSort("title")}>Title</button>
                     <button className="filter" onClick={() => handleSort("genre")}>Genre</button>
                     <button className="filter" onClick={() => handleSort("price")}>Price</button>
+                    <button className="filter" onClick={() => handleSort("length")}>Length</button>
                     <button className="filter" onClick={() => handleSort("devs")}>Developer</button>
-                    <button className="filter" onClick={() => handleSort("pubs")}>Publisher</button>
-                    {/*<button className="filter">Length</button>
+                    {/*<button className="filter" onClick={() => handleSort("pubs")}>Publisher</button>
+                    <button className="filter">Length</button>
                     <button className="filter">Content Rating</button>
                     <button className="filter">User Rating</button>
                     <button className="filter">Critic Rating</button>*/}
@@ -342,7 +340,7 @@ export function List() {
                         <button className="filter" onClick={() => handleOpen(1)}>Features</button>
                         {open1 ? (
                             <ul className="menu">
-                                {features.map((f) => (<li className="menu-item"> <button key={f}  onClick={() => handleFilter("feats", f)}>{f}</button></li>))}
+                                {features.map((f) => (<li className="menu-item" key={f}> <button onClick={() => handleFilter("feats", f)}>{f}</button></li>))}
                             </ul>
                         ) : null}
                     </div>
@@ -350,7 +348,7 @@ export function List() {
                         <button className="filter" onClick={() => handleOpen(2)}>Multiplayer</button>
                         {open2 ? (
                             <ul className="menu">
-                                {multiplayer.map((m) => (<li className="menu-item"> <button key={(m)}  onClick={() => handleFilter("multi", m)}>{m}</button></li>))}
+                                {multiplayer.map((m) => (<li className="menu-item" key={(m)}> <button onClick={() => handleFilter("multi", m)}>{m}</button></li>))}
                             </ul>
                         ) : null}
                     </div>
@@ -358,7 +356,7 @@ export function List() {
                         <button className="filter" onClick={() => handleOpen(3)}>Genre</button>
                         {open3 ? (
                             <ul className="menu">
-                                {genres.map((g) => (<li className="menu-item"> <button key={(g)}  onClick={() => handleFilter("genre", g)}>{g}</button></li>))}
+                                {genres.map((g) => (<li className="menu-item" key={(g)}> <button onClick={() => handleFilter("genre", g)}>{g}</button></li>))}
                             </ul>
                         ) : null}
                     </div>
@@ -366,27 +364,35 @@ export function List() {
                         <button className="filter" onClick={() => handleOpen(4)}>Price</button>
                         {open4 ? (
                             <ul className="menu">
-                                {price.map((c) => (<li className="menu-item"> <button key={(c)}  onClick={() => handleFilter("price", c)}>{c}</button></li>))}
+                                {prices.map((c) => (<li className="menu-item" key={(c)}> <button onClick={() => handleFilter("price", c)}>{c}</button></li>))}
                             </ul>
                         ) : null}
                     </div>
                     <div>
-                        <button className="filter" onClick={() => handleOpen(5)}>Developer</button>
+                        <button className="filter" onClick={() => handleOpen(5)}>Length</button>
                         {open5 ? (
                             <ul className="menu">
-                                {developers.map((d) => (<li className="menu-item"> <button key={(d)}  onClick={() => handleFilter("devs", d)}>{d}</button></li>))}
+                                {lengths.map((l) => (<li className="menu-item" key={(l)}> <button onClick={() => handleFilter("length", l)}>{l}</button></li>))}
                             </ul>
                         ) : null}
                     </div>
                     <div>
-                        <button className="filter" onClick={() => handleOpen(6)}>Publisher</button>
+                        <button className="filter" onClick={() => handleOpen(6)}>Developer</button>
                         {open6 ? (
+                            <ul className="menu">
+                                {developers.map((d) => (<li className="menu-item" key={(d)}> <button onClick={() => handleFilter("devs", d)}>{d}</button></li>))}
+                            </ul>
+                        ) : null}
+                    </div>
+                    {/*<div>
+                        <button className="filter" onClick={() => handleOpen(7)}>Publisher</button>
+                        {open7 ? (
                             <ul className="menu">
                                 {publishers.map((p) => (<li className="menu-item"> <button key={(p)}  onClick={() => handleFilter("pubs", p)}>{p}</button></li>))}
                             </ul>
                         ) : null}
                     </div>
-                    {/*<button className="filter">Length</button>
+                    <button className="filter">Length</button>
                     <button className="filter">Content Rating</button>
                     <button className="filter">User Rating</button>
                     <button className="filter">Critic Rating</button>*/}
@@ -406,8 +412,12 @@ export function List() {
                             {list.map((g) => (<div className="game" key={list.indexOf(g)}>{g.title}</div>))}
                         </div>
                         <div className="prices">
-                            <div className="header"> Price </div>
+                            <div className="header"> Price ($) </div>
                             {list.map((g) => (<div className="game" key={list.indexOf(g)}>{g.price}</div>))}
+                        </div>
+                        <div className="length">
+                            <div className="header"> Length (H) </div>
+                            {list.map((g) => (<div className="game" key={list.indexOf(g)}>{g.main_story}</div>))}
                         </div>
                         <div className="genres">
                             <div className="header"> Genre </div>
