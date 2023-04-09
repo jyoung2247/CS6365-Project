@@ -329,10 +329,9 @@ export function List() {
                     <button className="filter" onClick={() => handleSort("length")}>Length</button>
                     <button className="filter" onClick={() => handleSort("devs")}>Developer</button>
                     {/*<button className="filter" onClick={() => handleSort("pubs")}>Publisher</button>
-                    <button className="filter">Length</button>
-                    <button className="filter">Content Rating</button>
-                    <button className="filter">User Rating</button>
-                    <button className="filter">Critic Rating</button>*/}
+                    <button className="filter" onClick={() => handleSort("content")}>Content Rating</button>
+                    <button className="filter" onClick={() => handleSort("users")}>User Rating</button>
+                    <button className="filter" onClick={() => handleSort("critic")}>Critic Rating</button>*/}
                 </div>
                 <div className="filters">
                     Filter:
@@ -364,7 +363,7 @@ export function List() {
                         <button className="filter" onClick={() => handleOpen(4)}>Price</button>
                         {open4 ? (
                             <ul className="menu">
-                                {prices.map((c) => (<li className="menu-item" key={(c)}> <button onClick={() => handleFilter("price", c)}>{c}</button></li>))}
+                                {prices.map((p) => (<li className="menu-item" key={(p)}> <button onClick={() => handleFilter("price", p)}>{p}</button></li>))}
                             </ul>
                         ) : null}
                     </div>
@@ -384,15 +383,7 @@ export function List() {
                             </ul>
                         ) : null}
                     </div>
-                    {/*<div>
-                        <button className="filter" onClick={() => handleOpen(7)}>Publisher</button>
-                        {open7 ? (
-                            <ul className="menu">
-                                {publishers.map((p) => (<li className="menu-item"> <button key={(p)}  onClick={() => handleFilter("pubs", p)}>{p}</button></li>))}
-                            </ul>
-                        ) : null}
-                    </div>
-                    <button className="filter">Length</button>
+                    {/*<button className="filter">Publisher</button>
                     <button className="filter">Content Rating</button>
                     <button className="filter">User Rating</button>
                     <button className="filter">Critic Rating</button>*/}

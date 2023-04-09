@@ -34,19 +34,6 @@
   margin-left: 5px;
 }
 
-/*.circle2 {
-  background-color: #1b2838;
-  height: 5vh;
-  width: 5vh;
-  border-radius: 100px;
-  align-items: center;
-  border: 3px solid black;
-  position: absolute;
-  z-index: 1;
-  left: 62%;
-  top: 33%;
-}*/
-
 .contain {
   font-size: 72px;
   font-weight: bold;
@@ -376,7 +363,6 @@
 .devs {
   display: flex;
   flex-direction: column;
-
   min-width: 750px;
 }
 
@@ -385,8 +371,6 @@
   flex-direction: column;
   min-width: 750px;
 }
-
-
 
 .game {
   border-top: 1px solid #66c0f4;
