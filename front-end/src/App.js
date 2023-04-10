@@ -12,8 +12,8 @@ const multiplayer = ["Single-player", "Multi-player", "MMO", "PvP", "Online PvP"
 let genres = [];
 let developers = [];
 let publishers = [];
-let price = [];
-let length = [];
+let price = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
+let length = [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
 export function App() {
 
     const url = `http://localhost:8888/getRecs?steam_id=`;
@@ -43,12 +43,13 @@ export function App() {
                 }
                 g.price = g.price.replace("$","");
                 g.price = parseFloat(g.price);
-                if (g.genres.split(',').length > 2 && g.genres.split(',')[0] === "Action") {
-                    g.genres = g.genres.replace("Action,", "");
-                }
                 g.genres = g.genres.split(',');
-                if (g.genres[0] === "Massively Multiplayer") {
-                    g.genres[0] = "MMO";
+                if (g.genres.length >= 2 && g.genres[0] === "Action") {
+                    g.genres[0] = g.genres[1];
+                    g.genres[1] = "Action";
+                }
+                if (g.genres.includes("Massively Multiplayer")) {
+                    g.genres[g.genres.indexOf("Massively Multiplayer")] = "MMO";
                 }
                 g.main_story = Number(g.main_story.toFixed(3));
 
@@ -129,16 +130,10 @@ export function App() {
                     g.publisher = pubs[0];
                 }
 
-                price.push(g.price);
-                length.push(g.main_story);
                 genres = [...genres, ...g.genres];
                 developers = [...developers, ...devs];
                 publishers = [...publishers, ...pubs];
             });
-            price = price.sort((a, b) => (a.price > b.price) ? 1 : -1)
-            price = removeDuplicates(price);
-            length = length.sort((a, b) => (a.main_story > b.main_story) ? 1 : -1)
-            length = removeDuplicates(length);
             genres = removeDuplicates(genres.sort());
             developers = removeDuplicates(developers.sort());
             publishers = removeDuplicates(publishers.sort());
@@ -240,31 +235,31 @@ export function List() {
     function handleSort(term){
         switch (term) {
             case "ranks":
-                list = og_list.sort((a, b) => (parseFloat(a.est*100000) < parseFloat(b.est*100000)) ? 1 : -1).slice(0,99);
+                list = list.sort((a, b) => (parseFloat(a.est*100000) < parseFloat(b.est*100000)) ? 1 : -1);
                 forceUpdate();
                 break;
             case "title":
-                list = og_list.sort((a, b) => (a.title > b.title) ? 1 : -1).slice(0,99).slice(0,99);
+                list = list.sort((a, b) => (a.title > b.title) ? 1 : -1).slice(0,99);
                 forceUpdate();
                 break;
             case "genre":
-                list = og_list.sort((a, b) => (a.genres[0] > b.genres[0]) ? 1 : -1).slice(0,99);
+                list = list.sort((a, b) => (a.genres[0] > b.genres[0]) ? 1 : -1);
                 forceUpdate();
                 break;
             case "price":
-                list = og_list.sort((a, b) => (a.price > b.price) ? 1 : -1).slice(0,99);
+                list = list.sort((a, b) => (a.price > b.price) ? 1 : -1);
                 forceUpdate();
                 break;
             case "length":
-                list = og_list.sort((a, b) => (a.main_story > b.main_story) ? 1 : -1).slice(0,99);
+                list = list.sort((a, b) => (a.main_story > b.main_story) ? 1 : -1);
                 forceUpdate();
                 break;
             case "devs":
-                list = og_list.sort((a, b) => (a.developer > b.developer) ? 1 : -1).slice(0,99);
+                list = list.sort((a, b) => (a.developer > b.developer) ? 1 : -1);
                 forceUpdate();
                 break;
             case "pubs":
-                list = og_list.sort((a, b) => (a.publisher > b.publisher) ? 1 : -1).slice(0,99);
+                list = list.sort((a, b) => (a.publisher > b.publisher) ? 1 : -1);
                 forceUpdate();
                 break;
             default:
