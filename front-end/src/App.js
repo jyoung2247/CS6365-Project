@@ -35,7 +35,7 @@ export function App() {
         try {
             setLoading(true);
             og_list = await (await fetch(url + id + "?model_type=" + model)).json();
-            og_list = list.filter(g => g.genres !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown" && g.main_story !== "Unknown");
+            og_list = og_list.filter(g => g.genres !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown" && g.main_story !== "Unknown");
             og_list.forEach((g)=>{
                 g.price = g.price.replace(" ", "");
                 if (g.price === "Unknown") {
