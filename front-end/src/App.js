@@ -34,9 +34,9 @@ export function App() {
     const handleClick = async () => {
         try {
             setLoading(true);
-            list = await (await fetch(url + id + "?model_type=" + model)).json();
-            list = list.filter(g => g.genres !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown" && g.main_story !== "Unknown").slice(0,99);
-            list.forEach((g)=>{
+            og_list = await (await fetch(url + id + "?model_type=" + model)).json();
+            og_list = list.filter(g => g.genres !== "Unknown" && g.developer !== "Unknown" && g.publisher !== "Unknown" && g.main_story !== "Unknown");
+            og_list.forEach((g)=>{
                 g.price = g.price.replace(" ", "");
                 if (g.price === "Unknown") {
                     g.price = "$0.00"
@@ -143,8 +143,8 @@ export function App() {
             developers = removeDuplicates(developers.sort());
             publishers = removeDuplicates(publishers.sort());
 
-            console.log(list);
-            og_list = list;
+            console.log(og_list);
+            list = og_list.slice(0,99);
             setLoading(false);
         } catch (err) {
             console.log(err.message);
@@ -240,31 +240,31 @@ export function List() {
     function handleSort(term){
         switch (term) {
             case "ranks":
-                list = list.sort((a, b) => (parseFloat(a.est*100000) < parseFloat(b.est*100000)) ? 1 : -1);
+                list = og_list.sort((a, b) => (parseFloat(a.est*100000) < parseFloat(b.est*100000)) ? 1 : -1).slice(0,99);
                 forceUpdate();
                 break;
             case "title":
-                list = list.sort((a, b) => (a.title > b.title) ? 1 : -1);
+                list = og_list.sort((a, b) => (a.title > b.title) ? 1 : -1).slice(0,99).slice(0,99);
                 forceUpdate();
                 break;
             case "genre":
-                list = list.sort((a, b) => (a.genres[0] > b.genres[0]) ? 1 : -1);
+                list = og_list.sort((a, b) => (a.genres[0] > b.genres[0]) ? 1 : -1).slice(0,99);
                 forceUpdate();
                 break;
             case "price":
-                list = list.sort((a, b) => (a.price > b.price) ? 1 : -1);
+                list = og_list.sort((a, b) => (a.price > b.price) ? 1 : -1).slice(0,99);
                 forceUpdate();
                 break;
             case "length":
-                list = list.sort((a, b) => (a.main_story > b.main_story) ? 1 : -1);
+                list = og_list.sort((a, b) => (a.main_story > b.main_story) ? 1 : -1).slice(0,99);
                 forceUpdate();
                 break;
             case "devs":
-                list = list.sort((a, b) => (a.developer > b.developer) ? 1 : -1);
+                list = og_list.sort((a, b) => (a.developer > b.developer) ? 1 : -1).slice(0,99);
                 forceUpdate();
                 break;
             case "pubs":
-                list = list.sort((a, b) => (a.publisher > b.publisher) ? 1 : -1);
+                list = og_list.sort((a, b) => (a.publisher > b.publisher) ? 1 : -1).slice(0,99);
                 forceUpdate();
                 break;
             default:
@@ -278,34 +278,34 @@ export function List() {
     function handleFilter(cat, term) {
         switch (cat) {
             case "genre":
-                list = list.filter(g => g.genres.includes(term));
+                list = og_list.filter(g => g.genres.includes(term)).slice(0,99);
                 forceUpdate();
                 break;
             case "price":
-                list = list.filter(g => g.price <= term);
+                list = og_list.filter(g => g.price <= term).slice(0,99);
                 forceUpdate();
                 break;
             case "length":
-                list = list.filter(g => g.main_story <= term);
+                list = og_list.filter(g => g.main_story <= term).slice(0,99);
                 forceUpdate();
                 break;
             case "devs":
-                list = list.filter(g => g.developer.includes(term));
+                list = og_list.filter(g => g.developer.includes(term)).slice(0,99);
                 forceUpdate();
                 break;
             case "pubs":
-                list = list.filter(g => g.publisher.includes(term));
+                list = og_list.filter(g => g.publisher.includes(term)).slice(0,99);
                 forceUpdate();
                 break;
             default:
-                list = list.filter(g => g.categories.includes(term));
+                list = og_list.filter(g => g.categories.includes(term)).slice(0,99);
                 forceUpdate();
                 break;
         }
     }
 
     function handleClear() {
-        list = og_list;
+        list = og_list.slice(0,99);
         forceUpdate();
     }
 
