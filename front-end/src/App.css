@@ -128,7 +128,6 @@
   flex-direction: column;
   height: 0vh;
   width: 0vh;
-  margin-left: 0px;
 }
 
 .next {
@@ -191,32 +190,35 @@
   background-color: #2a475e;
 }
 
-.filter1 {
-  background-color: #1b2838;
-  min-height: 4vh;
-  min-width: 20vh;
-  font-size: 0.75em;
-  margin: 15px 25px 15px 45px;
-  border-radius: 15px;
-  border: 3px solid #66c0f4;
-  color: #c7d5e0;
-}
-
-.filter1:hover {
-  background-color: #2a475e;
-}
-
 .filters {
   display: flex;
   flex-direction: row;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.order {
+  background-color: #1b2838;
+  border: 1px solid #66c0f4;
+  color: #c7d5e0;
+  border-radius: 10px;
+  margin-right: -11px;
+  margin-left: 10px;
+  width: 20px;
+  height: 5vh;
+}
+
+.order:hover {
+  background-color: #2a475e;
 }
 
 .filter {
   background-color: #1b2838;
-  min-height: 4vh;
-  min-width: 20vh;
+  height: 5vh;
+  width: 20vh;
   font-size: 0.75em;
-  margin: 15px 25px 15px 25px;
+  margin-right: 25px;
+  margin-left: 25px;
   border-radius: 15px;
   border: 3px solid #66c0f4;
   color: #c7d5e0;
@@ -226,50 +228,28 @@
   background-color: #2a475e;
 }
 
-.mmenu {
+.pmenu {
   position: absolute;
   list-style-type: none;
-  margin-left: 1245px;
-  margin-top: 75px;
-  width: 20vh;
-  height: 15vh;
+  margin-left: 25px;
+  margin-top: 0px;
+  width: 45vh;
+  height: 10vh;
   overflow: auto;
-  border: 0.5px solid #66c0f4;
+  border: 1px solid #66c0f4;
   padding-left: 0px;
-}
-
-.mmenu > li {
   background-color: #171a21;
-  height: 40px;
-  padding: 0px;
-}
-
-.mmenu > li:hover {
-  background-color: #2a475e;
-}
-
-.mmenu > li > button {
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  background: none;
-  color: #c7d5e0;
-  padding: 0px;
-  font: inherit;
-  font-size: 12px;
-  cursor: pointer;
-  border: 0px;
 }
 
 .menu {
   position: absolute;
   list-style-type: none;
   margin-left: 25px;
-  margin-top: -15px;
+  margin-top: 0px;
   width: 20vh;
   height: 42vh;
   overflow: auto;
-  border: 0.5px solid #66c0f4;
+  border: 1px solid #66c0f4;
   padding-left: 0px;
 }
 
