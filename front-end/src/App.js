@@ -1,7 +1,8 @@
 import './App.css';
-import {Link} from "react-router-dom";
 import {CSSProperties, useReducer, useState} from "react";
+import {Link} from "react-router-dom";
 import BarLoader from "react-spinners/BarLoader";
+import MultiRangeSlider from "./MultiRangeSlider";
 import link from "./link.png";
 
 let models = ["SVD", "KNN_WM", "KNN_WZ", "SVDpp", "CoClustering", "SlopeOne"];
@@ -12,8 +13,12 @@ const multiplayer = ["Single-player", "Multi-player", "MMO", "PvP", "Online PvP"
 let genres = [];
 let developers = [];
 let publishers = [];
-let price = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
-let length = [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
+
+let minPrice = 0;
+let maxPrice = 80;
+let minLength = 0;
+let maxLength = 2110;
+
 export function App() {
 
     const url = `http://localhost:8888/getRecs?steam_id=`;
@@ -104,7 +109,7 @@ export function App() {
                 } else if (g.publisher.includes(", LTD.")) {
                     g.publisher = g.publisher.replace(", LTD.", "");
                 } else if (g.publisher.includes(", Ltd.")) {
-                g.publisher = g.publisher.replace(", Ltd.", "");
+                    g.publisher = g.publisher.replace(", Ltd.", "");
                 } else if (g.publisher.includes(", LTD")) {
                     g.publisher = g.publisher.replace(", LTD", "");
                 } else if (g.publisher.includes(", Ltd")) {
@@ -171,6 +176,7 @@ export function App() {
                             <button className="submit" onClick={handleClick}>Submit</button>
                         </div>
                     </div>
+
                     <BarLoader
                         cssOverride={override}
                         loading={loading}
@@ -200,12 +206,31 @@ export function List() {
     const [open5, setOpen5] = useState(false);
     const [open6, setOpen6] = useState(false);
 
-    const prices = price.sort(function(a, b){
-        return a - b;
-    });
-    const lengths = length.sort(function(a, b){
-        return a - b;
-    });
+    const [asc, setAsc] = useState(true);
+    const [txt, setTxt] = useState("^");
+
+    const [filtered, setFiltered] = useState(false);
+
+    const handleOrder = () => {
+        if (asc) {
+            setAsc(false);
+            setTxt("v");
+        } else {
+            setAsc(true);
+            setTxt("^");
+        }
+    }
+
+    const setPrice = (min, max) => {
+        minPrice = min;
+        maxPrice = max;
+        handleFilter("price", "range");
+    }
+    const setLength = (min, max) => {
+        minLength = min;
+        maxLength = max;
+        handleFilter("length", "range");
+    }
 
     const handleOpen = (num) => {
         switch (num) {
@@ -235,31 +260,59 @@ export function List() {
     function handleSort(term){
         switch (term) {
             case "ranks":
-                list = list.sort((a, b) => (parseFloat(a.est*100000) < parseFloat(b.est*100000)) ? 1 : -1);
+                if (asc) {
+                    list = list.sort((a, b) => (parseFloat(a.est*100000) < parseFloat(b.est*100000)) ? 1 : -1);
+                } else {
+                    list = list.sort((a, b) => (parseFloat(a.est*100000) > parseFloat(b.est*100000)) ? 1 : -1);
+                }
                 forceUpdate();
                 break;
             case "title":
-                list = list.sort((a, b) => (a.title > b.title) ? 1 : -1).slice(0,99);
+                if (asc) {
+                    list = list.sort((a, b) => (a.title > b.title) ? 1 : -1).slice(0,99);
+                } else {
+                    list = list.sort((a, b) => (a.title < b.title) ? 1 : -1).slice(0,99);
+                }
                 forceUpdate();
                 break;
             case "genre":
-                list = list.sort((a, b) => (a.genres[0] > b.genres[0]) ? 1 : -1);
+                if (asc) {
+                    list = list.sort((a, b) => (a.genres[0] > b.genres[0]) ? 1 : -1);
+                } else {
+                    list = list.sort((a, b) => (a.genres[0] < b.genres[0]) ? 1 : -1);
+                }
                 forceUpdate();
                 break;
             case "price":
-                list = list.sort((a, b) => (a.price > b.price) ? 1 : -1);
+                if (asc) {
+                    list = list.sort((a, b) => (a.price > b.price) ? 1 : -1);
+                } else {
+                    list = list.sort((a, b) => (a.price < b.price) ? 1 : -1);
+                }
                 forceUpdate();
                 break;
             case "length":
-                list = list.sort((a, b) => (a.main_story > b.main_story) ? 1 : -1);
+                if (asc) {
+                    list = list.sort((a, b) => (a.main_story > b.main_story) ? 1 : -1);
+                } else {
+                    list = list.sort((a, b) => (a.main_story < b.main_story) ? 1 : -1);
+                }
                 forceUpdate();
                 break;
             case "devs":
-                list = list.sort((a, b) => (a.developer > b.developer) ? 1 : -1);
+                if (asc) {
+                    list = list.sort((a, b) => (a.developer > b.developer) ? 1 : -1);
+                } else {
+                    list = list.sort((a, b) => (a.developer < b.developer) ? 1 : -1);
+                }
                 forceUpdate();
                 break;
             case "pubs":
-                list = list.sort((a, b) => (a.publisher > b.publisher) ? 1 : -1);
+                if (asc) {
+                    list = list.sort((a, b) => (a.publisher > b.publisher) ? 1 : -1);
+                } else {
+                    list = list.sort((a, b) => (a.publisher < b.publisher) ? 1 : -1);
+                }
                 forceUpdate();
                 break;
             default:
@@ -274,18 +327,22 @@ export function List() {
         switch (cat) {
             case "genre":
                 list = og_list.filter(g => g.genres.includes(term)).slice(0,99);
+                setOpen3(false);
                 forceUpdate();
                 break;
             case "price":
-                list = og_list.filter(g => g.price <= term).slice(0,99);
+                list = og_list.filter(g => g.price <= maxPrice && g.price >= minPrice).slice(0,99);
+                //setOpen4(false);
                 forceUpdate();
                 break;
             case "length":
-                list = og_list.filter(g => g.main_story <= term).slice(0,99);
+                list = og_list.filter(g => g.main_story <= maxLength && g.main_story >= minLength).slice(0,99);
+                //setOpen5(false);
                 forceUpdate();
                 break;
             case "devs":
                 list = og_list.filter(g => g.developer.includes(term)).slice(0,99);
+                setOpen6(false);
                 forceUpdate();
                 break;
             case "pubs":
@@ -294,13 +351,17 @@ export function List() {
                 break;
             default:
                 list = og_list.filter(g => g.categories.includes(term)).slice(0,99);
+                setOpen1(false);
+                setOpen2(false);
                 forceUpdate();
                 break;
         }
+        setFiltered(true);
     }
 
     function handleClear() {
         list = og_list.slice(0,99);
+        setFiltered(false);
         forceUpdate();
     }
 
@@ -315,9 +376,10 @@ export function List() {
                 <div className="result">Results</div>
             </div>
             <div className="results">
-                <div>
+                <div className="filters">
                     Sort:
-                    <button className="filter1" onClick={() => handleSort("ranks")}>Rank</button>
+                    <button className="order" onClick={() => handleOrder()}>{txt}</button>
+                    <button className="filter" onClick={() => handleSort("ranks")}>Rank</button>
                     <button className="filter" onClick={() => handleSort("title")}>Title</button>
                     <button className="filter" onClick={() => handleSort("genre")}>Genre</button>
                     <button className="filter" onClick={() => handleSort("price")}>Price</button>
@@ -357,16 +419,26 @@ export function List() {
                     <div>
                         <button className="filter" onClick={() => handleOpen(4)}>Price</button>
                         {open4 ? (
-                            <ul className="menu">
-                                {prices.map((p) => (<li className="menu-item" key={(p)}> <button onClick={() => handleFilter("price", p)}>{p}</button></li>))}
+                            <ul className="pmenu">
+                                {/*{prices.map((p) => (<li className="menu-item" key={(p)}> <button onClick={() => handleFilter("price", p)}>{p}</button></li>))}*/}
+                                <MultiRangeSlider
+                                    min={0}
+                                    max={80}
+                                    onChange={({min, max}) => setPrice(min, max)}
+                                />
                             </ul>
                         ) : null}
                     </div>
                     <div>
                         <button className="filter" onClick={() => handleOpen(5)}>Length</button>
                         {open5 ? (
-                            <ul className="menu">
-                                {lengths.map((l) => (<li className="menu-item" key={(l)}> <button onClick={() => handleFilter("length", l)}>{l}</button></li>))}
+                            <ul className="pmenu">
+                                {/*{lengths.map((l) => (<li className="menu-item" key={(l)}> <button onClick={() => handleFilter("length", l)}>{l}</button></li>))}*/}
+                                <MultiRangeSlider
+                                    min={0}
+                                    max={2110}
+                                    onChange={({min, max}) => setLength(min, max)}
+                                />
                             </ul>
                         ) : null}
                     </div>
@@ -383,7 +455,7 @@ export function List() {
                     <button className="filter">User Rating</button>
                     <button className="filter">Critic Rating</button>*/}
                 </div>
-                <div>
+                <div className="filters">
                     Clear:
                     <button className="filter" onClick={() => handleClear()}>CLEAR</button>
                 </div>
