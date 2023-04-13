@@ -209,8 +209,6 @@ export function List() {
     const [asc, setAsc] = useState(true);
     const [txt, setTxt] = useState("^");
 
-    const [filtered, setFiltered] = useState(false);
-
     const handleOrder = () => {
         if (asc) {
             setAsc(false);
@@ -356,12 +354,10 @@ export function List() {
                 forceUpdate();
                 break;
         }
-        setFiltered(true);
     }
 
     function handleClear() {
         list = og_list.slice(0,99);
-        setFiltered(false);
         forceUpdate();
     }
 

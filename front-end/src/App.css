@@ -128,7 +128,6 @@
   flex-direction: column;
   height: 0vh;
   width: 0vh;
-  margin-left: 0px;
 }
 
 .next {
@@ -218,7 +217,8 @@
   height: 5vh;
   width: 20vh;
   font-size: 0.75em;
-  margin: 0px 25px 0px 25px;
+  margin-right: 25px;
+  margin-left: 25px;
   border-radius: 15px;
   border: 3px solid #66c0f4;
   color: #c7d5e0;
@@ -236,7 +236,7 @@
   width: 45vh;
   height: 10vh;
   overflow: auto;
-  border: 0.5px solid #66c0f4;
+  border: 1px solid #66c0f4;
   padding-left: 0px;
   background-color: #171a21;
 }
@@ -249,7 +249,7 @@
   width: 20vh;
   height: 42vh;
   overflow: auto;
-  border: 0.5px solid #66c0f4;
+  border: 1px solid #66c0f4;
   padding-left: 0px;
 }
 
