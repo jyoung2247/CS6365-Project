@@ -6,8 +6,9 @@ import MultiRangeSlider from "./MultiRangeSlider";
 import link from "./link.png";
 
 let models = ["SVD", "KNN_WM", "KNN_WZ", "SVDpp", "CoClustering", "SlopeOne"];
-let list = [];
 let og_list = [];
+let in_list = [];
+let list = [];
 const features = ["Steam Achievements", "Full controller support", "Steam Trading Cards", "Steam Workshop", "Partial Controller Support", "Steam Cloud", "Stats", "Steam Leaderboards", "Includes level editor", "Remote Play on Phone", "Remote Play on Tablet", "Remote Play on TV", "Remote Play Together"].sort();
 const multiplayer = ["Single-player", "Multi-player", "MMO", "PvP", "Online PvP", "Co-op", "Online Co-op", "Shared/Split Screen Co-op", "Shared/Split Screen PvP", "Shared/Split Screen", "Cross-Platform Multiplayer"].sort();
 let genres = [];
@@ -144,6 +145,7 @@ export function App() {
             publishers = removeDuplicates(publishers.sort());
 
             console.log(og_list);
+            in_list = og_list;
             list = og_list.slice(0,99);
             setLoading(false);
         } catch (err) {
@@ -324,31 +326,37 @@ export function List() {
     function handleFilter(cat, term) {
         switch (cat) {
             case "genre":
-                list = og_list.filter(g => g.genres.includes(term)).slice(0,99);
+                in_list = in_list.filter(g => g.genres.includes(term));
+                list = in_list.slice(0,99);
                 setOpen3(false);
                 forceUpdate();
                 break;
             case "price":
-                list = og_list.filter(g => g.price <= maxPrice && g.price >= minPrice).slice(0,99);
+                in_list = in_list.filter(g => g.price <= maxPrice && g.price >= minPrice);
+                list = in_list.slice(0,99);
                 //setOpen4(false);
                 forceUpdate();
                 break;
             case "length":
-                list = og_list.filter(g => g.main_story <= maxLength && g.main_story >= minLength).slice(0,99);
+                in_list = in_list.filter(g => g.main_story <= maxLength && g.main_story >= minLength);
+                list = in_list.slice(0,99);
                 //setOpen5(false);
                 forceUpdate();
                 break;
             case "devs":
-                list = og_list.filter(g => g.developer.includes(term)).slice(0,99);
+                in_list = in_list.filter(g => g.developer.includes(term));
+                list = in_list.slice(0,99);
                 setOpen6(false);
                 forceUpdate();
                 break;
             case "pubs":
-                list = og_list.filter(g => g.publisher.includes(term)).slice(0,99);
+                in_list = in_list.filter(g => g.publisher.includes(term));
+                list = in_list.slice(0,99);
                 forceUpdate();
                 break;
             default:
-                list = og_list.filter(g => g.categories.includes(term)).slice(0,99);
+                in_list = in_list.filter(g => g.categories.includes(term));
+                list = in_list.slice(0,99);
                 setOpen1(false);
                 setOpen2(false);
                 forceUpdate();
@@ -357,7 +365,8 @@ export function List() {
     }
 
     function handleClear() {
-        list = og_list.slice(0,99);
+        in_list = og_list;
+        list = in_list.slice(0,99);
         forceUpdate();
     }
 
