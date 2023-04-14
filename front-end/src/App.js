@@ -170,7 +170,7 @@ export function App() {
                         Model:
                         {models.map((m) => (<label key={m} className="model"> <input type="radio" value={m} checked={model === m} onChange={() => setModel(m)}/>{m}</label>))}
                     </div>
-                    <div className="results">
+                    <div className="linkage">
                         <div className="circle1">
                             <img className="img" src={link} alt=""/>
                         </div>
