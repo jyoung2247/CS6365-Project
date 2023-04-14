@@ -23,7 +23,7 @@
 .thumb {
     pointer-events: none;
     position: absolute;
-    height: 0px;
+    height: 0;
     width: var(--SLICE-WIDTH);
 }
 
@@ -36,21 +36,7 @@
 }
 
 /* For Chrome browsers */
-.thumb::-webkit-slider-thumb {
-    background-color: var(--THUMB-COLOR);
-    border: none;
-    outline: none;
-    border-radius: 50%;
-
-    cursor: pointer;
-    height: var(--THUMB-SIZE);
-    width: var(--THUMB-SIZE);
-    margin-top: 4px;
-    pointer-events: all;
-    position: relative;
-}
-
-/* For Firefox browsers */
+.thumb::-webkit-slider-thumb,
 .thumb::-moz-range-thumb {
     background-color: var(--THUMB-COLOR);
     border: none;

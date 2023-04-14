@@ -263,9 +263,9 @@ export function List() {
         switch (term) {
             case "ranks":
                 if (asc) {
-                    list = list.sort((a, b) => (parseFloat(a.est*100000) < parseFloat(b.est*100000)) ? 1 : -1);
+                    list = list.sort((a, b) => (parseFloat(a["est"] * 100000) < parseFloat(b["est"] * 100000)) ? 1 : -1);
                 } else {
-                    list = list.sort((a, b) => (parseFloat(a.est*100000) > parseFloat(b.est*100000)) ? 1 : -1);
+                    list = list.sort((a, b) => (parseFloat(a["est"] * 100000) > parseFloat(b["est"] * 100000)) ? 1 : -1);
                 }
                 forceUpdate();
                 break;

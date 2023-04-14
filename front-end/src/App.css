@@ -143,8 +143,8 @@
 .link {
   display: flex;
   flex-direction: column;
-  height: 0vh;
-  width: 0vh;
+  height: 0;
+  width: 0;
 }
 
 .next {
@@ -255,12 +255,12 @@
   z-index: 1;
   position: relative;
   list-style-type: none;
-  margin: 0px -225px -100px 25px;
+  margin: 0 -225px -100px 25px;
   width: 45vh;
   height: 10vh;
   overflow: auto;
   border: 1px solid #66c0f4;
-  padding-left: 0px;
+  padding-left: 0;
   background-color: #171a21;
 }
 
@@ -268,18 +268,18 @@
   z-index: 1;
   position: relative;
   list-style-type: none;
-  margin: 0px 0px -400px 25px;
+  margin: 0 0 -400px 25px;
   width: 20vh;
   height: 42vh;
   overflow: auto;
   border: 1px solid #66c0f4;
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 .menu > li {
   background-color: #171a21;
   height: 40px;
-  padding: 0px;
+  padding: 0;
 }
 
 .menu > li:hover {
@@ -292,11 +292,11 @@
   text-align: left;
   background: none;
   color: #c7d5e0;
-  padding: 0px;
+  padding: 0;
   font: inherit;
   font-size: 12px;
   cursor: pointer;
-  border: 0px;
+  border: 0;
 }
 
 .dropdown {
