@@ -15,6 +15,8 @@ let genres = [];
 let developers = [];
 let publishers = [];
 
+let terms = [];
+
 let minPrice = 0;
 let maxPrice = 80;
 let minLength = 0;
@@ -326,6 +328,7 @@ export function List() {
     function handleFilter(cat, term) {
         switch (cat) {
             case "genre":
+                terms.push(term);
                 in_list = in_list.filter(g => g.genres.includes(term));
                 list = in_list.slice(0,99);
                 setOpen3(false);
@@ -344,17 +347,20 @@ export function List() {
                 forceUpdate();
                 break;
             case "devs":
+                terms.push(term);
                 in_list = in_list.filter(g => g.developer.includes(term));
                 list = in_list.slice(0,99);
                 setOpen6(false);
                 forceUpdate();
                 break;
             case "pubs":
+                terms.push(term);
                 in_list = in_list.filter(g => g.publisher.includes(term));
                 list = in_list.slice(0,99);
                 forceUpdate();
                 break;
             default:
+                terms.push(term);
                 in_list = in_list.filter(g => g.categories.includes(term));
                 list = in_list.slice(0,99);
                 setOpen1(false);
@@ -362,11 +368,13 @@ export function List() {
                 forceUpdate();
                 break;
         }
+        console.log(terms);
     }
 
     function handleClear() {
         in_list = og_list;
         list = in_list.slice(0,99);
+        terms = [];
         forceUpdate();
     }
 
@@ -390,10 +398,6 @@ export function List() {
                     <button className="filter" onClick={() => handleSort("price")}>Price</button>
                     <button className="filter" onClick={() => handleSort("length")}>Length</button>
                     <button className="filter" onClick={() => handleSort("devs")}>Developer</button>
-                    {/*<button className="filter" onClick={() => handleSort("pubs")}>Publisher</button>
-                    <button className="filter" onClick={() => handleSort("content")}>Content Rating</button>
-                    <button className="filter" onClick={() => handleSort("users")}>User Rating</button>
-                    <button className="filter" onClick={() => handleSort("critic")}>Critic Rating</button>*/}
                 </div>
                 <div className="filters">
                     Filter:
@@ -425,7 +429,6 @@ export function List() {
                         <button className="filter" onClick={() => handleOpen(4)}>Price</button>
                         {open4 ? (
                             <ul className="pmenu">
-                                {/*{prices.map((p) => (<li className="menu-item" key={(p)}> <button onClick={() => handleFilter("price", p)}>{p}</button></li>))}*/}
                                 <MultiRangeSlider
                                     min={0}
                                     max={80}
@@ -438,7 +441,6 @@ export function List() {
                         <button className="filter" onClick={() => handleOpen(5)}>Length</button>
                         {open5 ? (
                             <ul className="pmenu">
-                                {/*{lengths.map((l) => (<li className="menu-item" key={(l)}> <button onClick={() => handleFilter("length", l)}>{l}</button></li>))}*/}
                                 <MultiRangeSlider
                                     min={0}
                                     max={2110}
@@ -455,14 +457,11 @@ export function List() {
                             </ul>
                         ) : null}
                     </div>
-                    {/*<button className="filter">Publisher</button>
-                    <button className="filter">Content Rating</button>
-                    <button className="filter">User Rating</button>
-                    <button className="filter">Critic Rating</button>*/}
                 </div>
                 <div className="filters">
                     Clear:
                     <button className="filter" onClick={() => handleClear()}>CLEAR</button>
+                    {terms.map((t) => (<div className="terms" key={terms.indexOf(t)}>{t}</div>))}
                 </div>
                 <div className="rec-box">
                     <div className="rec-list">
