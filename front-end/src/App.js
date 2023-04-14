@@ -428,7 +428,7 @@ export function List() {
                     <div>
                         <button className="filter" onClick={() => handleOpen(4)}>Price</button>
                         {open4 ? (
-                            <ul className="pmenu">
+                            <ul className="dmenu">
                                 <MultiRangeSlider
                                     min={0}
                                     max={80}
@@ -440,7 +440,7 @@ export function List() {
                     <div>
                         <button className="filter" onClick={() => handleOpen(5)}>Length</button>
                         {open5 ? (
-                            <ul className="pmenu">
+                            <ul className="dmenu">
                                 <MultiRangeSlider
                                     min={0}
                                     max={2110}

@@ -22,9 +22,8 @@
   border: 3px solid #66c0f4;
   position: relative;
   z-index: 1;
-  left: 99%;
-  top: -10%;
-  margin-top: -15px;
+  margin-top: -25px;
+  margin-left: 1425px;
 }
 
 .img {
@@ -252,11 +251,11 @@
   margin-left: 10px;
 }
 
-.pmenu {
-  position: absolute;
+.dmenu {
+  z-index: 1;
+  position: relative;
   list-style-type: none;
-  margin-left: 25px;
-  margin-top: 0px;
+  margin: 0px -225px -100px 25px;
   width: 45vh;
   height: 10vh;
   overflow: auto;
@@ -266,10 +265,10 @@
 }
 
 .menu {
-  position: absolute;
+  z-index: 1;
+  position: relative;
   list-style-type: none;
-  margin-left: 25px;
-  margin-top: 0px;
+  margin: 0px 0px -400px 25px;
   width: 20vh;
   height: 42vh;
   overflow: auto;
