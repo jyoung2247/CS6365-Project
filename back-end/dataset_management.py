@@ -1,10 +1,13 @@
 import pandas as pd
-from steam_api_functions import getFriendsList, getGamesList, getAppList, getAppDetails
+from steam_api_functions import get_friends_list, get_games_list, get_app_list, get_app_details
 from howlongtobeatpy import HowLongToBeat
 import numpy as np
 from time import sleep
 
-#Needed for initial run before added-users and visitied-users created
+added_users = "created-datasets/added-users.csv"
+game_details = "created-datasets/game-details.csv"
+
+#Needed for initial run before added-users and visited-users created
 #df_added_users = pd.DataFrame(columns=['uid', 'title', 'hours'])
 #df_visited_users = pd.DataFrame(columns=['uid'])
 
@@ -14,13 +17,13 @@ def dfs(uid, max_depth):
         return
     df_visited_users.loc[len(df_visited_users.index)] = uid
     print(depth)
-    games = getGamesList(uid)
+    games = get_games_list(uid)
     if (games == 0):
         depth-=1
         return
     for game in games:
         df_added_users.loc[len(df_added_users.index)] = [uid, game['name'], game['playtime_forever']/60.0]
-    friends = getFriendsList(uid)
+    friends = get_friends_list(uid)
     if (friends == 0):
         return
     friends = friends.split(",")
@@ -63,14 +66,11 @@ def merge_datasets(uid):
     # df_users = df_users.loc[:, ["uid", "title", "hours"]]
 
     #Add scraped users to original dataset
-    df_users = pd.read_csv("created-datasets/added-users.csv")
-    #df_users_concat = pd.concat([df_users, df_added_users], axis=0)
+    df_users = pd.read_csv(added_users)
 
     #Add new user to dataset
     if uid != None:
-        games = getGamesList(uid)
-        if games == 0:
-            print("Error, profile is private or has no games")
+        games = get_games_list(uid)
         user_df = df_users.loc[df_users['uid'] == uid]
         if user_df.empty:
             for game in games:
@@ -112,16 +112,16 @@ def add_game_details(df_users_hltb):
     # df_appid_details_category = df_appid_details_category[~df_appid_details_category['appid'].isna()]
 
     if df_users_hltb is None:
-        df_appid_details_category = pd.read_csv("created-datasets/game-details.csv")
+        df_appid_details_category = pd.read_csv(game_details)
         df_appid_details_category.drop_duplicates(subset='title', inplace=True)
     else:
         #Use this when updating for a user
         df_users_hltb = df_users_hltb.drop_duplicates(subset='title')
-        df_appid_details_category = pd.read_csv("created-datasets/game-details.csv")
+        df_appid_details_category = pd.read_csv(game_details)
         df_users_hltb_appid = pd.merge(df_users_hltb, df_appid_details_category, on="title", how="left")
         df_appid_details_category = df_users_hltb_appid.iloc[:, [1, 4, 5, 6, 7, 8, 9]]
-        appList = getAppList()
-        df_applist = pd.DataFrame(appList)
+        app_list = get_app_list()
+        df_applist = pd.DataFrame(app_list)
         df_applist.rename(columns={'name':'title'}, inplace=True)
         df_applist.drop_duplicates(subset='title', inplace=True)
         df_appid_details_category.drop(columns=['appid'], inplace=True)
@@ -130,18 +130,18 @@ def add_game_details(df_users_hltb):
         #Drop duplicates that sometimes are created
         df_appid_details_category.drop_duplicates(subset='title', inplace=True)
 
-    nan_indicies = np.where(df_appid_details_category['publisher'].isna())[0]
+    nan_indices = np.where(df_appid_details_category['publisher'].isna())[0]
     
-    total_len = len(nan_indicies)-1
-    for i, idx in enumerate(nan_indicies):
+    total_len = len(nan_indices)-1
+    for i, idx in enumerate(nan_indices):
         print(i, total_len)
-        id = df_appid_details_category['appid'].iloc[idx]
-        if (not pd.isna(id) and id is not None):
-            id = int(float(id))
-            details = getAppDetails(id)
+        app_id = df_appid_details_category['appid'].iloc[idx]
+        if (not pd.isna(app_id) and app_id is not None):
+            app_id = int(float(app_id))
+            details = get_app_details(app_id)
             if (details == 1):
                 #save game details csv if data returned as None, meaning steam is limiting api calls
-                df_appid_details_category.to_csv("created-datasets/game-details.csv", index=False)
+                df_appid_details_category.to_csv(game_details, index=False)
                 print("Rate limited, waiting 5 minutes")
                 sleep(300)
                 add_game_details(None)
@@ -181,8 +181,7 @@ def add_game_details(df_users_hltb):
             df_appid_details_category.iloc[idx, 1:] = "Unknown"
 
     #save game details csv
-    df_appid_details_category.to_csv("created-datasets/game-details.csv", index=False)
-    #return df_appid_details_category
+    df_appid_details_category.to_csv(game_details, index=False)
 
 def add_ratings(df):
     #Add rating column
@@ -199,8 +198,8 @@ def add_ratings(df):
     
     return df
 
-def get_main_story_hours(gameName):
-    results_list = HowLongToBeat().search(str(gameName))
+def get_main_story_hours(game_name):
+    results_list = HowLongToBeat().search(str(game_name))
     if results_list is not None and len(results_list) > 0:
         best_element = max(results_list, key=lambda element: element.similarity)
         return best_element.main_story
@@ -221,13 +220,9 @@ def update_hltb(df_users_hltb):
     #df_missing_games = pd.DataFrame(columns=['title'])
     df_missing_games = pd.read_csv("created-datasets/missing-hltb.csv")
 
-    #main_story = df["main_story"].to_numpy()
-    #main_nan = pd.isna(df["main_story"]).to_numpy()
-    #nan_indices = np.argwhere(main_nan).squeeze()
 
     unavailable_titles = df_missing_games['title']
 
-    #missing_titles = df['title'].iloc[nan_indices]
     missing_titles = df['title'][df['main_story'].isna()]
 
     titles_to_check = set(np.setdiff1d(missing_titles, unavailable_titles))
@@ -273,7 +268,7 @@ def update_datasets(uid, max_depth):
     else:
         print("User has already been visited. Please choose a new user to start DFS on")
         return
-    df_added_users.to_csv("created-datasets/added-users.csv", index=False)
+    df_added_users.to_csv(added_users, index=False)
     df_visited_users.to_csv("created-datasets/visited-users.csv", index=False)
 
     ## Create datasets
@@ -284,7 +279,7 @@ def update_datasets(uid, max_depth):
     update_hltb(df_users_hltb)
 
 depth = 0
-df_added_users = pd.read_csv("created-datasets/added-users.csv")
+df_added_users = pd.read_csv(added_users)
 df_visited_users = pd.read_csv("created-datasets/visited-users.csv")
 
 ##Uncomment to update dataset, otherwise keep commented so it doesn't run updates when imported by steam_recommender.py

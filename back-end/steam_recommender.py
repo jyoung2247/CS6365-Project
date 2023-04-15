@@ -4,13 +4,13 @@ from dataset_management import get_dataset_for_user
 import pandas as pd
 import numpy as np
 
-class Steam_Recommender:
+class SteamRecommender:
 
-    def __init__(self, modelName, uid):
+    def __init__(self, model_name, uid):
         self.uid = uid
         self.data = self.get_data()
         self.train = self.get_train()
-        self.model = self.model_create_fit(modelName)
+        self.model = self.model_create_fit(model_name)
 
     #Import our csv as a dataframe to use as data
     def get_data(self):
@@ -31,19 +31,17 @@ class Steam_Recommender:
         return train
     
     #Create and fit the model to the training data
-    def model_create_fit(self, modelName):
-        if modelName == "KNN_WM":
+    def model_create_fit(self, model_name):
+        if model_name == "KNN_WM":
             model = KNNWithMeans()
-        if modelName == "KNN_WZ":
+        elif model_name == "KNN_WZ":
             model = KNNWithZScore()
-        if modelName == "SVDpp":
+        elif model_name == "SVDpp":
             model = SVDpp()
-        if modelName == "CoClustering":
+        elif model_name == "CoClustering":
             model = CoClustering()
-        if modelName == "SlopeOne":
+        elif model_name == "SlopeOne":
             model = SlopeOne()
-        if modelName == "SVD":
-            model = SVD()
         else:
             model = SVD()
         model.fit(self.train)
@@ -106,12 +104,5 @@ class Steam_Recommender:
 
         df.sort_values(by="est", ascending=False, inplace=True)
         top_titles_ratings_details = df.iloc[:, [1, 3, 6, 7, 8, 9, 10, 12]].to_dict('records')
-        #top_titles_ratings = list(zip(df.iloc[:n, [1]]['iid'], df.iloc[:n, [3]]['est']))
 
         return top_titles_ratings_details
-
-# Example
-# steam_recommender = Steam_Recommender("KNN_WM", 76561198058962258)
-# top_titles_ratings = steam_recommender.get_top_predictions(100)
-# print("top user titles: ", top_titles_ratings)
-#rmse = steam_recommender.model_rmse()

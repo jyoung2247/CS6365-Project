@@ -201,7 +201,6 @@ export function App() {
 
 export function List() {
 
-    //create your forceUpdate hook
     const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
     const [open1, setOpen1] = useState(false);
     const [open2, setOpen2] = useState(false);

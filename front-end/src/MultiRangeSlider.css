@@ -61,6 +61,8 @@
 .slider__range {
     position: absolute;
     bottom: -7px; /* Here you move the slice up or down only on any browser that is not firefox */
+    border-radius: 3px;
+    height: 9px; /* Here you define the height of the slice */
 }
 
 @supports (-moz-appearance: none) {
@@ -69,12 +71,6 @@
     .slider__range {
         bottom: -5px; /* Here you move the slice up or down only on firefox browser */
     }
-}
-
-.slider__track,
-.slider__range {
-    border-radius: 3px;
-    height: 9px; /* Here you define the height of the slice */
 }
 
 .slider__track {
