@@ -334,13 +334,13 @@ export function List() {
                 forceUpdate();
                 break;
             case "price":
-                in_list = in_list.filter(g => g.price <= maxPrice && g.price >= minPrice);
-                list = in_list.slice(0,99);
+                list = in_list;
+                list = list.filter(g => g.price <= maxPrice && g.price >= minPrice).slice(0,99);
                 forceUpdate();
                 break;
             case "length":
-                in_list = in_list.filter(g => g.main_story <= maxLength && g.main_story >= minLength);
-                list = in_list.slice(0,99);
+                list = in_list;
+                list = list.filter(g => g.main_story <= maxLength && g.main_story >= minLength).slice(0,99);
                 forceUpdate();
                 break;
             case "devs":
