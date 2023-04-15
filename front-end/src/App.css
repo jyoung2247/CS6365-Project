@@ -22,15 +22,15 @@
   border: 3px solid #66c0f4;
   position: relative;
   z-index: 1;
-  margin-top: -25px;
-  margin-left: 1425px;
+  top: -15%;
+  left: 99%;
 }
 
 .img {
-  height: 35px;
-  width: 35px;
-  margin-top: 5px;
-  margin-left: 5px;
+  height: 75%;
+  width: 75%;
+  margin-top: 12%;
+  margin-left: 12%;
 }
 
 .contain {
@@ -245,7 +245,7 @@
   z-index: 1;
   position: relative;
   list-style-type: none;
-  margin: 0 -225px -100px 25px;
+  margin: 0 -300px -150px 25px;
   width: 45vh;
   height: 10vh;
   overflow: auto;
@@ -258,7 +258,7 @@
   z-index: 1;
   position: relative;
   list-style-type: none;
-  margin: 0 0 -400px 25px;
+  margin: 0 0 -550px 25px;
   width: 20vh;
   height: 42vh;
   overflow: auto;
