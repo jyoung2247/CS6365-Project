@@ -5,7 +5,7 @@ import BarLoader from "react-spinners/BarLoader";
 import MultiRangeSlider from "./MultiRangeSlider";
 import link from "./link.png";
 
-let models = ["SVD", "KNN_WM", "KNN_WZ", "SVDpp", "CoClustering", "SlopeOne"];
+let models = ["CoClustering", "KNN_WZ", "KNN_WM", "SlopeOne", "SVDpp", "SVD"];
 let og_list = [];
 let in_list = [];
 let list = [];
@@ -26,7 +26,7 @@ export function App() {
 
     const url = `http://localhost:8888/getRecs?steam_id=`;
     const [id, setId] = useState('');
-    const [model, setModel] = useState('SVD');
+    const [model, setModel] = useState('CoClustering');
     let [loading, setLoading] = useState(false);
 
     const override: CSSProperties = {
