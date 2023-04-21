@@ -39,3 +39,7 @@ conda activate steamrec
 cd front-end
 
 npm start
+
+
+Link to Kaggle HLTB dataset which we used:
+https://www.kaggle.com/datasets/kasumil5x/howlongtobeat-games-completion-times
